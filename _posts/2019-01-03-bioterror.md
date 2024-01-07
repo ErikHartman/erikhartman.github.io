@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Synthetic biology: Bioterrorism in light of SARS-Cov-2
+title: Bioterrorism in light of SARS-Cov-2
 date: 2019-01-01 15:09:00
 description: written for SynthEthics
 tags: markdown

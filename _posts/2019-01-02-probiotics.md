@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Synthetic biology: A Brief History of Probiotics
+title: A Brief History of Probiotics
 date: 2019-01-01 15:09:00
-description: a short tutorial
+description: Written for iGEM
 tags: markdown
 featured: true
 ---
