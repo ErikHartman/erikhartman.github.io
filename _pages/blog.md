@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /blog/
-title: blog
+title: random stuff I think or have thought about
 nav: true
 nav_order: 1
 pagination:

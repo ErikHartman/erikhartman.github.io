@@ -124,8 +124,8 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Eriks blog # blog_name will be displayed in your blog page
-blog_description: a random blog.
+blog_name: blog # blog_name will be displayed in your blog page
+blog_description: things I think about / have thought about
 permalink: /blog/:year/:title/
 
 # Pagination
