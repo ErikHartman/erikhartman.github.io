@@ -3,8 +3,8 @@ layout: post
 title: Opportunities and risks of synthetic biology
 date: 2024-01-01 15:09:00
 description: article for iGEM
-tags: markdown
-featured: true
+tags: synthetic biology ethics risks
+featured: false
 ---
 
 _Synthetic biology, the field of science where life is altered, modernized and reconditioned to fit the needs of today, is one of the fastest growing fields of research in the scientific community. Engineers and scientists come together to create unimaginable and awe-inspiring organic machines by simply modifying the genome of organisms in a methodical manner. But where is this research taking us? What ethical inquiries must we pose to ensure that our future isn’t ruined by our own achievements? What can we do to ensure that the research is used to maximize the goodness in the world, and not the opposite? These are questions we must answer before we continue our efforts to expand our grasp of a technology we may not be able to master._

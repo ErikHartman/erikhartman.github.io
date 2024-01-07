@@ -3,7 +3,7 @@ layout: post
 title: A Brief History of Probiotics
 date: 2019-01-01 15:09:00
 description: Written for iGEM
-tags: markdown
+tags: synthetic biology
 featured: true
 ---
 

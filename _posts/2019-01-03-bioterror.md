@@ -3,8 +3,8 @@ layout: post
 title: Bioterrorism in light of SARS-Cov-2
 date: 2019-01-01 15:09:00
 description: written for SynthEthics
-tags: markdown
-featured: true
+tags: synthetic biology ethics risks bioterrorism
+featured: false
 ---
 
 Technological advancement, novel scientific discoveries and innovations inherently bring the opportunity to act against the welfare of intelligent life. Some innovations bear only minimum risk with a low potential for disaster, but some innovations are highly riskful and have to be dealt with delicately in order to reduce the risk for malicious use. The assessment of risk is weighed against the potential benefits new innovations bring in order to evaluate if research can be continued ethically. In most cases, the continuation of research is certain, as in the development of new methods for cancer therapy. However, some research has notoriously been advocated against by the public and academia, such as the development of nuclear weapons, where we today unanimously realize that the benefits did not outweigh the risks, and are facing the constant risk of annihilation because of it. Many are weary of the risks biotechnology brings, afraid of the sudden appearance of yet another threatening weapon of mass destruction - and rightfully so. If a deadly and contagious enough bioweapon were to be developed by in a lab with failing safety precautions or by bioterrorists, it may be the last innovation ever created.
