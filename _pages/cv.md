@@ -5,7 +5,7 @@ title: cv
 nav: true
 nav_order: 5
 cv_pdf: cv.pdf
-description: Below is a shortened version of my cv. You can download my complete cv by clicking 'pdf' (updated 2023).
+description: Below is a shortened version of my cv (still working on this one). You can download my complete cv by clicking 'pdf' (updated 2023).
 toc:
   sidebar: left
 ---

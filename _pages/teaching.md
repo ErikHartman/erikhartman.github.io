@@ -5,7 +5,7 @@ title: teaching
 description: 
 nav: true
 nav_order: 6
-description: I've always enjoyed teaching and would love to do so more in the future.
+description: I've always enjoyed teaching and would love to do more of it in the future.
 ---
 
 **BMEN35: Data-driven health (Faculty of Engineering, Lund University)**

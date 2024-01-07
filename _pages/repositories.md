@@ -7,7 +7,7 @@ nav: true
 nav_order: 4
 ---
 
-## My personal GitHub profile
+# GitHub profile
 
 {% if site.data.repositories.github_users %}
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
@@ -33,7 +33,7 @@ nav_order: 4
 {% endif %}
 {% endif %}
 
-## My favorite repositories
+## Notable repositories
 
 {% if site.data.repositories.github_repos %}
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
