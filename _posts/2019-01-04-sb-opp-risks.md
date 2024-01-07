@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Opportunities and risks of synthetic biology
-date: 2024-01-01 15:09:00
+date: 2019-01-01 15:09:00
 description: article for iGEM
 tags: synthetic biology ethics risks
 featured: false
