@@ -4,7 +4,7 @@ title: A Brief History of Probiotics
 date: 2019-01-01 15:09:00
 description: Written for iGEM
 tags: synthetic biology
-featured: true
+featured: false
 ---
 
 Probiotics, an emerging field of medicine, has been praised and condemned by both experts and the public. It concerns the microorganisms interacting with you, their host, and the possible health benefits they may provide for you. As new research looms, we’re more and more certain that microbes cooperate with us in several ways. Perhaps we are the ones cooperating with them. After all, they were here before us.
