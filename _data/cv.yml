@@ -68,6 +68,9 @@
     - year: 2022
       items: 
         - Best bachelor thesis
+    - year: 2024
+      items:
+        - Anders Wall Scholarship for Young Scientists à 200 000 SEK. Largest scholarship awarded to young researchers. Awarded to one selected researcher under the age of 25 in Sweden.
 
 
 - title: Academic Interests
@@ -80,11 +83,12 @@
     - title: Computation
       items:
         - Machine learning
-        - Monte Carlo methods
+        - Optimization
         - Explainable AI
 
 - title: Other Interests
   type: list
   contents:
     - Powerlifting
+    - Engaging the youth in science
     - Philosophy
