@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The broken game of academia
-date: 2024-03-01 15:09:00
+date: 2024-03-28 15:09:00
 description: academic publishing through the lens of games
 tags: game theory academia publishing
 featured: true
@@ -25,15 +25,14 @@ Journals are highly efficient profit machines that dictate the success of resear
 As long as the journal system exists in its current state, there will always be a misalignment between the ideal goals and the incentives of the researchers. This results in bad research, where the goal is to publish in high-impact journals instead of doing good science, resulting in reporting bias, fraud, and hype trains. Although the downstream impact of such research is unclear, it is reasonable to believe that research without such systems in place would generate better science, which in turn would make the world a better place. The diversion from such a world is morally wrong.
 
 ## How to align incentives with goals
-While it is possible to imagine a scenario where the researchers are unaffected by the incentives of journals, and uphold a moral standard which further the ideal goals of research, it seems like a highly unlikely one, since any player which diverges from this tactic ruins the game by immediately becoming the most famous researcher in the world. It is not a steady equilibrium. It is therefore necessary to change the system to align the incentives with the ideal goals, which means to alter the way in which research is evaluated and spread to the public and to peers.
+While it is possible to imagine a scenario where the researchers are unaffected by the incentives of journals and uphold a moral standard that furthers the ideal goals of research, it seems like a highly unlikely one since any player who diverges from this tactic ruins the game by immediately becoming the most famous researcher in the world. It is not a steady equilibrium. It is therefore necessary to change the system to align the incentives with the ideal goals, which means altering the way in which research is evaluated and spread to the public and to peers.
 
-But how can science be spread in an unbiased way which doesn't incentivize the researchers deviate from the desired outcome? This is a difficult question of which I have no definitive answer. However, there are two actions which seem overwhelmingly clear, and which have been raised by others, and would improve the publishing system:
+But how can science be spread in an unbiased way that doesn't incentivize the researchers to deviate from the desired outcome? This is a difficult question for which I have no definitive answer. However, there are two actions that seem overwhelmingly clear, have been raised by others, and would improve the publishing system:
 
-1. Abandon the journals and pre-publication peer review, and move to pre-print like servers. These include an initial check for obviously obnoxious publications, but otherwise lets everything through. 
+1. Abandon the journals and pre-publication peer review and move to pre-print servers. These include an initial check for obviously obnoxious publications, but otherwise let everything through.
 2. Make post-publication peer review open.
 
-These actions would remove the monetization from the publication system, reduce the time of publication and thereby increase the rate of scientific exchange, and reduce the level of gatekeeping currently upheld by monopolized publishing companies. Journals to play an important role in identifying good research, but this can be done just as easily with post-publication peer review.
+These actions would remove monetization from the publication system, reduce the time of publication, thereby increase the rate of scientific exchange, and reduce the level of gatekeeping currently upheld by monopolised publishing companies. Journals play an important role in identifying good research, but this can be done just as easily with post-publication peer review.
 
-This model has already been adopted by some newer fields of research, such as machine learning (ML)/AI. Especially for mathematics and ML-research, journals rarely hold any power, and arXiv is the name of the game. Publications are sometimes spread through alternative channels across the web, and some papers become viral if they are regarded as worthy of mentions. Alternative decentralized ways of funding, doing, and reporting science utilizing the Web3 stack are on the come-up (called DeSci), but I don't know if these will catch on. In general, I believe that the two points above is enough to fix the problems with journals. Further, they are actionable and available now. 
-
+This model has already been adopted by some newer fields of research, such as machine learning (ML) and AI. Especially for mathematics and ML research, journals rarely hold any power, and arXiv is the name of the game. Publications are sometimes spread through alternative channels across the web, and papers become viral if they are regarded as worthy of mention. Alternative decentralised ways of funding, doing, and reporting science utilising the Web3 stack are on the rise (called DeSci), but I don't know if these will catch on. In general, I believe that the two points above are enough to fix the problems with journals. Further, they are actionable and available with current technology.
 
