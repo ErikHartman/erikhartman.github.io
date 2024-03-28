@@ -1,3 +1,12 @@
+---
+layout: post
+title: The broken game of academia
+date: 2024-03-28 15:09:00
+description: 
+tags: game theory academia publishing
+featured: true
+---
+
 Games are fundamental to the behavior of living organisms, and most biological, societal, and economic systems can be understood using game theory. In game theory, a game is defined by a set of players, a set of rules, and a set of objectives. In large, the goal of game theory is to define and study games, and in doing so, it can help to define policies (rules) and actions which optimize the process of reaching an objective. Life is perhaps the most rudimentary of all games, in which players constitute living organisms, and the natural objectives include surviving, flourishing and procreating. Wars can easily be likened to games, where the goal could be to conquer land or subdue a population. Naturally, tactics become important in games, and a large part of game theoretic endeavors lies in identifying the optimal tactics (actions) which result in the desired outcome of a game. 
 
 When breaking down a complex system into a set of games, it becomes possible to define policies which shift the incentives of players to favor a desired outcome. Here, I will try to break down the world of academia into a set of games, to showcase that the incentives and goals of the key players in the game are misaligned, and that the current setup of rules and policies of academia are resulting in unfavorable outcomes which doesn’t benefit humanity.
