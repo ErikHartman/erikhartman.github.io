@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The broken game of academia
-date: 2024-03-28 15:09:00
+date: 2024-28-03 15:09:00
 description: academic publishing through the lens of games
 tags: game theory academia publishing
 featured: true
