@@ -20,9 +20,13 @@ Fame is created by the acknowledgement and opinion of the public and of peers. I
 
 The power journals hold in academia is that of selecting and spreading research findings. They therefore play an important part in furthering and extending the border of knowledge, but they also play a large role in governing the influence and fame of researchers. It is therefore crucial that journals uphold a level of integrity and that they are regulated so that they don't sway from the goal of science and placate the egoistic needs of humans. Unfortunately, this is exactly what is currently happening in the field of academia.
 
+
 Journals are highly efficient profit machines that dictate the success of researchers while exploiting their flaws as humans as well as their institutions for monetary gain. They play their own game, in which impact factors are a proxy for profit, and their tactics include utilising researchers as editors, reviewers, and publishers, creating a money-printing cycle where researchers run like hamsters in the pursuit of scientific glory.
+{% include figure.html path="assets/img/running_man.jpg" class="img-fluid z-depth-1" %}
 
 As long as the journal system exists in its current state, there will always be a misalignment between the ideal goals and the incentives of the researchers. This results in bad research, where the goal is to publish in high-impact journals instead of doing good science, resulting in reporting bias, fraud, and hype trains. Although the downstream impact of such research is unclear, it is reasonable to believe that research without such systems in place would generate better science, which in turn would make the world a better place. The diversion from such a world is morally wrong.
+
+{% include figure.html path="assets/img/utopia_dystopia.jpg" class="img-fluid z-depth-1" %}
 
 ## How to align incentives with goals
 While it is possible to imagine a scenario where the researchers are unaffected by the incentives of journals and uphold a moral standard that furthers the ideal goals of research, it seems like a highly unlikely one since any player who diverges from this tactic ruins the game by immediately becoming the most famous researcher in the world. It is not a steady equilibrium. It is therefore necessary to change the system to align the incentives with the ideal goals, which means altering the way in which research is evaluated and spread to the public and to peers.
