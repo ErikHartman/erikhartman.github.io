@@ -24,7 +24,7 @@ Journals are highly efficient profit machines that dictate the success of resear
 
 {% include figure.html path="assets/img/running_man.jpg" class="img-fluid z-depth-1" %}
 
-As long as the journal system exists in its current state, there will always be a misalignment between the ideal goals and the incentives of the researchers. This results in bad research, where the goal is to publish in high-impact journals instead of doing good science, resulting in reporting bias, fraud, and hype trains. Although the downstream impact of such research is unclear, it is reasonable to believe that research without such systems in place would generate better science, which in turn would make the world a better place. The diversion from such a world is morally wrong.
+As long as the publication system exists in its current state, there will always be a misalignment between the ideal goals and the incentives of the researchers. This results in bad research, where the goal is to publish in high-impact journals instead of doing good science, resulting in reporting bias, fraud, and hype trains. Although the downstream impact of such research is unclear, it is reasonable to believe that research without such systems in place would generate better science, which in turn would make the world a better place. The diversion from such a world is morally wrong.
 
 {% include figure.html path="assets/img/utopia_dystopia.jpg" class="img-fluid z-depth-1" %}
 
