@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The broken game of academia
+title: "The broken game of academic research: how journals are shifting the incentives of researchers and ruining science"
 date: 2024-03-27 15:09:00
 description: academic publishing through the lens of games
 tags: game theory academia publishing
