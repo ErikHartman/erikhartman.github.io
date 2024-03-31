@@ -2,9 +2,11 @@
 layout: post
 title: "The broken game of academic research: how journals are shifting the incentives of researchers and ruining science"
 date: 2024-03-27 15:09:00
-description: academic publishing through the lens of games
+description: the flawed academic system through the lens of game theory
 tags: game theory academia publishing
 featured: true
+authors:
+  - name: Erik Hartman
 ---
 
 Games are fundamental to the behavior of rational agents, and many biological, societal, and economic systems can be understood and analyzed using game theory. In game theory, a game is defined by a set of players, a set of rules, and a set of objectives. In large, the goal of game theory is to define and study games, and in doing so, it can help to define policies (rules) and actions that optimize the process of reaching an objective. Life itself can be construed as the most elemental of games, where living organisms are the players striving to survive, thrive, and procreating. Similarly, conflicts such as wars can be analyzed as strategic games, with goals like territorial conquest or population control. Naturally, tactics become important in games, and a large part of game theoretic endeavors lies in identifying the optimal tactics (actions) that result in the desired outcome of a game. 
@@ -41,5 +43,6 @@ These actions would remove monetization from the publication system, reduce the 
 
 This model has already been adopted by some fields of research, prominently in machine learning (ML) research. Here, articles are often never published in any conventional peer reviewed journal, but instead servers like arXiv are the names of the game. Papers deemed noteworthy quickly gain traction and virality within the research community. Alternative decentralized ways of funding, doing, and reporting science utilizing the Web3 stack are on the rise. Referred to as DeSci (Decentralized Science), these alternative frameworks represent a potential avenue for reshaping the scientific enterprise. However, their widespread adoption remains uncertain. In general, I believe that the two points above are enough to fix the problems with journals. Further, they are actionable and available with current technology.
 
+## In summary
 While acknowledging the valuable contributions of scientific journals, it's essential to address a fundamental issue: the disconnect between researchers' incentives and the overarching goals of scientific advancement. When publications are valued primarily for their placement in prestigious journals and their impact on authors' h-indexes, rather than for their substantive content and contributions to their respective fields, it undermines the integrity of scientific research. In an era where the importance of science and technology has never been greater, we must recognize the imperative for change within academic norms. Only by reforming the current system can we ensure that scientific endeavors truly serve the greater good.
 
