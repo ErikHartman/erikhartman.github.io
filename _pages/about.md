@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Computational methods to understand biology.
+subtitle: Trying to get good at ~science~
 
 profile:
   align: left
