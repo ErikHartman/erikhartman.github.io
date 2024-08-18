@@ -11,18 +11,15 @@
 - title: Education
   type: time_table
   contents:
+
     - title: PhD student
-      institution: Lund University, Lund, Sweden
+      institution: Dept. infection medicine proteomics, Lund University
       year: 2024
       description:
-        - Proteomics
-        - title: Machine learning
-          contents:
-            - Generative models
-            - Classification / regression
-        - Statistical methods
+        - Computational methods for analyzing protein degradation
 
-    - title: M. Sc
+
+    - title: MSc
       institution: Faculty of Engineering at Lund University, Lund, Sweden
       year: 2018
       description:
@@ -33,10 +30,11 @@
   type: time_table
   contents:
     - title: Research engineer
-      institution: Dept. infection medicine proteomics
+      institution: Dept. infection medicine proteomics, Lund University
       year: 2023
       description:
         - Machine learning & computation in omics
+
     - title: Machine learning developer
       institution: Qlucore, Lund, Sweden
       year: 2023
@@ -70,7 +68,10 @@
         - Best bachelor thesis
     - year: 2024
       items:
-        - Anders Wall Scholarship for Young Scientists à 200 000 SEK. Largest scholarship awarded to young researchers. Awarded to one selected researcher under the age of 25 in Sweden.
+        - Anders Wall Scholarship for Young Scientists (20.000 €). Largest personal award for young researchers. Awarded to one selected researcher under the age of 25 in Sweden.
+    - year: 2024
+      items:
+        - EMBO Fellowship Grant (9.000 €)
 
 
 - title: Academic Interests
@@ -85,10 +86,3 @@
         - Machine learning
         - Optimization
         - Explainable AI
-
-- title: Other Interests
-  type: list
-  contents:
-    - Powerlifting
-    - Engaging the youth in science
-    - Philosophy
