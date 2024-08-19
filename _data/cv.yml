@@ -54,24 +54,31 @@
 - title: Honors and Awards
   type: time_table
   contents:
+  
+    - year: 2024
+      items:
+        - EMBO Fellowship Grant (9.000 €)
+   
+    - year: 2024
+      items:
+        - Anders Wall Scholarship for Young Scientists (20.000 €). Largest personal award for young researchers. Awarded to one selected researcher under the age of 25 in Sweden.
+    
+    - year: 2022
+      items: 
+        - Best bachelor thesis
+
+    - year: 2019
+      items: 
+        - iGEM, gold medal
+
     - year: 2018
       items: 
         - National science competition, 1st place
         - intel ISEF, 3rd place
         - Outstanding performance in biology (high school)
         - Outstanding overall performance (high school)
-    - year: 2019
-      items: 
-        - iGEM, gold medal
-    - year: 2022
-      items: 
-        - Best bachelor thesis
-    - year: 2024
-      items:
-        - Anders Wall Scholarship for Young Scientists (20.000 €). Largest personal award for young researchers. Awarded to one selected researcher under the age of 25 in Sweden.
-    - year: 2024
-      items:
-        - EMBO Fellowship Grant (9.000 €)
+
+
 
 
 - title: Academic Interests
