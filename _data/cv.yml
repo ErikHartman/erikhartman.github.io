@@ -4,9 +4,7 @@
     - name: Full Name
       value: Erik Hartman
     - name: Date of Birth
-      value: 4th September 1999
-    - name: Languages
-      value: English, Swedish, French
+      value: September 4th, 1999
 
 - title: Education
   type: time_table
