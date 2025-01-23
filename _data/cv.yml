@@ -46,12 +46,20 @@
   type: time_table
   contents:
     - title: <a href="https://github.com/InfectionMedicineProteomics/BINN">Biologically informed neural networks</a>
-      year: 2015-now
+      year: 2023-now
       description: Embedding biological information into neural networks.
 
 - title: Honors and Awards
   type: time_table
   contents:
+
+  - year: 2024
+      items:
+        - Career Development Grant (3.000 SGD)
+
+  - year: 2024
+      items:
+        - Engineering Promise of the Year, Swedish Chamber of Commerce (5.000 €)
   
     - year: 2024
       items:
@@ -59,7 +67,7 @@
    
     - year: 2024
       items:
-        - Anders Wall Scholarship for Young Scientists (20.000 €). Largest personal award for young researchers. Awarded to one selected researcher under the age of 25 in Sweden.
+        - Anders Wall Scholarship for Young Scientists (20.000 €). Largest personal award for young researchers.
     
     - year: 2022
       items: 
@@ -73,9 +81,6 @@
       items: 
         - National science competition, 1st place
         - intel ISEF, 3rd place
-        - Outstanding performance in biology (high school)
-        - Outstanding overall performance (high school)
-
 
 
 
