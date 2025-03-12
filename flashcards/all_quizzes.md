@@ -258,21 +258,21 @@ Suppose you observed 10 cases among 50 untreated and 10 cases among 100 treated 
     - 5.0
 
 **Question 1**
-Two different cohorts have investigated the association between birth weight and atrial fibrillation, the Helsinki Birth Cohort Study (HBCS) and the Atherosclerosis Risk In Communities (ARIC) Study. In HBCS participants were enrolled and birth weight data was collected through study of medical records at the time of birth in 1930-1940. All live births in the relevant years of inclusion that occurred in Helsinki were included. In ARIC participants were enrolled as adults, and birth weight data was collected at the time of enrollment, through questionnaires. Participants were followed until first diagnosis of atrial fibrillation. Which cohort was prospective?
+Two different cohorts have investigated the association between birth weight and atrial fibrillation, the Helsinki Birth Cohort Study (HBCS) and the Atherosclerosis Risk In Communities (ARIC) Study. In HBCS participants were enrolled and birth weight data was collected through study of medical records at the time of birth in 1930-1940. All live births in the relevant years of inclusion that occurred in Helsinki were included. In ARIC participants were enrolled as adults, and birth weight data was collected at the time of enrollment, through questionnaires. Participants were followed until first diagnosis of atrial fibrillation. Which cohort was prospective? ✅
   - [ ] None 
   - [ ] HBCS 
   - [x] Both 
   - [ ] ARIC 
  
 **Question 3**
-Two different cohorts have investigated the association between birth weight and atrial fibrillation, the Helsinki Birth Cohort Study (HBCS) and the Atherosclerosis Risk In Communities (ARIC) Study. In HBCS participants were enrolled and birth weight data was collected through study of medical records at the time of birth in 1930-1940. All live births in the relevant years of inclusion that occurred in Helsinki were included. In ARIC participants were enrolled as adults, and birth weight data was collected at the time of enrollment, through questionnaires. Participants were followed until first diagnosis of atrial fibrillation. Which method of recruitment and data collection will result in the least amount of bias?
+Two different cohorts have investigated the association between birth weight and atrial fibrillation, the Helsinki Birth Cohort Study (HBCS) and the Atherosclerosis Risk In Communities (ARIC) Study. In HBCS participants were enrolled and birth weight data was collected through study of medical records at the time of birth in 1930-1940. All live births in the relevant years of inclusion that occurred in Helsinki were included. In ARIC participants were enrolled as adults, and birth weight data was collected at the time of enrollment, through questionnaires. Participants were followed until first diagnosis of atrial fibrillation. Which method of recruitment and data collection will result in the least amount of bias? ✅
   - [x] The method used in HBCS 
   - [ ] The method used in ARIC 
   - [ ] Both result in severe selection bias 
   - [ ] Neither should result in bias 
  
 **Question 4**
-Randomized controlled trials provide strong evidence that an observed effect is due to the intervention (the assigned exposure). One reason is because
+Randomized controlled trials provide strong evidence that an observed effect is due to the intervention (the assigned exposure). One reason is because ✅
   - [ ] it is easier to measure the outcome variable with great precision in randomised, controlled trials compared to in other study designs 
   - [x] when the participants are randomized possible confounding factors are likely to be evenly distributed in the groups 
   - [ ] the study participants are volunteers and therefore motivated to take part in the study 
@@ -287,19 +287,19 @@ Subject 4: Followed for 3 years, dropped-out, died after 5 years.
 Subject 5: Followed for 7 years, emigrated.
   - [ ] 31 person-years 
   - [ ] 37 person-years 
-  - [ ] 35 person-years 
-  - [x] 29 person-years 
+  - [x] 35 person-years 
+  - [ ] 29 person-years 
  
 **Question 6**
-Study the DAG below. What do you need to adjust for to obtain the total effect of intrauterine growth restriction on atrial fibrillation?
+Study the DAG below. What do you need to adjust for to obtain the total effect of intrauterine growth restriction on atrial fibrillation? (cant add image. Imagine it...)
   - [ ] The total effect can’t be estimated 
   - [ ] Diabetes, hypertension weight, height and CVD 
   - [ ] Maternal SES 
-  - [ ] Sex, Race and Individual SES 
-  - [x] Birth weight 
+  - [x] Sex, Race and Individual SES 
+  - [ ] Birth weight 
  
 **Question 7**
-Which of these statements is based on counterfactual reasoning?
+Which of these statements is based on counterfactual reasoning? ✅
   - [ ] The adjusted Hazard Ratio for heart attacks is 1.8 for smokers compared to non-smokers. Therefore, smoking causes heart attacks. 
   - [ ] Smokers more often die of heart attacks than non-smokers, therefore smoking causes heart attacks 
   - [x] John died of a heart attack. If he hadn’t smoked he wouldn’t have. Therefore, smoking causes heart attacks 
@@ -307,45 +307,45 @@ Which of these statements is based on counterfactual reasoning?
   - [ ] Smoking causes pathological processes in the coronary vessels. Therefore, smoking causes heart attacks 
  
 **Question 8**
-In which of the following graphs would adjustment for U introduce bias?
+In which of the following graphs would adjustment for U introduce bias? (cant import image. Imagine it...)
   - [ ] C 
-  - [x] A 
+  - [ ] A
   - [ ] D 
   - [ ] A and B 
-  - [ ] B 
+  - [x] B 
  
 **Question 9**
-In this DAG there is a box around variables that have been conditioned on (adjusted for, or stratified on). Is there an open backdoor path between liver disease and lung cancer?
+In this DAG there is a box around variables that have been conditioned on (adjusted for, or stratified on). Is there an open backdoor path between liver disease and lung cancer? (can't import image)
   - [ ] Yes, through yellow fingers and smoking 
   - [ ] Yes, the lack of an arrow implies a strong assumption of no association 
-  - [ ] Yes, conditioning on the collider A opens a path 
-  - [x] No, the conditioning on A blocks the path between liver disease and lung cancer 
+  - [x] Yes, conditioning on the collider A opens a path 
+  - [ ] No, the conditioning on A blocks the path between liver disease and lung cancer 
   - [ ] No, smoking is a collider 
  
 **Question 10**
 Study the DAG below. A is an exposure, and Y is the outcome. What do you need to adjust for to obtain the total effect of A on Y? (Pic not included hehe)
-  - [x] L, it is a confounder 
+  - [ ] L, it is a confounder 
   - [ ] Y 
-  - [ ] Nothing 
+  - [x] Nothing 
   - [ ] L, it is a mediator 
   - [ ] The total effect can’t be established under this DAG 
  
 **Question 11**
-Economist sometimes talks about opportunity costs – what do they mean by that? More than one statement can be correct.
+Economist sometimes talks about opportunity costs – what do they mean by that? More than one statement can be correct. ✅
   - [x] it is the loss of value or benefit that would be incurred by choosing that activity 
   - [ ] It summarizes costs of investments in a firm or organization 
   - [ ] It is a term characterising investments with low expected returns 
   - [x] it represents the potential benefits an individual, investor, or business misses out on when choosing one alternative over another 
  
 **Question 12**
-What characterizes a health economic evaluation?
+What characterizes a health economic evaluation? ✅
   - [ ] Systematic analyses of outcomes from randomized controlled trials including cost data and health-related quality of life
   - [ ] Comparisons of selected costs and benefits of two treatments 
   - [ ] A life-time follow-up on costs after implementation of a new health care treatment
   - [x] Systematic comparison of two or more alternative health care programmes regarding costs and consequences 
  
 **Question 13**
-Health economics is a tool for …
+Health economics is a tool for … ✅
   - [ ] … governments reorganizing the health care system 
   - [x] … applying economic analysis on activities that impact on people’s health 
   - [ ] … maximizing the budgets allocated to hospitals 
@@ -360,7 +360,7 @@ Which of the following characterizes a randomized controlled trial? ✅
  
 
 **Question 14**
-To meet health authorities’ need for a single measure of health benefits for systematic comparison to costs, health economists developed the QALY in the 1980’s and 1990’s. What is true about QALY? More than one statement can be correct.
+To meet health authorities’ need for a single measure of health benefits for systematic comparison to costs, health economists developed the QALY in the 1980’s and 1990’s. What is true about QALY? More than one statement can be correct. ✅
   - [ ] It is an instrument for measuring health outcomes in the American health insurance industry
   - [x] Originally developed to range between states death and full health, research has shown that the general public may consider some health states worse than death 
   - [x] Health gains from improved management of acute stroke can be compared with health gains from improved cancer care when applying the same QALY measurement
@@ -368,14 +368,14 @@ To meet health authorities’ need for a single measure of health benefits for s
   - [x] The measure combines experience of well-being and duration of health state 
  
 **Question 15**
-Cost-effectiveness analyses and cost-utility analyses present results as an ICER. What does the acronym stand for?
+Cost-effectiveness analyses and cost-utility analyses present results as an ICER. What does the acronym stand for? ✅
   - [ ] Incredible Cost-Earnings Ratio 
   - [x] Incremental Cost-Effectiveness Ratio 
   - [ ] Incremental Cost-Efficacy Ratio
   - [ ] Increasing Cost-Effectiveness Ratio 
 
 **Question 1**
-Which of the following statements about the attributable fraction among the exposed (AF) are correct? More than one statement can be correct. RR = Relative risk. More than one statement can be correct
+Which of the following statements about the attributable fraction among the exposed (AF) are correct? More than one statement can be correct. RR = Relative risk. More than one statement can be correct ✅
 - [x] AF is independent of the exposure prevalence 
 - [ ] AF is independent of RR 
 - [ ] AF decreases when RR increases 
@@ -384,28 +384,28 @@ Which of the following statements about the attributable fraction among the expo
 - [ ] AF decreases when the exposure prevalence increases 
 
 **Question 2**
-Suppose a chronic disease leads to 20% of health loss for an average of 20 years. It also leads to preterm death, 10 years too early on average. What is DALY (disability-adjusted life years lost) in this example?
+Suppose a chronic disease leads to 20% of health loss for an average of 20 years. It also leads to preterm death, 10 years too early on average. What is DALY (disability-adjusted life years lost) in this example? ✅
 - [ ] 10 years 
 - [ ] 2 years 
 - [ ] 4 years 
 - [x] 14 years 
 
 **Question 3**
-Suppose the relative risk of severe COVID-19 is 0.10 when contrasting vaccinated and unvaccinated individuals. What is the vaccine effectiveness?
+Suppose the relative risk of severe COVID-19 is 0.10 when contrasting vaccinated and unvaccinated individuals. What is the vaccine effectiveness? ✅
 - [x] 90% 
 - [ ] 75% 
 - [ ] 10% 
 - [ ] 25% 
 
 **Question 4**
-Suppose a chronic disease leads to 20% of health loss for an average of 20 years. It also leads to preterm death, 10 years too early on average. What is YLL (years of life lost) in this example?
+Suppose a chronic disease leads to 20% of health loss for an average of 20 years. It also leads to preterm death, 10 years too early on average. What is YLL (years of life lost) in this example? ✅
 - [x] 10 years 
 - [ ] 2 years 
 - [ ] 14 years 
 - [ ] 4 years 
 
 **Question 5**
-Which of the following statements about the population attributable fraction (PAF) are correct? More than one statement can be correct. RR = Relative risk. More than one statement can be correct
+Which of the following statements about the population attributable fraction (PAF) are correct? More than one statement can be correct. RR = Relative risk. More than one statement can be correct ✅
 - [x] PAF increases when RR increases 
 - [ ] PAF decreases when the exposure prevalence increases 
 - [ ] PAF is independent of the exposure prevalence 
@@ -414,7 +414,7 @@ Which of the following statements about the population attributable fraction (PA
 - [ ] PAF is independent of RR 
 
 **Question 6**
-Which of the following statement are true about YLL (years of life lost) in a population? More than one statement can be correct
+Which of the following statement are true about YLL (years of life lost) in a population? More than one statement can be correct 
 - [x] YLL increases the more fatal the disease is 
 - [ ] YLL increases the more disability the disease leads to 
 - [ ] At a given case fatality, YLL increases with later onset 
@@ -422,84 +422,84 @@ Which of the following statement are true about YLL (years of life lost) in a po
 - [x] At a given case fatality, YLL increases with younger onset 
 
 **Question 7**
-What does the life expectancy measure?
+What does the life expectancy measure? ✅
 - [ ] Average age of people dying last year 
 - [x] Expected length of life among newborns exposed to current mortality rates in society 
 - [ ] Expected length of life among newborns exposed to future mortality rates in society 
 - [ ] Average length of life for people who were born 100 years ago 
 
 **Question 8**
-What does the heritability coefficient measure?
+What does the heritability coefficient measure? ✅
     - [ ] Proportion of cases that would disappear if everyone had a favourable lifestyle 
     - [ ] Proportion of cases that would disappear if everyone had low genetic risk 
     - [ ] Proportion of variance in disease risk that can be attributed to lifestyle factors 
     - [x] Proportion of variance in disease risk that can be attributed to genetic factors 
 
 **Question 9**
-Suppose a chronic disease leads to 20% of health loss for an average of 20 years. It also leads to preterm death, 10 years too early on average. What is YLD (years lost due to disability) in this example?
+Suppose a chronic disease leads to 20% of health loss for an average of 20 years. It also leads to preterm death, 10 years too early on average. What is YLD (years lost due to disability) in this example? ✅
     - [x] 4 years 
     - [ ] 2 years 
     - [ ] 10 years 
     - [ ] 14 years 
 
 **Question 10**
-Suppose a community-based intervention decreases the incidence rate from 20 to 15 cases per 1000 person-years. What fraction of all cases in the population will be prevented?
+Suppose a community-based intervention decreases the incidence rate from 20 to 15 cases per 1000 person-years. What fraction of all cases in the population will be prevented? ✅
     - [x] 25% 
     - [ ] 50% 
     - [ ] 75% 
     - [ ] 20%
 
 **Question 1**
-Reflexivity of the researchers means:
+Reflexivity of the researchers means: ✅
     - The researcher reflects upon the results and decides if the findings look plausible 
     - The researcher reflects upon the data collection method and if data could have been collected in an easier way 
     - The extent to which the researcher can mirror the body language of the research participants during an interview 
     - **The researcher examines own judgments, practices, and belief systems that may affect the research**
 
 **Question 2**
-How can you decide on the sample size in qualitative research?
+How can you decide on the sample size in qualitative research? ✅
   - **An adequate sample size for qualitative studies depends on information power. This indicates for example that the more information the sample holds, relevant for the actual study the less participants are needed**
   - Multiply the number of interviews you have conducted prior to your research project with the number of questions in your interview guide and divide with the number of researchers in your research group 
   - This is not necessary in qualitative studies. I wait and see how many participants I have time to approach 
   - A sample size should be large enough to sufficiently describe the population of interest 
 
 **Question 3**
-Which of the following types of studies are considered a qualitative study?
+Which of the following types of studies are considered a qualitative study? ✅
     - Comparative study 
     - Case control study 
     - Cohort study 
     - **Ethnographic study**
 
 **Question 4**
-The review of the literature in qualitative research is
-    - Always conducted prior to the beginning of the study 
+The review of the literature in qualitative research is ✅
+    - **Always conducted prior to the beginning of the study** 
     - Never conducted prior to the beginning of the study 
     - Not necessary 
-    - **Sometimes conducted prior to the beginning of the study**
+    - Sometimes conducted prior to the beginning of the study
 
 **Question 5**
-What characterizes a qualitative study?
+What characterizes a qualitative study? ✅
     - C. Qualitative research is concerned with developing generalizable conclusions 
     - **A. Qualitative data is descriptive in nature and expressed in terms of language**
     - B. Qualitative data quantify quotes from the individual participant 
     - D. Qualitative research is characterized by results of high quality 
 
 **Question 6**
-What are the key elements in experimental design to evaluate research hypothesis?
+What are the key elements in experimental design to evaluate research hypothesis? ✅ (but wrong in reality)
     - Right experimental system; ethics approval; testing one variable at the time; appropriate controls; appropriate sample size; reproducibility 
     - Right experimental system; ethics approval; appropriate controls; appropriate sample size 
     - Right experimental system; appropriate controls; appropriate sample size; reproducibility 
     - **Right experimental system; testing one variable at the time; appropriate controls; appropriate sample size; reproducibility**
 
 **Question 7**
-The so called “3R rule” in the animal research stands for (involves) the following:
+The so called “3R rule” in the animal research stands for (involves) the following: ✅
     - **Replacement; Refinement; Reduction**
     - Replacement; Refinement; Rejection 
     - Replacement; Reflection; Reduction 
     - Replacement, Reduction, Recovery 
 
 **Question 8**
-Asking a question is the first step in experimental design and selecting research methodology. Which example of research questions listed below represents a good research question?
+Asking a question is the first step in experimental design and selecting research methodology. Which example of research questions listed below represents a good research question? ✅
     - Is there a connection between age and cancer? 
     - Does age affects cancer? 
     - **What is an impact of age on cancer occurrence?**
@@ -513,28 +513,28 @@ Which of the statements related to the research method approaches applied in pre
     - **Quantitative research methods focused on numerical data and statistical analysis are mostly applied in pre-clinical studies.**
 
 **Question 10**
-What are core elements of research integrity?
+What are core elements of research integrity? ✅
     - Honesty; rigor; care and respect for all participants and subjects of the research 
     - Competitiveness; transparency and open communication; care and respect for all participants and subjects of the research 
     - **Honesty; rigor; transparency and open communication; care and respect for all participants and subjects of the research**
     - Rigor, transparency and open communication 
 
 **Question 11**
-What does Epoché mean in the modern philosophy of phenomenology?
+What does Epoché mean in the modern philosophy of phenomenology? ✅
     - It means the time you spend with the research participants 
     - It is the process where you use your pre-understanding of the phenomenon to ask in-depth questions to the person being interviewed 
     - It means “watch out” the interview data may not be reliable 
     - **It is a kind of “suspension of judgement” where own assumptions and beliefs are blocked in order to explain a phenomenon in terms of its own inherent system of meaning**
 
 **Question 12**
-Questions of a qualitative interview guide are characterized by?
+Questions of a qualitative interview guide are characterized by? ✅
     - **Open questions that primarily seeks answers to “what, how, why etc.”**
     - Long questions with medical terminology 
     - Questions you clearly can answer “yes” or “no” to 
     - Leading the participant to answer in the direction of the researchers’ preconceptions 
 
 **Question 13**
-Triangulation means?
+Triangulation means? ✅
     - Long interviews or long-lasting engagement in the field with participants 
     - **Using different data sources, investigators or methods of data collection**
     - A focus group interview with three participants 
@@ -548,15 +548,15 @@ Qualitative research seeks answers to questions about:
     - How the quality assessment looks like in clinical trials 
 
 **Question 15**
-Which of statements related to pre-clinical and clinical research listed below is correct?
-    - **Both pre-clinical and clinical studies have to be performed according to previously established protocol**
+Which of statements related to pre-clinical and clinical research listed below is correct? ✅
+    - Both pre-clinical and clinical studies have to be performed according to previously established protocol
     - Only clinical research involves studies using human material, while in pre-clinical studies animal models are mostly applied 
-    - Different experimental methods can be applied in pre-clinical research, while in clinical studies the established protocol has to be followed without any changes 
+    - **Different experimental methods can be applied in pre-clinical research, while in clinical studies the established protocol has to be followed without any changes**
     - If the results are inconclusive, both pre-clinical and clinical studies can be repeated 
 
 **Question 16**
-Which approvals are required in pre-clinical studies?
-    - Ethical permit for medical research involving human subjects; ethical permit for research using animals and training in animal work (theory and practice)
-    - **Ethical permit for research using animals**
+Which approvals are required in pre-clinical studies? ✅
+    - **Ethical permit for medical research involving human subjects; ethical permit for research using animals and training in animal work (theory and practice)**
+    - Ethical permit for research using animals
     - Ethical permit for medical research involving human subjects
     - Ethical permit for research using animals and training in animal work (theory and practice)

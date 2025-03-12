@@ -5,6 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Methodology Flash Cards</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+    @media (max-width: 600px) {
+        .container {
+            padding: 0.5rem;
+        }
+        .card-actions button {
+            width: 100%;
+            margin: 0.5rem 0;
+        }
+        .navigation {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    /* Make flashcard container nicer */
+    .flashcard-container {
+        margin: 1rem 0;
+        padding: 1rem;
+        border-radius: 4px;
+        background-color: #fafafa;
+        overflow: visible !important;
+        max-height: none !important;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Question styling */
+    #question-text {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    /* Option styling */
+    .option {
+        background-color: #f9f9f9;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+    .option:hover {
+        background-color: #eee;
+    }
+    .option.correct {
+        background-color: #d4f8d4;
+        border: 1px solid #52b788;
+    }
+    .option.wrong {
+        background-color: #ffdce0;
+        border: 1px solid #ff5a5f;
+    }
+
+    .options-container {
+        overflow: visible;
+        max-height: none;
+    }
+
+    body {
+        background-color: #f5f6fa;
+        font-family: 'Open Sans', sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    .scoreboard {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        text-align: center;
+        font-weight: 500;
+    }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -30,15 +104,15 @@
                         <p id="question-text"></p>
                         <div id="front-options" class="options-container"></div>
                     </div>
-                    <div class="card-back">
-                        <h2>Answer</h2>
-                        <div id="answer-options" class="options-container"></div>
-                    </div>
                 </div>
             </div>
             <div class="card-actions">
-                <button id="flip-btn">Flip to See Answer</button>
+                <button id="flip-btn">Show Answer</button>
                 <button id="shuffle-btn">Shuffle Cards</button>
+            </div>
+            <div class="scoreboard">
+                <span id="score-correct">0</span> correct |
+                <span id="score-wrong">0</span> wrong
             </div>
         </main>
         
