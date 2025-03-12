@@ -224,9 +224,9 @@ Suppose the basic reproduction number for an infectious disease is 4.0 and no re
 
 **Question 18**  
 Suppose you observe 10 cases among 50 exposed and 10 cases among 100 unexposed persons during one year of follow up. What is the odds ratio?  
-- **1.0**  
-- 1.5  
-- 2.25  
+- 1.0  
+- 1.5
+- **2.25**  
 - 2.0
 
 **Question 19**  
@@ -252,8 +252,8 @@ Among the patients with stroke treated actively in a clinical trial, 5% died wit
 
 **Question 30**  
 Suppose you observed 10 cases among 50 untreated and 10 cases among 100 treated persons during one year of follow up. What is NNT (Numbers Needed to Treat)?  
-    - 10  
-    - **2.0**  
+    - **10**  
+    - 2.0
     - 1.0  
     - 5.0
 
@@ -279,24 +279,12 @@ Randomized controlled trials provide strong evidence that an observed effect is 
   - [ ] the exposure level and the outcome are measured at the same time 
 
 **Question 5**
-What is the total person-time at risk in the following study of mortality among 5 subjects?
-Subject 1: Followed for 10 years, alive.
-Subject 2: Followed for 10 years, had a myocardial infarction after 4 years.
-Subject 3: Followed for 5 years, died.
-Subject 4: Followed for 3 years, dropped-out, died after 5 years.
-Subject 5: Followed for 7 years, emigrated.
+What is the total person-time at risk in the following study of mortality among 5 subjects Subject 1: Followed for 10 years, alive. Subject 2: Followed for 10 years, had a myocardial infarction after 4 years. Subject 3: Followed for 5 years, died. Subject 4: Followed for 3 years, dropped-out, died after 5 years. Subject 5: Followed for 7 years, emigrated.
   - [ ] 31 person-years 
   - [ ] 37 person-years 
   - [x] 35 person-years 
   - [ ] 29 person-years 
- 
-**Question 6**
-Study the DAG below. What do you need to adjust for to obtain the total effect of intrauterine growth restriction on atrial fibrillation? (cant add image. Imagine it...)
-  - [ ] The total effect can’t be estimated 
-  - [ ] Diabetes, hypertension weight, height and CVD 
-  - [ ] Maternal SES 
-  - [x] Sex, Race and Individual SES 
-  - [ ] Birth weight 
+
  
 **Question 7**
 Which of these statements is based on counterfactual reasoning? ✅
@@ -305,30 +293,7 @@ Which of these statements is based on counterfactual reasoning? ✅
   - [x] John died of a heart attack. If he hadn’t smoked he wouldn’t have. Therefore, smoking causes heart attacks 
   - [ ] Before John died of a heart attack, he smoked a cigarette. Therefore, smoking caused John’s heart attack 
   - [ ] Smoking causes pathological processes in the coronary vessels. Therefore, smoking causes heart attacks 
- 
-**Question 8**
-In which of the following graphs would adjustment for U introduce bias? (cant import image. Imagine it...)
-  - [ ] C 
-  - [ ] A
-  - [ ] D 
-  - [ ] A and B 
-  - [x] B 
- 
-**Question 9**
-In this DAG there is a box around variables that have been conditioned on (adjusted for, or stratified on). Is there an open backdoor path between liver disease and lung cancer? (can't import image)
-  - [ ] Yes, through yellow fingers and smoking 
-  - [ ] Yes, the lack of an arrow implies a strong assumption of no association 
-  - [x] Yes, conditioning on the collider A opens a path 
-  - [ ] No, the conditioning on A blocks the path between liver disease and lung cancer 
-  - [ ] No, smoking is a collider 
- 
-**Question 10**
-Study the DAG below. A is an exposure, and Y is the outcome. What do you need to adjust for to obtain the total effect of A on Y? (Pic not included hehe)
-  - [ ] L, it is a confounder 
-  - [ ] Y 
-  - [x] Nothing 
-  - [ ] L, it is a mediator 
-  - [ ] The total effect can’t be established under this DAG 
+
  
 **Question 11**
 Economist sometimes talks about opportunity costs – what do they mean by that? More than one statement can be correct. ✅
@@ -560,3 +525,108 @@ Which approvals are required in pre-clinical studies? ✅
     - Ethical permit for research using animals
     - Ethical permit for medical research involving human subjects
     - Ethical permit for research using animals and training in animal work (theory and practice)
+
+**Question 1**
+Which of the following steps are included in the making of a systematic review? ✅
+- Select studies, assess study quality, and extract data 
+- Formulate a question and develop a protocol 
+- Conduct a literature search 
+- **All of the possible answers **
+ 
+**Question 2**
+Which of the following statements regarding the systematic review search are correct?
+- **Incomplete searches reduce the reliability and applicability of the review´s findings**
+- **At least two bibliographic databases should be searched**
+- You should only use the PICO-framework to structure all type of review questions when you conduct a systematic review
+- **Systematic review look across a wide variety of sources**
+ 
+**Question 3**
+Which reporting guidance and critical appraisal-tool of already created systematic reviews could be used? 
+- STROBE 
+- **PRISMA**
+- **AMSTAR**
+- GRADE 
+ 
+**Question 4**
+Where can the protocol of a systematic review be prospectively registered?
+- PubMed 
+- **PROSPERO** 
+- PRISMA 
+- Health Research Council 
+ 
+**Question 5**
+Which of the following statements regarding the systematic review process and use are correct?
+- You do not need to assess risk of bias in high quality systematic reviews
+- **You need to quality check a systematic review, as with any study, before using them**
+- If a systematic review does not include a meta-analysis it can’t be trusted
+- **You need to prespecify your including- and exclusion criteria, as well as your outcomes, before you start the search if you are conducting a systematic review**
+
+**Question 1**  
+What does it mean if a causal diagram is "acyclic"?  
+- It contains cycles or loops.  
+- **It does not contain any cycles or loops.**  
+- It represents only direct relationships.  
+- It has only one arrow per node.
+
+**Question 2**  
+In a Directed Acyclic Graph, what do nodes typically represent?  
+- Statistical tests  
+- **Variables**  
+- Confounding bias  
+- Effect sizes  
+
+**Question 3**  
+What type of relationship is represented by an arrow in a DAG?  
+- Association without direction  
+- Correlation  
+- **A causal relationship**  
+- Statistical significance  
+
+**Question 4**  
+Which of the following statements best describes a collider in a DAG?  
+- A variable that causes at least two other variables  
+- A variable caused by exactly one other variable  
+- **A variable caused by two or more other variables**  
+- A variable unrelated to other variables  
+
+**Question 5**  
+What bias occurs specifically due to conditioning on a collider?  
+- Selection bias  
+- Information bias  
+- **Collider stratification bias**  
+- Confounding bias  
+
+**Question 6**  
+Which of the following best describes a confounder in a DAG?  
+- A variable caused by the exposure only  
+- **A variable that causes both exposure and outcome**  
+- A variable caused by the outcome only  
+- A variable unrelated to exposure and outcome  
+
+**Question 7**  
+What is a "backdoor path" in the context of a DAG?  
+- A path following only causal arrows forward  
+- **A non-causal path linking exposure and outcome through a common cause**  
+- A direct causal path from exposure to outcome  
+- A cycle connecting exposure and outcome  
+
+**Question 8**  
+What does adjusting for a mediator in a DAG typically do to the estimated causal effect?  
+- Correctly removes confounding bias  
+- **Biases the causal estimate toward the null**  
+- Provides an unbiased estimate of the causal effect  
+- Increases the generalizability of findings  
+
+**Question 9**  
+Which of these describes a "d-separation" criterion in a DAG?  
+- It identifies the presence of mediation only  
+- It describes cycles in a causal diagram  
+- **It helps determine whether variables are conditionally independent**  
+- It calculates the strength of associations  
+
+**Question 10**  
+Why are DAGs useful in epidemiology?  
+- They guarantee randomized exposure assignment  
+- They ensure statistical significance of findings  
+- **They help visualize and manage confounding and selection bias**  
+- They automatically adjust for collider bias

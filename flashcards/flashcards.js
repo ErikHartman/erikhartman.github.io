@@ -40,6 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
         './all_quizzes.md'
     ];
     
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
     // Initialize flash cards
     function initFlashcards() {
         // Show loading indicator first
@@ -53,10 +60,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (cards.length > 0) {
                     allCards = cards;
                     console.log(`Loaded ${allCards.length} cards from markdown files`);
+                    shuffleArray(allCards);
                 } else {
                     // Fall back to built-in data if fetching fails
                     allCards = [...fallbackQuizData];
                     console.log(`Using fallback data with ${allCards.length} cards`);
+                    shuffleArray(allCards);
                 }
                 currentCards = [...allCards];
                 
@@ -87,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error("Error loading quiz files:", error);
                 // Fall back to built-in data
                 allCards = [...fallbackQuizData];
+                shuffleArray(allCards);
                 currentCards = [...allCards];
                 updateCardDisplay();
                 updateCardCounter();
