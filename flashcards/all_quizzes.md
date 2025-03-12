@@ -13,7 +13,7 @@ You are concerned about the impact of a new disease on the health care system. W
 - [ ] Increase in incidence, out-migration of cases, in-migration of susceptible people
 
 ## Question 3
-A disease has a prevalence of 5% in the population and you have designed a screening test for this disease with a sensitivity of 99% and a specificity of 98%. Assume you test 10000 individuals. You want to see if the same screening test works equally well in another population where the disease has a prevalence of 50%. What will be the PPV of your test in this new population?
+A disease has a prevalence of 5% in the population and you have designed a screening test for this disease with a sensitivity of 99% and a specificity of 98%. Assume you test 10000 individuals. You want to see if the same screening test works equally well in another population where the disease has a prevalence of 50%. What will be the PPV of your test in this new population? ✅
 - [x] The PPV will be higher since the prevalence is higher in the new population
 - [ ] The PPV will be the same as in the first population since the test is the same
 - [ ] The PPV will be lower since the prevalence is higher in the new population
@@ -72,13 +72,20 @@ General conclusions obtained from integration of specific observations is an exa
 - [ ] …counterfactual reasoning
 - [ ] …deduction
 
+## Question 10
+Attributing specific cases of a disease to occupational causes would be an example of…
+- [ ] …refutationism
+- [ ] …induction
+- [ ] …counterfactual reasoning
+- [x] …deduction
+
 
 ## Question 13
-You are about to do a project. Why is it – seen from a scientifically theoretical as well as practical perspective – important to have a good Material & Methods section in your protocol?
+You are about to do a project. Why is it – seen from a scientifically theoretical as well as practical perspective – important to have a good Material & Methods section in your protocol? ✅
 - [ ] The section is required for inclusion in your PhD thesis at Lund University
-- [x] The section ensures that you have carefully considered how to collect, store, analyse and publish your results
+- [] The section ensures that you have carefully considered how to collect, store, analyse and publish your results
 - [ ] The section is required for publication according to the IMRAD model, which most scientific journals recommend in their instructions to authors
-- [ ] The section is your ‘cookbook’ for how you want to conduct the project, to later remember what you did, and to ensure reproducibility
+- [x ] The section is your ‘cookbook’ for how you want to conduct the project, to later remember what you did, and to ensure reproducibility
 
 ## Question 14
 What is a surrogate outcome?
@@ -131,75 +138,68 @@ Which of the following study design is rated as the highest level of clinical ev
 - [ ] Cross-sectional
 
 ## Question 14
-You are assessing the quality of an RCT and focus among other things on?
+You are assessing the quality of an RCT and focus among other things on? ✅
 - [ ] All the other answers
 - [ ] Whether it is published in a high-ranked scientific journal
 - [ ] Whether the abstract corresponds with the main text of the article
 - [x] Inclusion and follow-up rates
 
 ## Question 15
-What does it mean that a study is totally blinded?
+What does it mean that a study is totally blinded? ✅
 - [ ] The participants and assessors are blinded
 - [ ] The participants and the investigators are blinded
 - [x] The participants, investigators and assessors are blinded
 - [ ] The participants are blinded
 
 **Question 2**  
-Which are the three basic mixed method study designs?  
+Which are the three basic mixed method study designs? ✅
 - Embedded mixed method, Exploratory sequential mixed methods, Exploratory sequential mixed method  
 - Convergent parallel mixed method, Exploratory sequential mixed methods, Multiphase mixed methods  
 - **Convergent parallel mixed method, Explanatory sequential mixed methods, Exploratory sequential mixed method**  
 - Participatory design, Convergent parallel mixed method, Exploratory sequential mixed methods
 
+## Question 5
+You need an explicit research protocol (before starting) if you are planning? ✅
+  - To do a case-control study 
+  - To do a screening study 
+  - **All of the mentioned studies**
+  - To do a cohort study 
+
 
 **Question 4**  
-Which research approach has qualitative research and quantitative research respectively?  
+Which research approach has qualitative research and quantitative research respectively? ✅
 - exploring and understanding the meaning by examining the relationship among variables; testing objective theories of phenomenon for individuals and groups  
 - testing objective theories by examining the relationship among variables; exploring and understanding the meaning of phenomenon for individuals and groups  
 - exploring and understanding the meaning by testing objective theories; examining the relationship of phenomenon for individuals and groups among variables  
 - **exploring and understanding the meaning of phenomenon for individuals and groups; testing objective theories by examining the relationship among variables**
 
 **Question 5**  
-When is qualitative data collected in Convergent parallel mixed method, Explanatory sequential mixed method and Exploratory sequential mixed method in relation to quantitative data collection?  
+When is qualitative data collected in Convergent parallel mixed method, Explanatory sequential mixed method and Exploratory sequential mixed method in relation to quantitative data collection? ✅
 - After before and in parallel  
-- In parallel, after and before  
-- **Before, after and in parallel**  
+- **In parallel, after and before**
+- Before, after and in parallel  
 - After, in parallel and before
 
 **Question 6**  
-Which of the following is “a type of ratio where the numerator is included in the denominator”?  
+Which of the following is “a type of ratio where the numerator is included in the denominator”?
 - …incidence rate  
 - …index  
 - …odds ratio  
 - **…proportion**
 
 **Question 7**  
-Suppose you observe 10 cases among 50 exposed and 10 cases among 100 unexposed persons during one year of follow up. What is the risk difference?  
-- 10 percentage points  
+Suppose you observe 10 cases among 50 exposed and 10 cases among 100 unexposed persons during one year of follow up. What is the risk difference? ✅
+- **10 percentage points**
 - 1.5 percentage points  
-- **5.0 percentage points**  
+- 5.0 percentage points  
 - 1.0 percentage points
 
 **Question 9**  
-Suppose you observe 4 new cases of disease during 50 months of follow up. What is the incidence rate?  
+Suppose you observe 4 new cases of disease during 50 months of follow up. What is the incidence rate? ✅
 - 4%  
 - 8%  
 - 0.04 cases per person and month  
 - **0.08 cases per person and month**
-
-**Question 12**  
-When is qualitative data collected in Convergent parallel mixed method, Explanatory sequential mixed method and Exploratory sequential mixed method in relation to quantitative data collection?  
-- In parallel, after and before  
-- **Before, after and in parallel**  
-- After, in parallel and before  
-- After before and in parallel
-
-**Question 13**  
-Which research approach has qualitative research and quantitative research respectively?  
-- **exploring and understanding the meaning of phenomenon for individuals and groups; testing objective theories by examining the relationship among variables**  
-- testing objective theories by examining the relationship among variables; exploring and understanding the meaning of phenomenon for individuals and groups  
-- exploring and understanding the meaning by testing objective theories; examining the relationship of phenomenon for individuals and groups among variables  
-- exploring and understanding the meaning by examining the relationship among variables; testing objective theories of phenomenon for individuals and groups
 
 **Question 14**  
 What kind of analysis can be performed from quantitative methods, mixed methods and qualitative methods?  
@@ -243,22 +243,8 @@ The difference between the odds ratio and the corresponding risk ratio gets larg
 - …the less common the exposure is  
 - **…the more common the outcome is**
 
-**Question 22**  
-Which research approach has qualitative research and quantitative research respectively?  
-- testing objective theories by examining the relationship among variables; exploring and understanding the meaning of phenomenon for individuals and groups  
-- **exploring and understanding the meaning of phenomenon for individuals and groups; testing objective theories by examining the relationship among variables**  
-- exploring and understanding the meaning by testing objective theories; examining the relationship of phenomenon for individuals and groups among variables  
-- exploring and understanding the meaning by examining the relationship among variables; testing objective theories of phenomenon for individuals and groups
-
-**Question 24**  
-When is qualitative data collected in Convergent parallel mixed method, Explanatory sequential mixed method and Exploratory sequential mixed method in relation to quantitative data collection?  
-- Before, after and in parallel  
-- After before and in parallel  
-- In parallel, after and before  
-- **After, in parallel and before**
-
 **Question 28**  
-Among the patients with stroke treated actively in a clinical trial, 5% died within 90 days. What type of measure is this?  
+Among the patients with stroke treated actively in a clinical trial, 5% died within 90 days. What type of measure is this?
 - …risk  
 - …incidence rate  
 - …prevalence  
@@ -275,8 +261,8 @@ Suppose you observed 10 cases among 50 untreated and 10 cases among 100 treated 
 Two different cohorts have investigated the association between birth weight and atrial fibrillation, the Helsinki Birth Cohort Study (HBCS) and the Atherosclerosis Risk In Communities (ARIC) Study. In HBCS participants were enrolled and birth weight data was collected through study of medical records at the time of birth in 1930-1940. All live births in the relevant years of inclusion that occurred in Helsinki were included. In ARIC participants were enrolled as adults, and birth weight data was collected at the time of enrollment, through questionnaires. Participants were followed until first diagnosis of atrial fibrillation. Which cohort was prospective?
   - [ ] None 
   - [ ] HBCS 
-  - [ ] Both 
-  - [x] ARIC 
+  - [x] Both 
+  - [ ] ARIC 
  
 **Question 3**
 Two different cohorts have investigated the association between birth weight and atrial fibrillation, the Helsinki Birth Cohort Study (HBCS) and the Atherosclerosis Risk In Communities (ARIC) Study. In HBCS participants were enrolled and birth weight data was collected through study of medical records at the time of birth in 1930-1940. All live births in the relevant years of inclusion that occurred in Helsinki were included. In ARIC participants were enrolled as adults, and birth weight data was collected at the time of enrollment, through questionnaires. Participants were followed until first diagnosis of atrial fibrillation. Which method of recruitment and data collection will result in the least amount of bias?
@@ -363,7 +349,14 @@ Health economics is a tool for …
   - [ ] … governments reorganizing the health care system 
   - [x] … applying economic analysis on activities that impact on people’s health 
   - [ ] … maximizing the budgets allocated to hospitals 
-  - [ ] … understanding the accounting systems in hospitals 
+  - [ ] … understanding the accounting systems in hospitals
+
+**Question 14**
+Which of the following characterizes a randomized controlled trial? ✅
+  - It should be totally (=double) blinded 
+  - It should include placebo 
+  - It should include at least 300 participants 
+  - **It should include a control group**
  
 
 **Question 14**
