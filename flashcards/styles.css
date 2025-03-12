@@ -15,6 +15,8 @@ body {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
+    background: linear-gradient(to bottom right, #ffffff, #f4f4f4);
+    border-radius: 12px;
 }
 
 header {
@@ -60,6 +62,7 @@ button {
     color: white;
     border: none;
     transition: background-color 0.3s;
+    border-radius: 8px;
 }
 
 button:hover {
@@ -195,4 +198,12 @@ footer {
     .flashcard-container {
         height: 300px;
     }
+}
+
+.scoreboard {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 1rem;
+    padding: 10px;
 }

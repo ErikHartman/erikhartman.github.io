@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let allCards = [];
     let currentCards = [];
     let currentCardIndex = 0;
+    let correctCount = 0;
+    let wrongCount = 0;
+    let answeredThisCard = false;
     
     // Fallback quiz data for direct file opening (without server)
     const fallbackQuizData = [
@@ -192,6 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Display current card
     function updateCardDisplay() {
+        answeredThisCard = false;
         if (currentCards.length === 0) {
             questionText.textContent = '';
             frontOptions.innerHTML = '';
@@ -214,34 +218,34 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Clear previous options
         frontOptions.innerHTML = '';
-        answerOptions.innerHTML = '';
         
         // Add options to front side (without highlighting the correct one)
         shuffledOptions.forEach((option, index) => {
             const optionElement = document.createElement('div');
             optionElement.classList.add('option');
             optionElement.textContent = `${String.fromCharCode(65 + index)}. ${option.text}`;
+            optionElement.addEventListener('click', () => {
+                if (answeredThisCard) return;
+                answeredThisCard = true;
+                if (option.isCorrect) {
+                    optionElement.classList.add('correct');
+                    correctCount++;
+                } else {
+                    optionElement.classList.add('wrong');
+                    wrongCount++;
+                    // Also highlight the correct one
+                    shuffledOptions.forEach((opt, i) => {
+                        if (opt.isCorrect) {
+                            frontOptions.querySelectorAll('.option')[i].classList.add('correct');
+                        }
+                    });
+                }
+                document.getElementById('score-correct').textContent = correctCount;
+                document.getElementById('score-wrong').textContent = wrongCount;
+            });
             frontOptions.appendChild(optionElement);
         });
-        
-        // Add options to back side (with the correct one highlighted)
-        shuffledOptions.forEach((option, index) => {
-            const optionElement = document.createElement('div');
-            optionElement.classList.add('option');
-            if (option.isCorrect) {
-                optionElement.classList.add('correct');
-            }
-            optionElement.textContent = `${String.fromCharCode(65 + index)}. ${option.text}`;
-            answerOptions.appendChild(optionElement);
-        });
-        
-        // Reset card to front side
-        if (flashcard.classList.contains('flipped')) {
-            flashcard.classList.remove('flipped');
-        }
     }
-
-    
     
     // Shuffle the cards
     function shuffleCards() {
@@ -256,7 +260,18 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Event listeners
     flipBtn.addEventListener('click', function() {
-        flashcard.classList.toggle('flipped');
+        if (answeredThisCard) return;
+        // Instead of flipping, just highlight the correct answer
+        const card = currentCards[currentCardIndex];
+        const optionElements = frontOptions.querySelectorAll('.option');
+        // Reset highlighting
+        optionElements.forEach(el => el.classList.remove('correct'));
+        // Highlight correct one
+        card.options.forEach((option, index) => {
+            if (option.isCorrect) {
+                optionElements[index].classList.add('correct');
+            }
+        });
     });
     
     prevBtn.addEventListener('click', function() {
@@ -276,7 +291,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     shuffleBtn.addEventListener('click', shuffleCards);
-    
     
     // Initialize
     initFlashcards();
