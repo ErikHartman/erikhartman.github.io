@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextBtn = document.getElementById('next-btn');
     const cardCounter = document.getElementById('card-counter');
     const loadingIndicator = document.getElementById('loading-indicator');
+    const incorrectList = document.getElementById('incorrect-list');
     
     // Flash cards data
     let allCards = [];
@@ -265,6 +266,11 @@ document.addEventListener('DOMContentLoaded', function() {
                             frontOptions.querySelectorAll('.option')[i].classList.add('correct');
                         }
                     });
+                    const li = document.createElement('li');
+                    li.textContent = card.question;
+                    // Optional: also include their chosen answer
+                    // li.textContent = `${card.question} (Your answer: ${option.text})`;
+                    incorrectList.appendChild(li);
                 }
                 document.getElementById('score-correct').textContent = correctCount;
                 document.getElementById('score-wrong').textContent = wrongCount;

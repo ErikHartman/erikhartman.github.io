@@ -200,6 +200,13 @@ footer {
     }
 }
 
+@media (max-width: 600px) {
+    .flashcard-container {
+        height: auto !important;
+        overflow-y: auto;
+    }
+}
+
 .scoreboard {
     background-color: #ffffff;
     border: 1px solid #ddd;
