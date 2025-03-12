@@ -1,11 +1,13 @@
 ---
 layout: page
 permalink: /repositories/
-title: repositories
+title: code & apps
 description:
 nav: true
 nav_order: 4
 ---
+# Apps
+- [🎓 Introduction to research methodology quiz](https://erikhartman.github.io/flashcards/index.html)
 
 # GitHub profile
 
