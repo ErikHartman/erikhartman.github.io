@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
     const shuffleBtn = document.getElementById('shuffle-btn');
-    const topicFilter = document.getElementById('topic-filter');
     const cardCounter = document.getElementById('card-counter');
     const loadingIndicator = document.getElementById('loading-indicator');
     
@@ -22,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Day 2: Epidemiology and Causality
         {
             id: 1,
-            topic: 'day2',
             question: 'You are about to start a new study and want to minimize bias. Which three types of bias exist?',
             options: [
                 { text: 'Information bias, Selection bias and Confounding', isCorrect: true },
@@ -99,23 +97,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Extract day from filename if possible
                 const dayMatch = filePath.match(/day(\d+)\.md$/i);
-                const defaultTopic = dayMatch ? `day${dayMatch[1]}` : 'unknown';
                 
                 // Extract cards using the parser
                 try {
                     const cards = QuizParser.parseMarkdown(markdown);
                     console.log(`Parsed ${cards.length} cards from ${filePath}`);
                     
-                    // If we have cards but no topics, set default
                     if (cards.length > 0) {
-                        cards.forEach(card => {
-                            if (card.topic === 'unknown') card.topic = defaultTopic;
-                        });
                         allQuizCards = allQuizCards.concat(cards);
                     } else {
                         console.warn(`No cards were parsed from ${filePath}`);
                         // Last resort - try manual parsing with regex
-                        const backupCards = manuallyParseMarkdown(markdown, defaultTopic);
+                        const backupCards = manuallyParseMarkdown(markdown);
                         if (backupCards.length > 0) {
                             console.log(`Manual parsing found ${backupCards.length} cards`);
                             allQuizCards = allQuizCards.concat(backupCards);
@@ -133,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Backup parser as last resort
-    function manuallyParseMarkdown(markdown, defaultTopic) {
+    function manuallyParseMarkdown(markdown) {
         const cards = [];
         let id = 1;
         
@@ -176,7 +169,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (options.length > 0) {
                     cards.push({
                         id: id++,
-                        topic: defaultTopic,
                         question: questionText,
                         options: options
                     });
@@ -211,6 +203,13 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const card = currentCards[currentCardIndex];
         
+        // Shuffle the card options
+        const shuffledOptions = [...card.options];
+        for (let i = shuffledOptions.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffledOptions[i], shuffledOptions[j]] = [shuffledOptions[j], shuffledOptions[i]];
+        }
+
         questionText.textContent = card.question;
         
         // Clear previous options
@@ -218,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
         answerOptions.innerHTML = '';
         
         // Add options to front side (without highlighting the correct one)
-        card.options.forEach((option, index) => {
+        shuffledOptions.forEach((option, index) => {
             const optionElement = document.createElement('div');
             optionElement.classList.add('option');
             optionElement.textContent = `${String.fromCharCode(65 + index)}. ${option.text}`;
@@ -226,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Add options to back side (with the correct one highlighted)
-        card.options.forEach((option, index) => {
+        shuffledOptions.forEach((option, index) => {
             const optionElement = document.createElement('div');
             optionElement.classList.add('option');
             if (option.isCorrect) {
@@ -241,19 +240,8 @@ document.addEventListener('DOMContentLoaded', function() {
             flashcard.classList.remove('flipped');
         }
     }
+
     
-    // Filter cards by topic
-    function filterCardsByTopic(topic) {
-        if (topic === 'all') {
-            currentCards = [...allCards];
-        } else {
-            currentCards = allCards.filter(card => card.topic === topic);
-        }
-        
-        currentCardIndex = 0;
-        updateCardDisplay();
-        updateCardCounter();
-    }
     
     // Shuffle the cards
     function shuffleCards() {
@@ -289,9 +277,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     shuffleBtn.addEventListener('click', shuffleCards);
     
-    topicFilter.addEventListener('change', function() {
-        filterCardsByTopic(this.value);
-    });
     
     // Initialize
     initFlashcards();

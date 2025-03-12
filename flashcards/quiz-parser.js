@@ -95,14 +95,8 @@ class QuizParser {
         
         // If we have options, create a card
         if (options.length > 0) {
-          // Determine the topic (day) from the context
-          const dayMatch = questionBlock.match(/Day\s+(\d+)/) || 
-                           title.match(/Day\s+(\d+)/) || 
-                           { index: -1, 1: "unknown" };
-          
           cards.push({
             id: id++,
-            topic: `day${dayMatch[1] || "unknown"}`,
             title: title.replace(/^Question\s*\d+[\s:]*/, '').trim(),
             question: questionText,
             options: options
@@ -166,8 +160,8 @@ class QuizParser {
     daySections.forEach(section => {
       if (!section.text) return;
       
-      const topic = `day${section.day}`;
-      const sectionCards = this.parseQuestionsInSection(section.text, topic, id);
+
+      const sectionCards = this.parseQuestionsInSection(section.text, id);
       id += sectionCards.length;
       cards.push(...sectionCards);
     });
@@ -178,10 +172,8 @@ class QuizParser {
   /**
    * Parse questions within a section
    */
-  static parseQuestionsInSection(text, topic, startId) {
-    // Delegate to the direct parsing method but set the topic
+  static parseQuestionsInSection(text, startId) {
     const cards = this.parseQuestionsDirectly(text);
-    cards.forEach(card => card.topic = topic);
     return cards;
   }
 }
