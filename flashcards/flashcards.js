@@ -4,10 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const questionText = document.getElementById('question-text');
     const frontOptions = document.getElementById('front-options');
     const answerOptions = document.getElementById('answer-options');
-    const flipBtn = document.getElementById('flip-btn');
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
-    const shuffleBtn = document.getElementById('shuffle-btn');
     const cardCounter = document.getElementById('card-counter');
     const loadingIndicator = document.getElementById('loading-indicator');
     
@@ -18,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let correctCount = 0;
     let wrongCount = 0;
     let answeredThisCard = false;
+    let userStates = [];
     
     // Fallback quiz data for direct file opening (without server)
     const fallbackQuizData = [
@@ -59,6 +58,22 @@ document.addEventListener('DOMContentLoaded', function() {
                     console.log(`Using fallback data with ${allCards.length} cards`);
                 }
                 currentCards = [...allCards];
+                
+                // Initialize a userStates entry per card
+                userStates = currentCards.map(card => {
+                    // Shuffle options once and store them
+                    const shuffled = [...card.options];
+                    for (let i = shuffled.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+                    }
+                    return {
+                        answered: false,
+                        chosenIndex: null,
+                        shuffledOptions: shuffled
+                    };
+                });
+                
                 updateCardDisplay();
                 updateCardCounter();
                 
@@ -195,7 +210,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Display current card
     function updateCardDisplay() {
-        answeredThisCard = false;
         if (currentCards.length === 0) {
             questionText.textContent = '';
             frontOptions.innerHTML = '';
@@ -205,28 +219,40 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
+        const state = userStates[currentCardIndex];
+        answeredThisCard = state.answered;
         const card = currentCards[currentCardIndex];
+        const shuffledOptions = state.shuffledOptions;  // Reuse stored shuffle
         
-        // Shuffle the card options
-        const shuffledOptions = [...card.options];
-        for (let i = shuffledOptions.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [shuffledOptions[i], shuffledOptions[j]] = [shuffledOptions[j], shuffledOptions[i]];
-        }
-
         questionText.textContent = card.question;
-        
-        // Clear previous options
         frontOptions.innerHTML = '';
         
-        // Add options to front side (without highlighting the correct one)
         shuffledOptions.forEach((option, index) => {
             const optionElement = document.createElement('div');
             optionElement.classList.add('option');
             optionElement.textContent = `${String.fromCharCode(65 + index)}. ${option.text}`;
+            
+            // If already answered, restore highlights
+            if (state.answered) {
+                if (index === state.chosenIndex) {
+                    optionElement.classList.add(option.isCorrect ? 'correct' : 'wrong');
+                }
+                if (!option.isCorrect && index === state.chosenIndex) {
+                    // highlight correct one
+                    shuffledOptions.forEach((opt, i) => {
+                        if (opt.isCorrect) {
+                            // We'll highlight this further down
+                        }
+                    });
+                }
+            }
+            
             optionElement.addEventListener('click', () => {
                 if (answeredThisCard) return;
                 answeredThisCard = true;
+                state.answered = true;
+                state.chosenIndex = index;
+                
                 if (option.isCorrect) {
                     optionElement.classList.add('correct');
                     correctCount++;
@@ -243,37 +269,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('score-correct').textContent = correctCount;
                 document.getElementById('score-wrong').textContent = wrongCount;
             });
+            
             frontOptions.appendChild(optionElement);
         });
-    }
-    
-    // Shuffle the cards
-    function shuffleCards() {
-        for (let i = currentCards.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [currentCards[i], currentCards[j]] = [currentCards[j], currentCards[i]];
+        
+        // If the card was previously answered and was wrong, highlight correct one
+        if (state.answered && !shuffledOptions[state.chosenIndex].isCorrect) {
+            shuffledOptions.forEach((opt, i) => {
+                if (opt.isCorrect) {
+                    frontOptions.querySelectorAll('.option')[i].classList.add('correct');
+                }
+            });
         }
-        currentCardIndex = 0;
-        updateCardDisplay();
-        updateCardCounter();
     }
     
     // Event listeners
-    flipBtn.addEventListener('click', function() {
-        if (answeredThisCard) return;
-        // Instead of flipping, just highlight the correct answer
-        const card = currentCards[currentCardIndex];
-        const optionElements = frontOptions.querySelectorAll('.option');
-        // Reset highlighting
-        optionElements.forEach(el => el.classList.remove('correct'));
-        // Highlight correct one
-        card.options.forEach((option, index) => {
-            if (option.isCorrect) {
-                optionElements[index].classList.add('correct');
-            }
-        });
-    });
-    
     prevBtn.addEventListener('click', function() {
         if (currentCardIndex > 0) {
             currentCardIndex--;
@@ -289,8 +299,6 @@ document.addEventListener('DOMContentLoaded', function() {
             updateCardCounter();
         }
     });
-    
-    shuffleBtn.addEventListener('click', shuffleCards);
     
     // Initialize
     initFlashcards();
