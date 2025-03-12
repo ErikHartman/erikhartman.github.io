@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Methodology Flash Cards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Research Methodology Flash Cards</h1>
+            <div id="loading-indicator">
+                <p>Loading questions... <span class="spinner"></span></p>
+            </div>
+            <div class="controls">
+                <div class="filters">
+                    <label for="topic-filter">Filter by Topic:</label>
+                    <select id="topic-filter">
+                        <option value="all">All Topics</option>
+
+                    </select>
+                </div>
+                <div class="navigation">
+                    <button id="prev-btn" disabled>Previous</button>
+                    <span id="card-counter">Card 1 of 1</span>
+                    <button id="next-btn">Next</button>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <div class="flashcard-container">
+                <div class="flashcard" id="current-card">
+                    <div class="card-front">
+                        <p id="question-text"></p>
+                        <div id="front-options" class="options-container"></div>
+                    </div>
+                    <div class="card-back">
+                        <h2>Answer</h2>
+                        <div id="answer-options" class="options-container"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-actions">
+                <button id="flip-btn">Flip to See Answer</button>
+                <button id="shuffle-btn">Shuffle Cards</button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Created for Introduction to Research Methodology course</p>
+        </footer>
+    </div>
+    
+    <!-- Load parser before main script -->
+    <script src="quiz-parser.js"></script>
+    <script src="flashcards.js"></script>
+</body>
+</html>
