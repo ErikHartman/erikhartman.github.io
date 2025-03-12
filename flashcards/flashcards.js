@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentCardIndex = 0;
     let correctCount = 0;
     let wrongCount = 0;
-    let answeredThisCard = false;
     let userStates = [];
     
     // Fallback quiz data for direct file opening (without server)
@@ -78,8 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
                     }
                     return {
-                        answered: false,
-                        chosenIndex: null,
+                        selectedIndexes: [],
                         shuffledOptions: shuffled
                     };
                 });
@@ -231,7 +229,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         const state = userStates[currentCardIndex];
-        answeredThisCard = state.answered;
         const card = currentCards[currentCardIndex];
         const shuffledOptions = state.shuffledOptions;  // Reuse stored shuffle
         
@@ -242,55 +239,34 @@ document.addEventListener('DOMContentLoaded', function() {
             const optionElement = document.createElement('div');
             optionElement.classList.add('option');
             optionElement.textContent = `${String.fromCharCode(65 + index)}. ${option.text}`;
-            
-            // If already answered, restore highlights
-            if (state.answered) {
-                if (index === state.chosenIndex) {
-                    optionElement.classList.add(option.isCorrect ? 'correct' : 'wrong');
-                }
-                if (!option.isCorrect && index === state.chosenIndex) {
-                    // highlight correct one
-                    shuffledOptions.forEach((opt, i) => {
-                        if (opt.isCorrect) {
-                            // We'll highlight this further down
-                        }
-                    });
-                }
+
+            // If already selected, restore highlight
+            if (state.selectedIndexes.includes(index)) {
+                optionElement.classList.add(option.isCorrect ? 'correct' : 'wrong');
             }
-            
+
             optionElement.addEventListener('click', () => {
-                if (answeredThisCard) return;
-                answeredThisCard = true;
-                state.answered = true;
-                state.chosenIndex = index;
-                
-                if (option.isCorrect) {
-                    optionElement.classList.add('correct');
-                    correctCount++;
-                } else {
-                    optionElement.classList.add('wrong');
-                    wrongCount++;
-                    // Also highlight the correct one
-                    shuffledOptions.forEach((opt, i) => {
-                        if (opt.isCorrect) {
-                            frontOptions.querySelectorAll('.option')[i].classList.add('correct');
-                        }
-                    });
-                    const li = document.createElement('li');
-                    li.textContent = card.question;
-                    // Optional: also include their chosen answer
-                    // li.textContent = `${card.question} (Your answer: ${option.text})`;
-                    incorrectList.appendChild(li);
+                // Only proceed if this option not yet selected
+                if (!state.selectedIndexes.includes(index)) {
+                    state.selectedIndexes.push(index);
+
+                    if (option.isCorrect) {
+                        optionElement.classList.add('correct');
+                        correctCount++;
+                    } else {
+                        optionElement.classList.add('wrong');
+                        wrongCount++;
+                    }
+                    document.getElementById('score-correct').textContent = correctCount;
+                    document.getElementById('score-wrong').textContent = wrongCount;
                 }
-                document.getElementById('score-correct').textContent = correctCount;
-                document.getElementById('score-wrong').textContent = wrongCount;
             });
-            
+
             frontOptions.appendChild(optionElement);
         });
-        
+
         // If the card was previously answered and was wrong, highlight correct one
-        if (state.answered && !shuffledOptions[state.chosenIndex].isCorrect) {
+        if (state.selectedIndexes.some(index => !shuffledOptions[index].isCorrect)) {
             shuffledOptions.forEach((opt, i) => {
                 if (opt.isCorrect) {
                     frontOptions.querySelectorAll('.option')[i].classList.add('correct');

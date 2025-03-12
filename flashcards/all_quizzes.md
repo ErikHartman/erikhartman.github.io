@@ -83,9 +83,9 @@ Attributing specific cases of a disease to occupational causes would be an examp
 ## Question 13
 You are about to do a project. Why is it – seen from a scientifically theoretical as well as practical perspective – important to have a good Material & Methods section in your protocol? ✅
 - [ ] The section is required for inclusion in your PhD thesis at Lund University
-- [] The section ensures that you have carefully considered how to collect, store, analyse and publish your results
+- [ ] The section ensures that you have carefully considered how to collect, store, analyse and publish your results
 - [ ] The section is required for publication according to the IMRAD model, which most scientific journals recommend in their instructions to authors
-- [x ] The section is your ‘cookbook’ for how you want to conduct the project, to later remember what you did, and to ensure reproducibility
+- [x] The section is your ‘cookbook’ for how you want to conduct the project, to later remember what you did, and to ensure reproducibility
 
 ## Question 14
 What is a surrogate outcome?
@@ -258,14 +258,14 @@ Suppose you observed 10 cases among 50 untreated and 10 cases among 100 treated 
     - 5.0
 
 **Question 1**
-Two different cohorts have investigated the association between birth weight and atrial fibrillation, the Helsinki Birth Cohort Study (HBCS) and the Atherosclerosis Risk In Communities (ARIC) Study. In HBCS participants were enrolled and birth weight data was collected through study of medical records at the time of birth in 1930-1940. All live births in the relevant years of inclusion that occurred in Helsinki were included. In ARIC participants were enrolled as adults, and birth weight data was collected at the time of enrollment, through questionnaires. Participants were followed until first diagnosis of atrial fibrillation. Which cohort was prospective? ✅
+Two different cohorts have investigated the association between birth weight and atrial fibrillation, the Helsinki Birth Cohort Study (HBCS) and the Atherosclerosis Risk In Communities (ARIC) Study. In HBCS participants were enrolled and birth weight data was collected through study of medical records at the time of birth in 1930 to 1940. All live births in the relevant years of inclusion that occurred in Helsinki were included. In ARIC participants were enrolled as adults, and birth weight data was collected at the time of enrollment, through questionnaires. Participants were followed until first diagnosis of atrial fibrillation. Which cohort was prospective? ✅
   - [ ] None 
   - [ ] HBCS 
   - [x] Both 
   - [ ] ARIC 
  
 **Question 3**
-Two different cohorts have investigated the association between birth weight and atrial fibrillation, the Helsinki Birth Cohort Study (HBCS) and the Atherosclerosis Risk In Communities (ARIC) Study. In HBCS participants were enrolled and birth weight data was collected through study of medical records at the time of birth in 1930-1940. All live births in the relevant years of inclusion that occurred in Helsinki were included. In ARIC participants were enrolled as adults, and birth weight data was collected at the time of enrollment, through questionnaires. Participants were followed until first diagnosis of atrial fibrillation. Which method of recruitment and data collection will result in the least amount of bias? ✅
+Two different cohorts have investigated the association between birth weight and atrial fibrillation, the Helsinki Birth Cohort Study (HBCS) and the Atherosclerosis Risk In Communities (ARIC) Study. In HBCS participants were enrolled and birth weight data was collected through study of medical records at the time of birth in 1930 to 1940. All live births in the relevant years of inclusion that occurred in Helsinki were included. In ARIC participants were enrolled as adults, and birth weight data was collected at the time of enrollment, through questionnaires. Participants were followed until first diagnosis of atrial fibrillation. Which method of recruitment and data collection will result in the least amount of bias? ✅
   - [x] The method used in HBCS 
   - [ ] The method used in ARIC 
   - [ ] Both result in severe selection bias 
@@ -279,7 +279,7 @@ Randomized controlled trials provide strong evidence that an observed effect is 
   - [ ] the exposure level and the outcome are measured at the same time 
 
 **Question 5**
-What is the total person-time at risk in the following study of mortality among 5 subjects Subject 1: Followed for 10 years, alive. Subject 2: Followed for 10 years, had a myocardial infarction after 4 years. Subject 3: Followed for 5 years, died. Subject 4: Followed for 3 years, dropped-out, died after 5 years. Subject 5: Followed for 7 years, emigrated.
+What is the total person time at risk in the following study of mortality among 5 subjects Subject 1: Followed for 10 years, alive. Subject 2: Followed for 10 years, had a myocardial infarction after 4 years. Subject 3: Followed for 5 years, died. Subject 4: Followed for 3 years, dropped out, died after 5 years. Subject 5: Followed for 7 years, emigrated.
   - [ ] 31 person-years 
   - [ ] 37 person-years 
   - [x] 35 person-years 
@@ -471,11 +471,11 @@ Asking a question is the first step in experimental design and selecting researc
     - Discuss a connection between age and cancer occurrence 
 
 **Question 9**
-Which of the statements related to the research method approaches applied in pre-clinical studies listed below is correct?
-    - Quantitative research methods involving interviews and thematic analysis are used only in pre-clinical studies.
-    - Qualitative research methods focused on description and textual data analysis are mostly applied in pre-clinical studies.
-    - Qualitative research methods involving experiments and testing hypothesis are used only in pre-clinical studies.
-    - **Quantitative research methods focused on numerical data and statistical analysis are mostly applied in pre-clinical studies.**
+Which of the statements related to the research method approaches applied in pre clinical studies listed below is correct?
+    - Quantitative research methods involving interviews and thematic analysis are used only in pre clinical studies.
+    - Qualitative research methods focused on description and textual data analysis are mostly applied in pre clinical studies.
+    - Qualitative research methods involving experiments and testing hypothesis are used only in pre clinical studies.
+    - **Quantitative research methods focused on numerical data and statistical analysis are mostly applied in pre clinical studies.**
 
 **Question 10**
 What are core elements of research integrity? ✅
@@ -513,18 +513,18 @@ Qualitative research seeks answers to questions about:
     - How the quality assessment looks like in clinical trials 
 
 **Question 15**
-Which of statements related to pre-clinical and clinical research listed below is correct? ✅
-    - Both pre-clinical and clinical studies have to be performed according to previously established protocol
-    - Only clinical research involves studies using human material, while in pre-clinical studies animal models are mostly applied 
-    - **Different experimental methods can be applied in pre-clinical research, while in clinical studies the established protocol has to be followed without any changes**
-    - If the results are inconclusive, both pre-clinical and clinical studies can be repeated 
+Which of statements related to pre clinical and clinical research listed below is correct? ✅
+- Both pre clinical and clinical studies have to be performed according to previously established protocol
+- Only clinical research involves studies using human material, while in pre clinical studies animal models are mostly applied 
+- **Different experimental methods can be applied in pre clinical research, while in clinical studies the established protocol has to be followed without any changes**
+- If the results are inconclusive, both pre clinical and clinical studies can be repeated 
 
 **Question 16**
-Which approvals are required in pre-clinical studies? ✅
-    - **Ethical permit for medical research involving human subjects; ethical permit for research using animals and training in animal work (theory and practice)**
-    - Ethical permit for research using animals
-    - Ethical permit for medical research involving human subjects
-    - Ethical permit for research using animals and training in animal work (theory and practice)
+Which approvals are required in pre clinical studies? ✅
+- **Ethical permit for medical research involving human subjects; ethical permit for research using animals and training in animal work (theory and practice)**
+- Ethical permit for research using animals
+- Ethical permit for medical research involving human subjects
+- Ethical permit for research using animals and training in animal work (theory and practice)
 
 **Question 1**
 Which of the following steps are included in the making of a systematic review? ✅
