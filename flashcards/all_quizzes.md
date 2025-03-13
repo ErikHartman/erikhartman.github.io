@@ -73,7 +73,7 @@ General conclusions obtained from integration of specific observations is an exa
 - [ ] …deduction
 
 ## Question 10
-Attributing specific cases of a disease to occupational causes would be an example of…
+Attributing specific cases of a disease to occupational causes would be an example of… ✅
 - [ ] …refutationism
 - [ ] …induction
 - [ ] …counterfactual reasoning
@@ -506,7 +506,7 @@ Triangulation means? ✅
     - A method for analyzing data in three steps 
 
 **Question 14**
-Qualitative research seeks answers to questions about:
+Qualitative research seeks answers to questions about: ✅
     - **How people are affected by or experience the events that goes on around them**
     - How people rate their health-related quality of life using validated questionnaires 
     - The effect of interventions 
@@ -534,99 +534,141 @@ Which of the following steps are included in the making of a systematic review? 
 - **All of the possible answers **
  
 **Question 2**
-Which of the following statements regarding the systematic review search are correct?
+Which of the following statements regarding the systematic review search are correct? ✅
 - **Incomplete searches reduce the reliability and applicability of the review´s findings**
 - **At least two bibliographic databases should be searched**
 - You should only use the PICO-framework to structure all type of review questions when you conduct a systematic review
 - **Systematic review look across a wide variety of sources**
  
 **Question 3**
-Which reporting guidance and critical appraisal-tool of already created systematic reviews could be used? 
+Which reporting guidance and critical appraisal-tool of already created systematic reviews could be used? ✅
 - STROBE 
 - **PRISMA**
 - **AMSTAR**
 - GRADE 
  
 **Question 4**
-Where can the protocol of a systematic review be prospectively registered?
+Where can the protocol of a systematic review be prospectively registered? ✅
 - PubMed 
 - **PROSPERO** 
 - PRISMA 
 - Health Research Council 
  
 **Question 5**
-Which of the following statements regarding the systematic review process and use are correct?
+Which of the following statements regarding the systematic review process and use are correct? ✅
 - You do not need to assess risk of bias in high quality systematic reviews
 - **You need to quality check a systematic review, as with any study, before using them**
 - If a systematic review does not include a meta-analysis it can’t be trusted
 - **You need to prespecify your including- and exclusion criteria, as well as your outcomes, before you start the search if you are conducting a systematic review**
 
 **Question 1**  
-What does it mean if a causal diagram is "acyclic"?  
+What does it mean if a causal diagram is "acyclic"?  ✅
 - It contains cycles or loops.  
 - **It does not contain any cycles or loops.**  
 - It represents only direct relationships.  
 - It has only one arrow per node.
 
 **Question 2**  
-In a Directed Acyclic Graph, what do nodes typically represent?  
+In a Directed Acyclic Graph, what do nodes typically represent? ✅
 - Statistical tests  
 - **Variables**  
 - Confounding bias  
 - Effect sizes  
 
 **Question 3**  
-What type of relationship is represented by an arrow in a DAG?  
+What type of relationship is represented by an arrow in a DAG? ✅  
 - Association without direction  
 - Correlation  
 - **A causal relationship**  
 - Statistical significance  
 
 **Question 4**  
-Which of the following statements best describes a collider in a DAG?  
+Which of the following statements best describes a collider in a DAG? ✅
 - A variable that causes at least two other variables  
 - A variable caused by exactly one other variable  
 - **A variable caused by two or more other variables**  
 - A variable unrelated to other variables  
 
 **Question 5**  
-What bias occurs specifically due to conditioning on a collider?  
+What bias occurs specifically due to conditioning on a collider? ✅
 - Selection bias  
 - Information bias  
 - **Collider stratification bias**  
 - Confounding bias  
 
 **Question 6**  
-Which of the following best describes a confounder in a DAG?  
+Which of the following best describes a confounder in a DAG? ✅
 - A variable caused by the exposure only  
 - **A variable that causes both exposure and outcome**  
 - A variable caused by the outcome only  
 - A variable unrelated to exposure and outcome  
 
 **Question 7**  
-What is a "backdoor path" in the context of a DAG?  
+What is a "backdoor path" in the context of a DAG? ✅
 - A path following only causal arrows forward  
 - **A non-causal path linking exposure and outcome through a common cause**  
 - A direct causal path from exposure to outcome  
 - A cycle connecting exposure and outcome  
 
 **Question 8**  
-What does adjusting for a mediator in a DAG typically do to the estimated causal effect?  
+What does adjusting for a mediator in a DAG typically do to the estimated causal effect? ✅
 - Correctly removes confounding bias  
 - **Biases the causal estimate toward the null**  
 - Provides an unbiased estimate of the causal effect  
 - Increases the generalizability of findings  
 
 **Question 9**  
-Which of these describes a "d-separation" criterion in a DAG?  
+Which of these describes a "d-separation" criterion in a DAG? ✅  
 - It identifies the presence of mediation only  
 - It describes cycles in a causal diagram  
 - **It helps determine whether variables are conditionally independent**  
 - It calculates the strength of associations  
 
 **Question 10**  
-Why are DAGs useful in epidemiology?  
+Why are DAGs useful in epidemiology? ✅
 - They guarantee randomized exposure assignment  
 - They ensure statistical significance of findings  
 - **They help visualize and manage confounding and selection bias**  
 - They automatically adjust for collider bias
+
+**Question 12**
+Which of the following characterizes a screening/diagnostic test? ✅
+- Sensitivity and specificity as well as positive and negative prevalence
+- Sensitivity and specificity as well as positive and negative results
+- Sensitivity and specificity as well as positive and negative p-value
+- **Sensitivity and specificity as well as positive and negative predictive value**
+
+**Question 1**  
+Which formula correctly represents the Positive Predictive Value (PPV)?  ✅
+- PPV = True negatives / (True negatives + False negatives)  
+- **PPV = True positives / (True positives + False positives)**  
+- PPV = True positives / (True positives + False negatives)  
+- PPV = True negatives / (True negatives + False positives)  
+
+**Question 2**  
+Which of the following formulas represents Number Needed to Treat (NNT)? ✅
+- **NNT = 1 / (Absolute Risk Reduction)**  
+- NNT = 1 / (Relative Risk)  
+- NNT = Absolute Risk Reduction / Relative Risk  
+- NNT = Relative Risk / Absolute Risk Reduction  
+
+**Question 3**  
+Which expression is correct for calculating the Relative Risk (RR)? ✅
+- RR = Odds of disease in exposed / Odds of disease in unexposed  
+- RR = Incidence in unexposed / Incidence in exposed  
+- **RR = Incidence in exposed / Incidence in unexposed**  
+- RR = Risk difference / Incidence in exposed  
+
+**Question 5**  
+Which formula represents the Negative Predictive Value (NPV)?✅  
+- **NPV = True negatives / (True negatives + False negatives)**  
+- NPV = True positives / (True positives + False positives)  
+- NPV = True negatives / (True negatives + False positives)  
+- NPV = True positives / (True positives + False negatives)  
+
+**Question 6**  
+Which of these defines Absolute Risk Reduction (ARR) correctly? ✅
+- ARR = Incidence in exposed / Incidence in unexposed  
+- ARR = Incidence in exposed - Odds ratio  
+- **ARR = Incidence in unexposed - Incidence in exposed**  
+- ARR = (Incidence in exposed - Incidence in unexposed) / Incidence in unexposed
