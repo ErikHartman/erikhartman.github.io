@@ -1,0 +1,47 @@
+{
+  "name": "Erik Hartman",
+  "url": "https://erikhartman.github.io",
+  "description": "Erik Hartman is a computational biologist at Lund University and a visiting research scholar at Penn, studying encrypted peptides and computational protein and peptide design.",
+  "email": "erik.hartman@hotmail.com",
+  "scholar": "https://scholar.google.com/citations?user=Cf9bITgAAAAJ&hl=en",
+  "github": "https://github.com/ErikHartman",
+  "orcid": "https://orcid.org/0000-0001-9997-2405",
+  "linkedin": "https://www.linkedin.com/in/erik-hartman-155b98170/",
+  "updated": "2026-10-01",
+  "introduction": "I study how proteins give rise to bioactive peptides, and build computational methods to discover and design them.",
+  "focus": "My current work focuses on encrypted peptide discovery, particularly antimicrobial peptides, and computational methods for protein and peptide design.",
+  "research": [
+    {
+      "title": "Encrypted peptides",
+      "description": "I investigate bioactive peptides released through protein degradation, particularly antimicrobial peptides and their role in host defense.",
+      "figure": {
+        "src": "/figures/encrypted-peptides.svg",
+        "alt": "A folded protein is cleaved into peptide fragments, with one candidate fragment outlined.",
+        "caption": "Protein cleavage and candidate peptide discovery. Schematic."
+      }
+    },
+    {
+      "title": "Protein and peptide design",
+      "description": "I develop methods for protein and peptide design using machine learning, Bayesian optimization, and biological information.",
+      "figure": {
+        "src": "/figures/sequence-design.svg",
+        "alt": "Candidate sequences are evaluated by a computational model, ranked, and used to guide the next design round.",
+        "caption": "An iterative approach to sequence design. Schematic."
+      }
+    },
+    {
+      "title": "Protein degradation",
+      "description": "I use peptidomics, graph models, and interpretable machine learning to study protein degradation and molecular changes during infection.",
+      "figure": {
+        "src": "/figures/degradation-graph.svg",
+        "alt": "A directed graph traces sequential cleavage from longer peptides to shorter fragments.",
+        "caption": "Representing peptide degradation as a graph. Schematic."
+      }
+    }
+  ],
+  "sources": [
+    "Existing website biography; current Penn affiliation and research focus confirmed by Erik on 1 October 2026.",
+    "https://portal.research.lu.se/en/persons/erik-hartman/",
+    "https://www.intramed.lu.se/evenemang/erik-hartman-institutionen-kliniska-vetenskaper-lund"
+  ]
+}

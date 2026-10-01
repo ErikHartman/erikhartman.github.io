@@ -1,0 +1,8 @@
+[
+  { "name": "BoPep", "category": "Sequence design", "description": "Bayesian optimization for exploring protein and peptide sequence space.", "url": "https://github.com/ErikHartman/bopep" },
+  { "name": "Degradation graphs", "category": "Peptidomics", "description": "Model and analyze sequential protein degradation from peptide measurements.", "url": "https://github.com/ErikHartman/degradation-graphs" },
+  { "name": "BINN", "category": "Interpretable ML", "description": "Build and interpret neural networks informed by biological pathways.", "url": "https://github.com/InfectionMedicineProteomics/BINN" },
+  { "name": "pepnets", "category": "Peptidomics", "description": "Cluster related peptides to reveal patterns in large peptidomics datasets.", "url": "https://github.com/ErikHartman/pepnets" },
+  { "name": "FK-RFdiffusion", "category": "Protein design", "description": "Guide protein generation toward structural and biochemical objectives.", "url": "https://github.com/ErikHartman/FK-RFdiffusion" },
+  { "name": "ProteoCFM", "category": "Proteomics", "description": "Reconstruct proteomic disease trajectories with conditional flow matching.", "url": "https://github.com/ErikHartman/ProteoCFM" }
+]

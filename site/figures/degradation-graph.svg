@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="200" viewBox="0 0 440 200" role="img" aria-labelledby="degradation-graph-title degradation-graph-desc">
+  <title id="degradation-graph-title">A peptide degradation cascade</title>
+  <desc id="degradation-graph-desc">A long peptide separates into two fragments, which each divide into shorter fragments through sequential cleavage. The number of beads is conserved at each division. This is a schematic, not measured data.</desc>
+  <defs>
+    <marker id="degradation-graph-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1 L5 3 L1 5" fill="none" stroke="#777" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <circle id="degradation-graph-bead" cx="0" cy="0" r="3.5" fill="#fff" stroke="#222" stroke-width="1.1"/>
+  </defs>
+  <g fill="#222" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">
+    <text x="220" y="24">Sequential cleavage</text>
+    <text x="220" y="190">Peptide fragments</text>
+  </g>
+  <g fill="none" stroke="#888" stroke-width="1.1" marker-end="url(#degradation-graph-arrow)">
+    <path d="M186 59 L126 89"/>
+    <path d="M264 59 L318 89"/>
+    <path d="M112 111 L78 141"/>
+    <path d="M149 111 L188 141"/>
+    <path d="M309 111 L281 141"/>
+    <path d="M330 111 L366 141"/>
+  </g>
+  <g fill="none" stroke="#888" stroke-width="1.1">
+    <path d="M154 48 H286 M84 100 H168 M300 100 H336 M54 152 H102 M176 152 H200 M274 152 H286 M360 152 H372"/>
+  </g>
+  <g>
+    <use href="#degradation-graph-bead" x="154" y="48"/>
+    <use href="#degradation-graph-bead" x="166" y="48"/>
+    <use href="#degradation-graph-bead" x="178" y="48"/>
+    <use href="#degradation-graph-bead" x="190" y="48"/>
+    <use href="#degradation-graph-bead" x="202" y="48"/>
+    <use href="#degradation-graph-bead" x="214" y="48"/>
+    <use href="#degradation-graph-bead" x="226" y="48"/>
+    <use href="#degradation-graph-bead" x="238" y="48"/>
+    <use href="#degradation-graph-bead" x="250" y="48"/>
+    <use href="#degradation-graph-bead" x="262" y="48"/>
+    <use href="#degradation-graph-bead" x="274" y="48"/>
+    <use href="#degradation-graph-bead" x="286" y="48"/>
+    <use href="#degradation-graph-bead" x="84" y="100"/>
+    <use href="#degradation-graph-bead" x="96" y="100"/>
+    <use href="#degradation-graph-bead" x="108" y="100"/>
+    <use href="#degradation-graph-bead" x="120" y="100"/>
+    <use href="#degradation-graph-bead" x="132" y="100"/>
+    <use href="#degradation-graph-bead" x="144" y="100"/>
+    <use href="#degradation-graph-bead" x="156" y="100"/>
+    <use href="#degradation-graph-bead" x="168" y="100"/>
+    <use href="#degradation-graph-bead" x="300" y="100"/>
+    <use href="#degradation-graph-bead" x="312" y="100"/>
+    <use href="#degradation-graph-bead" x="324" y="100"/>
+    <use href="#degradation-graph-bead" x="336" y="100"/>
+    <use href="#degradation-graph-bead" x="54" y="152"/>
+    <use href="#degradation-graph-bead" x="66" y="152"/>
+    <use href="#degradation-graph-bead" x="78" y="152"/>
+    <use href="#degradation-graph-bead" x="90" y="152"/>
+    <use href="#degradation-graph-bead" x="102" y="152"/>
+    <use href="#degradation-graph-bead" x="176" y="152"/>
+    <use href="#degradation-graph-bead" x="188" y="152"/>
+    <use href="#degradation-graph-bead" x="200" y="152"/>
+    <use href="#degradation-graph-bead" x="274" y="152"/>
+    <use href="#degradation-graph-bead" x="286" y="152"/>
+    <use href="#degradation-graph-bead" x="360" y="152"/>
+    <use href="#degradation-graph-bead" x="372" y="152"/>
+  </g>
+  <g stroke="#999" stroke-width="1" stroke-dasharray="2 3">
+    <path d="M244 39 V57 M138 91 V109 M318 91 V109"/>
+  </g>
+</svg>

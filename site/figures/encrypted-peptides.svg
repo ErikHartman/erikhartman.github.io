@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="200" viewBox="0 0 440 200" role="img" aria-labelledby="peptide-title peptide-description">
+  <title id="peptide-title">Protein cleavage and peptide discovery</title>
+  <desc id="peptide-description">A folded protein chain is cleaved into shorter peptide fragments. One fragment is outlined as a candidate for testing biological activity. This is a conceptual illustration.</desc>
+  <defs>
+    <marker id="peptide-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M1 1 6 3.5 1 6" fill="none" stroke="#555" stroke-width="1.2"/></marker>
+  </defs>
+  <g fill="none" stroke="#888" stroke-width="1.5" stroke-linecap="round">
+    <path d="M24 94C37 17 107 22 102 85S24 161 49 101 160 33 179 87 134 171 97 130 174 65 198 108"/>
+    <path d="M219 98H274" stroke="#555" marker-end="url(#peptide-arrow)"/>
+    <path d="M306 49H396M322 98H379M306 147H378"/>
+  </g>
+  <g fill="#fff" stroke="#555" stroke-width="1.5">
+    <circle cx="24" cy="94" r="3.5"/><circle cx="39" cy="50" r="3.5"/><circle cx="75" cy="37" r="3.5"/>
+    <circle cx="101" cy="67" r="3.5"/><circle cx="90" cy="111" r="3.5"/><circle cx="54" cy="134" r="3.5"/>
+    <circle cx="47" cy="103" r="3.5"/><circle cx="83" cy="71" r="3.5"/><circle cx="128" cy="56" r="3.5"/>
+    <circle cx="164" cy="68" r="3.5"/><circle cx="181" cy="101" r="3.5"/><circle cx="166" cy="140" r="3.5"/>
+    <circle cx="128" cy="146" r="3.5"/><circle cx="99" cy="126" r="3.5"/><circle cx="132" cy="98" r="3.5"/>
+    <circle cx="174" cy="92" r="3.5"/><circle cx="198" cy="108" r="3.5"/>
+    <circle cx="306" cy="49" r="3.5"/><circle cx="324" cy="49" r="3.5"/><circle cx="342" cy="49" r="3.5"/>
+    <circle cx="360" cy="49" r="3.5"/><circle cx="378" cy="49" r="3.5"/><circle cx="396" cy="49" r="3.5"/>
+    <circle cx="306" cy="147" r="3.5"/><circle cx="324" cy="147" r="3.5"/><circle cx="342" cy="147" r="3.5"/>
+    <circle cx="360" cy="147" r="3.5"/><circle cx="378" cy="147" r="3.5"/>
+    <rect x="308" y="82" width="85" height="32" rx="16" stroke="#000"/>
+  </g>
+  <path d="M322 98H379" stroke="#000" stroke-width="1.5"/>
+  <g fill="#000"><circle cx="322" cy="98" r="3.5"/><circle cx="341" cy="98" r="3.5"/><circle cx="360" cy="98" r="3.5"/><circle cx="379" cy="98" r="3.5"/></g>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#000" text-anchor="middle">
+    <text x="109" y="188">Protein</text><text x="246" y="78">Cleavage</text><text x="351" y="188">Peptides</text>
+  </g>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="200" viewBox="0 0 440 200" role="img" aria-labelledby="sequence-design-title sequence-design-desc">
+  <title id="sequence-design-title">Computational peptide design</title>
+  <desc id="sequence-design-desc">Candidate peptide sequences pass through a computational model to produce a ranked set. A return arrow indicates another round of design. This is a schematic, not measured data.</desc>
+  <defs>
+    <marker id="sequence-design-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1 L5 3 L1 5" fill="none" stroke="#777" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <g id="sequence-design-row" fill="#fff" stroke="#222" stroke-width="1.1">
+      <path d="M0 0 H60" fill="none" stroke="#888"/>
+      <circle cx="0" cy="0" r="3.5"/>
+      <circle cx="12" cy="0" r="3.5"/>
+      <circle cx="24" cy="0" r="3.5"/>
+      <circle cx="36" cy="0" r="3.5"/>
+      <circle cx="48" cy="0" r="3.5"/>
+      <circle cx="60" cy="0" r="3.5"/>
+    </g>
+  </defs>
+  <g fill="#222" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">
+    <text x="62" y="42">Candidates</text>
+    <text x="210" y="42">Model</text>
+    <text x="359" y="42">Ranked candidates</text>
+  </g>
+  <g>
+    <use href="#sequence-design-row" x="32" y="76"/>
+    <use href="#sequence-design-row" x="32" y="98"/>
+    <use href="#sequence-design-row" x="32" y="120"/>
+    <g fill="#e5e5e5" stroke="#222" stroke-width="1.1">
+      <circle cx="44" cy="76" r="3.5"/>
+      <circle cx="80" cy="76" r="3.5"/>
+      <circle cx="56" cy="98" r="3.5"/>
+      <circle cx="68" cy="120" r="3.5"/>
+      <circle cx="92" cy="120" r="3.5"/>
+    </g>
+  </g>
+  <g fill="none" stroke="#777" stroke-width="1.1" marker-end="url(#sequence-design-arrow)">
+    <path d="M107 98 H153"/>
+    <path d="M267 98 H311"/>
+  </g>
+  <rect x="166" y="65" width="88" height="66" rx="3" fill="#f7f7f7" stroke="#999" stroke-width="1"/>
+  <g stroke="#aaa" stroke-width="1" fill="none">
+    <path d="M184 80 L210 87 L236 98 M184 98 L210 87 M184 116 L210 87 M184 80 L210 109 L236 98 M184 98 L210 109 M184 116 L210 109"/>
+  </g>
+  <g fill="#fff" stroke="#333" stroke-width="1.1">
+    <circle cx="184" cy="80" r="3.5"/>
+    <circle cx="184" cy="98" r="3.5"/>
+    <circle cx="184" cy="116" r="3.5"/>
+    <circle cx="210" cy="87" r="3.5"/>
+    <circle cx="210" cy="109" r="3.5"/>
+    <circle cx="236" cy="98" r="3.5"/>
+  </g>
+  <g>
+    <use href="#sequence-design-row" x="329" y="76"/>
+    <use href="#sequence-design-row" x="329" y="98"/>
+    <use href="#sequence-design-row" x="329" y="120"/>
+    <g fill="#e5e5e5" stroke="#222" stroke-width="1.1">
+      <circle cx="365" cy="76" r="3.5"/>
+      <circle cx="389" cy="76" r="3.5"/>
+      <circle cx="341" cy="98" r="3.5"/>
+      <circle cx="377" cy="98" r="3.5"/>
+      <circle cx="353" cy="120" r="3.5"/>
+    </g>
+  </g>
+  <path d="M359 138 V162 Q359 166 355 166 H66 Q62 166 62 162 V138" fill="none" stroke="#888" stroke-width="1.1" marker-end="url(#sequence-design-arrow)"/>
+  <text x="210" y="189" fill="#555" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Next round</text>
+</svg>

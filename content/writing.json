@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "phd-background",
+    "route": "/blog/2024/phd-background/",
+    "date": "2024-08-22",
+    "title": "The role of protein degradation during infection",
+    "description": "A background to my PhD projects",
+    "file": "phd-background.md",
+    "featured": true
+  },
+  {
+    "slug": "game-theory-academics",
+    "route": "/blog/2024/game-theory-academics/",
+    "date": "2024-03-27",
+    "title": "The broken game of academic research: how journals are shifting the incentives of researchers and ruining science",
+    "description": "the flawed academic system through the lens of game theory",
+    "file": "game-theory-academics.md",
+    "featured": true
+  },
+  {
+    "slug": "markdown",
+    "route": "/blog/2024/markdown/",
+    "date": "2024-01-01",
+    "title": "Writing academic articles in Markdown",
+    "description": "a short tutorial",
+    "file": "markdown.md",
+    "featured": false
+  },
+  {
+    "slug": "sb",
+    "route": "/blog/2020/sb/",
+    "date": "2020-01-01",
+    "title": "Synthetic biology; playing God, life or machine, bioterrorism and biotechnological singularities - a reason for urgency",
+    "description": "a longer article for SynthEthics",
+    "file": "sb.md",
+    "featured": false,
+    "migrationNotes": "Two unavailable image embeds (synthethics-fig1.jpg and synthethics-fig2.jpg) were omitted; the original essay prose is preserved."
+  },
+  {
+    "slug": "probiotics",
+    "route": "/blog/2019/probiotics/",
+    "date": "2019-01-01",
+    "title": "A Brief History of Probiotics",
+    "description": "Written for iGEM",
+    "file": "probiotics.md",
+    "featured": false
+  },
+  {
+    "slug": "bioterror",
+    "route": "/blog/2019/bioterror/",
+    "date": "2019-01-01",
+    "title": "Bioterrorism in light of SARS-Cov-2",
+    "description": "written for SynthEthics",
+    "file": "bioterror.md",
+    "featured": false
+  },
+  {
+    "slug": "sb-opp-risks",
+    "route": "/blog/2019/sb-opp-risks/",
+    "date": "2019-01-01",
+    "title": "Opportunities and risks of synthetic biology",
+    "description": "article for iGEM",
+    "file": "sb-opp-risks.md",
+    "featured": false
+  }
+]
