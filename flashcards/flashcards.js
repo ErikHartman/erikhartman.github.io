@@ -1,14 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     // DOM elements
-    const flashcard = document.getElementById('current-card');
     const questionText = document.getElementById('question-text');
     const frontOptions = document.getElementById('front-options');
-    const answerOptions = document.getElementById('answer-options');
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
     const cardCounter = document.getElementById('card-counter');
-    const loadingIndicator = document.getElementById('loading-indicator');
-    const incorrectList = document.getElementById('incorrect-list');
     
     // Flash cards data
     let allCards = [];
@@ -31,10 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 { text: 'Selection bias, competing risks and Information bias', isCorrect: false }
             ]
         },
-        // More fallback questions...
     ];
     
-    // File paths to fetch - fixed the typo in path
+    // File paths to fetch
     const quizFiles = [
         './all_quizzes.md'
     ];
@@ -48,11 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize flash cards
     function initFlashcards() {
-        // Show loading indicator first
-        if (loadingIndicator) {
-            loadingIndicator.style.display = 'block';
-        }
-        
         // Try to fetch markdown files first
         loadQuizFilesSequentially(quizFiles)
             .then(cards => {
@@ -84,11 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 updateCardDisplay();
                 updateCardCounter();
-                
-                // Hide loading indicator
-                if (loadingIndicator) {
-                    loadingIndicator.style.display = 'none';
-                }
             })
             .catch(error => {
                 console.error("Error loading quiz files:", error);
@@ -98,11 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentCards = [...allCards];
                 updateCardDisplay();
                 updateCardCounter();
-                
-                // Hide loading indicator
-                if (loadingIndicator) {
-                    loadingIndicator.style.display = 'none';
-                }
             });
     }
     
@@ -121,9 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const markdown = await response.text();
                 console.log(`Successfully fetched ${filePath}, content length: ${markdown.length} characters`);
                 console.log(`First 100 characters: ${markdown.substring(0, 100)}...`);
-                
-                // Extract day from filename if possible
-                const dayMatch = filePath.match(/day(\d+)\.md$/i);
                 
                 // Extract cards using the parser
                 try {
@@ -222,7 +199,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentCards.length === 0) {
             questionText.textContent = '';
             frontOptions.innerHTML = '';
-            answerOptions.innerHTML = '';
             prevBtn.disabled = true;
             nextBtn.disabled = true;
             return;

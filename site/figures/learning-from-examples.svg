@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="240" viewBox="0 0 640 240" role="img" aria-labelledby="learning-title learning-description">
+  <title id="learning-title">A model learns from examples</title>
+  <desc id="learning-description">Houses with known prices provide examples. A model predicts a price, which is compared with the known price. The model is adjusted and tries again. This is a simplified illustration of training a model, not house-price data.</desc>
+  <defs>
+    <marker id="learning-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M2 1.5 7 4.5 2 7.5" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M23 90 50 67 77 90 M30 85V126H70V85 M45 126V105H57V126"/>
+    <path d="M83 78 115 52 147 78 M91 72V126H139V72 M108 126V102H121V126"/>
+    <path d="M102 85H109V92H102Z M123 85H130V92H123Z"/>
+    <rect x="211" y="65" width="152" height="75" rx="3"/>
+    <rect x="429" y="65" width="185" height="75" rx="3"/>
+  </g>
+  <g fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#learning-arrow)">
+    <path d="M164 102H197"/>
+    <path d="M379 102H414"/>
+    <path d="M521 156V188Q521 194 515 194H293Q287 194 287 188V156"/>
+  </g>
+  <g fill="#000" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">
+    <text x="85" y="31">Examples</text>
+    <text x="85" y="159">Known prices</text>
+    <text x="287" y="96">Model</text>
+    <text x="287" y="121">predicts a price</text>
+    <text x="521" y="96">Compare with</text>
+    <text x="521" y="121">the known price</text>
+    <text x="404" y="225">Adjust the model and try again</text>
+  </g>
+</svg>

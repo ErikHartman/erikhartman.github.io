@@ -18,7 +18,7 @@ a:hover { text-decoration-thickness: 2px; }
 a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 button, input { font: inherit; color: var(--ink); }
 button, summary { cursor: pointer; }
-img, svg { max-width: 100%; }
+img { max-width: 100%; }
 img { height: auto; }
 figure, h1, h2, h3, p { margin: 0; }
 h1, h2, h3 { font-weight: 600; line-height: 1.3; }
@@ -133,18 +133,19 @@ h3 { font-size: 18px; line-height: 1.45; }
 .article-description { font-size: 16px; }
 .prose { font-size: 16px; line-height: 1.8; overflow-wrap: anywhere; }
 .prose > * + * { margin-top: 20px; }
-.prose h1, .prose h2 { font-size: 26px; margin-top: 34px; line-height: 1.35; }
+.prose h2 { font-size: 26px; margin-top: 34px; line-height: 1.35; }
 .prose h3 { font-size: 21px; margin-top: 28px; }
-.prose h4 { font-size: 18px; margin-top: 24px; }
 .prose img { display: block; height: auto; max-width: 100%; margin: 24px auto; }
 .prose figure { margin: 24px 0; }
 .prose figcaption { font-size: 13px; color: var(--muted); }
+.prose .article-figure { margin: 30px 0; }
+.prose .article-figure img { width: 100%; margin: 0 auto 12px; }
+.prose .article-figure figcaption { max-width: 650px; margin-inline: auto; font-size: 14px; line-height: 1.65; }
+.prose .article-figure.diagram { max-width: 640px; margin-inline: auto; }
+.prose .model-equation { padding: 14px 0; font-size: 18px; font-weight: 600; }
 .prose pre { padding: 16px; overflow-x: auto; font-size: 13px; line-height: 1.65; border: 1px solid var(--line); }
 .prose code { font-family: var(--mono); font-size: .85em; }
 .prose :not(pre) > code { padding: 1px 3px; border: 1px solid var(--line); }
-.prose blockquote { border-left: 2px solid #888; padding: 2px 0 2px 20px; margin-inline: 0; color: var(--muted); }
-.prose table { width: 100%; border-collapse: collapse; display: block; overflow-x: auto; font-size: 14px; }
-.prose th, .prose td { padding: 10px; border-bottom: 1px solid var(--line); text-align: left; }
 .prose li + li { margin-top: 7px; }
 .prose hr { border: 0; border-top: 1px solid var(--line); margin-block: 28px; }
 .article-end { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 36px; padding: 24px 0 36px; font-size: 14px; }
@@ -161,11 +162,9 @@ h3 { font-size: 18px; line-height: 1.45; }
   .section, .a-little-more { padding-block: 26px 30px; }
   .research-topic { grid-template-columns: 1fr; gap: 12px; }
   .research-topics { gap: 30px; }
-  .research-figure { width: min(100%, 440px); margin-inline: auto; }
   .software-grid { column-gap: 24px; }
   .writing-row { grid-template-columns: 1fr; gap: 5px; }
   .year-group { grid-template-columns: 1fr; gap: 0; }
-  .year-group > h2 { padding-top: 20px; }
   .cv-section { grid-template-columns: 1fr; gap: 18px; }
   .page-intro { padding-block: 32px 26px; }
   .article-header h1 { font-size: 32px; }

@@ -7,9 +7,9 @@
   "github": "https://github.com/ErikHartman",
   "orcid": "https://orcid.org/0000-0001-9997-2405",
   "linkedin": "https://www.linkedin.com/in/erik-hartman-155b98170/",
-  "updated": "2026-10-01",
+  "updated": "2026-10-03",
   "introduction": "I study how proteins give rise to bioactive peptides, and build computational methods to discover and design them.",
-  "focus": "My current work focuses on encrypted peptide discovery, particularly antimicrobial peptides, and computational methods for protein and peptide design.",
+  "focus": "I’m interested in how mathematics and machine learning can help us understand biology, from interpreting molecular data to designing proteins and peptides. A particular interest is encrypted peptides: fragments of proteins that can have biological functions of their own. I study how these fragments are generated and what roles they may play across the tree of life.",
   "research": [
     {
       "title": "Encrypted peptides",

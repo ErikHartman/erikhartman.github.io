@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="435" viewBox="0 0 340 435" role="img" aria-labelledby="learning-mobile-title learning-mobile-description">
+  <title id="learning-mobile-title">A model learns from examples</title>
+  <desc id="learning-mobile-description">From top to bottom: houses with known prices provide examples; a model predicts a price; the prediction is compared with the known price. A return arrow shows that the model is adjusted and tries again. This is a simplified illustration of training a model, not house-price data.</desc>
+  <defs>
+    <marker id="learning-mobile-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M2 1.5 7 4.5 2 7.5" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M59 79 86 56 113 79 M66 74V115H106V74 M81 115V94H93V115"/>
+    <path d="M119 67 151 41 183 67 M127 61V115H175V61 M144 115V91H157V115"/>
+    <path d="M138 74H145V81H138Z M159 74H166V81H159Z"/>
+    <rect x="32" y="204" width="180" height="70" rx="3"/>
+    <rect x="32" y="344" width="180" height="70" rx="3"/>
+  </g>
+  <g fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#learning-mobile-arrow)">
+    <path d="M122 159V189"/>
+    <path d="M122 289V329"/>
+    <path d="M226 379H307Q313 379 313 373V245Q313 239 307 239H226"/>
+  </g>
+  <g fill="#000" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">
+    <text x="122" y="25">Examples</text>
+    <text x="122" y="142">Known prices</text>
+    <text x="122" y="232">Model</text>
+    <text x="122" y="257">predicts a price</text>
+    <text x="122" y="372">Compare with</text>
+    <text x="122" y="397">the known price</text>
+  </g>
+  <g fill="#000" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">
+    <text x="259" y="286">Adjust the</text>
+    <text x="259" y="309">model and</text>
+    <text x="259" y="332">try again</text>
+  </g>
+</svg>

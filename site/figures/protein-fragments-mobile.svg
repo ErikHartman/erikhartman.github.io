@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="488" viewBox="0 0 340 488" role="img" aria-labelledby="fragments-mobile-title fragments-mobile-description">
+  <title id="fragments-mobile-title">Proteins break down into smaller peptides</title>
+  <desc id="fragments-mobile-description">From top to bottom: a folded protein chain breaks into three shorter peptide fragments. One fragment is linked to a bacterial cell, showing that some peptides help fight bacteria. The other fragments are not linked to the bacterium. This is a conceptual illustration, not a molecular structure.</desc>
+  <defs>
+    <marker id="fragments-mobile-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M2 1.5 7 4.5 2 7.5" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g transform="translate(74 5)">
+    <path d="M27 105C34 51 98 44 107 81S44 164 43 113 132 63 150 97 120 166 83 137 144 81 163 118" fill="none" stroke="#777" stroke-width="1.5" stroke-linecap="round"/>
+    <g fill="#fff" stroke="#444" stroke-width="1.5">
+      <circle cx="27" cy="105" r="3.5"/><circle cx="43" cy="66" r="3.5"/>
+      <circle cx="80" cy="56" r="3.5"/><circle cx="107" cy="81" r="3.5"/>
+      <circle cx="90" cy="119" r="3.5"/><circle cx="54" cy="138" r="3.5"/>
+      <circle cx="43" cy="113" r="3.5"/><circle cx="70" cy="82" r="3.5"/>
+      <circle cx="111" cy="80" r="3.5"/><circle cx="150" cy="97" r="3.5"/>
+      <circle cx="137" cy="139" r="3.5"/><circle cx="101" cy="148" r="3.5"/>
+      <circle cx="83" cy="137" r="3.5"/><circle cx="119" cy="106" r="3.5"/>
+      <circle cx="150" cy="100" r="3.5"/><circle cx="163" cy="118" r="3.5"/>
+    </g>
+  </g>
+  <g fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#fragments-mobile-arrow)">
+    <path d="M170 168V202"/>
+    <path d="M170 299V336"/>
+  </g>
+  <g fill="none" stroke="#777" stroke-width="1.5" stroke-linecap="round">
+    <path d="M52 233H122 M218 233H288 M142 270H198"/>
+  </g>
+  <g fill="#fff" stroke="#444" stroke-width="1.5">
+    <circle cx="52" cy="233" r="3.5"/><circle cx="69.5" cy="233" r="3.5"/>
+    <circle cx="87" cy="233" r="3.5"/><circle cx="104.5" cy="233" r="3.5"/><circle cx="122" cy="233" r="3.5"/>
+    <circle cx="218" cy="233" r="3.5"/><circle cx="235.5" cy="233" r="3.5"/>
+    <circle cx="253" cy="233" r="3.5"/><circle cx="270.5" cy="233" r="3.5"/><circle cx="288" cy="233" r="3.5"/>
+    <rect x="126" y="254" width="88" height="32" rx="16" stroke="#000"/>
+  </g>
+  <g fill="#000">
+    <circle cx="142" cy="270" r="3.5"/><circle cx="160.7" cy="270" r="3.5"/>
+    <circle cx="179.3" cy="270" r="3.5"/><circle cx="198" cy="270" r="3.5"/>
+  </g>
+  <g fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="120" y="358" width="100" height="62" rx="31"/>
+    <path d="M137 361 130 351 M154 358 151 348 M180 358 185 347 M201 362 208 352 M217 375 228 372 M220 395 231 397 M208 413 216 421 M183 420 186 430 M159 420 156 430 M135 415 128 424 M122 403 111 408 M120 381 110 376"/>
+    <path d="M145 387C151 373 161 404 172 386S189 401 197 386" stroke="#777"/>
+  </g>
+  <g fill="#000" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">
+    <text x="170" y="26">Protein</text>
+    <text x="252" y="189">Breaks down</text>
+    <text x="170" y="233">Peptides</text>
+    <text x="170" y="465">Some help fight bacteria</text>
+  </g>
+</svg>

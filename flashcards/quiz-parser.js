@@ -8,9 +8,6 @@ class QuizParser {
    * @return {Array} Array of quiz card objects
    */
   static parseMarkdown(markdown) {
-    const cards = [];
-    let id = 1;
-    
     console.log("Started parsing markdown, length:", markdown.length);
     
     // Try different parsing approaches
@@ -35,14 +32,12 @@ class QuizParser {
     // Look for question patterns (## Question X, **Question X**, etc.)
     const questionRegex = /(?:##\s*Question\s*(\d+)|##\s*Q(?:uestion)?\s*(\d+)|Question\s*(\d+):|Q(\d+):?|\*\*Question\s*(\d+)\*\*)/g;
     let match;
-    let lastIndex = 0;
     
     // Find all question headers
     const questionPositions = [];
     while ((match = questionRegex.exec(markdown)) !== null) {
       questionPositions.push({
-        index: match.index,
-        number: match[1] || match[2] || match[3] || match[4] || match[5]
+        index: match.index
       });
     }
     
@@ -116,7 +111,6 @@ class QuizParser {
    */
   static parseSectionsByDay(markdown) {
     const cards = [];
-    let id = 1;
     
     // Split by day headers
     const dayRegex = /(?:##\s*Day\s+(\d+)|Round\s+(\d+))/g;
@@ -127,22 +121,19 @@ class QuizParser {
     while ((dayMatch = dayRegex.exec(markdown)) !== null) {
       if (lastIndex < dayMatch.index) {
         daySections.push({
-          text: markdown.substring(lastIndex, dayMatch.index),
-          day: "unknown"  
+          text: markdown.substring(lastIndex, dayMatch.index)
         });
       }
       lastIndex = dayMatch.index;
       daySections.push({
-        start: dayMatch.index,
-        day: dayMatch[1] || dayMatch[2]
+        start: dayMatch.index
       });
     }
     
     // Add the final section
     if (lastIndex < markdown.length) {
       daySections.push({
-        text: markdown.substring(lastIndex),
-        day: "unknown"
+        text: markdown.substring(lastIndex)
       });
     }
     
@@ -161,8 +152,7 @@ class QuizParser {
       if (!section.text) return;
       
 
-      const sectionCards = this.parseQuestionsInSection(section.text, id);
-      id += sectionCards.length;
+      const sectionCards = this.parseQuestionsInSection(section.text);
       cards.push(...sectionCards);
     });
     
@@ -172,9 +162,8 @@ class QuizParser {
   /**
    * Parse questions within a section
    */
-  static parseQuestionsInSection(text, startId) {
-    const cards = this.parseQuestionsDirectly(text);
-    return cards;
+  static parseQuestionsInSection(text) {
+    return this.parseQuestionsDirectly(text);
   }
 }
 

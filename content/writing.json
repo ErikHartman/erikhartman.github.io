@@ -1,5 +1,14 @@
 [
   {
+    "slug": "faq",
+    "route": "/blog/2026/faq/",
+    "date": "2026-10-03",
+    "title": "Frequently asked questions",
+    "description": "Answers to questions from family and friends about AI and my research.",
+    "file": "faq.md",
+    "featured": true
+  },
+  {
     "slug": "phd-background",
     "route": "/blog/2024/phd-background/",
     "date": "2024-08-22",

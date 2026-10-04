@@ -10,10 +10,6 @@
         .container {
             padding: 0.5rem;
         }
-        .card-actions button {
-            width: 100%;
-            margin: 0.5rem 0;
-        }
         .navigation {
             flex-direction: column;
             align-items: center;
@@ -99,7 +95,7 @@
         
         <main>
             <div class="flashcard-container">
-                <div class="flashcard" id="current-card">
+                <div class="flashcard">
                     <div class="card-front">
                         <p id="question-text"></p>
                         <div id="front-options" class="options-container"></div>
@@ -107,15 +103,13 @@
                 </div>
             </div>
             <div class="card-actions">
-                <!-- Removed 'Show Answer' and 'Shuffle Cards' buttons -->
             </div>
             <div class="scoreboard">
                 <span id="score-correct">0</span> correct |
                 <span id="score-wrong">0</span> wrong
             </div>
-            <div id="incorrect-section">
+            <div>
                 <h2>Incorrect Answers</h2>
-                <ul id="incorrect-list"></ul>
             </div>
         </main>
         

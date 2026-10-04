@@ -94,7 +94,10 @@ for (const name of ['prof_pic.jpg', 'phd_background.png', 'md_pdf.png', 'md_word
   await cp(path.join(root, 'assets/img', name), path.join(out, 'assets/img', name));
 }
 for (const name of ['cv.pdf', 'sb_for_beginners.pdf']) await cp(path.join(root, 'assets/pdf', name), path.join(out, 'assets/pdf', name));
-await cp(path.join(root, 'flashcards'), path.join(out, 'flashcards'), { recursive: true, filter: file => !file.endsWith('.DS_Store') });
+await mkdir(path.join(out, 'flashcards'), { recursive: true });
+for (const name of ['index.html', 'styles.css', 'quiz-parser.js', 'flashcards.js', 'all_quizzes.md']) {
+  await cp(path.join(root, 'flashcards', name), path.join(out, 'flashcards', name));
+}
 
 const selectedDois = ['10.48550/ARXIV.2511.09216', '10.1101/2025.01.20.633551', '10.1371/journal.pcbi.1013972', '10.1038/s41467-024-51589-y'];
 const selected = selectedDois.map(doi => publications.find(p => p.doi.toLowerCase() === doi.toLowerCase())).filter(Boolean);
