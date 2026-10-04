@@ -11,7 +11,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-padding-top: 24px; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+body { position: relative; margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
 ::selection { background: #ddd; color: #000; }
 a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 a:hover { text-decoration-thickness: 2px; }
@@ -34,6 +34,38 @@ h3 { font-size: 18px; line-height: 1.45; }
 .site-header nav { display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; }
 .site-header nav a { font-size: 15px; }
 .site-header nav a[aria-current] { font-weight: 600; }
+
+.molecule-margin { display: none; }
+@media (min-width: 880px) {
+  .wrap { width: min(960px, calc(100% - 224px)); }
+  .molecule-margin {
+    position: absolute;
+    z-index: 1;
+    top: 108px;
+    height: calc(100vh - 140px);
+    width: max(112px, calc((100% - 960px) / 2));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 32px;
+    color: #888;
+    pointer-events: none;
+    user-select: none;
+  }
+  .molecule-margin--left { left: 0; }
+  .molecule-margin--right { right: 0; }
+  .molecule-margin pre {
+    margin: 0;
+    flex: none;
+    font: 400 clamp(10px, .9vw, 12px) / 1.35 var(--mono);
+    font-variant-ligatures: none;
+    white-space: pre;
+  }
+}
+@media (max-height: 640px) {
+  .molecule-margin pre + pre { display: none; }
+}
 
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 48px; align-items: start; padding: 44px 0; }
 .hero h1 { margin-bottom: 20px; }
@@ -181,7 +213,7 @@ h3 { font-size: 18px; line-height: 1.45; }
 }
 @media print {
   .wrap { width: 100%; }
-  .site-header, .site-footer, .publication-filters, .pub-actions, .back-link { display: none; }
+  .site-header, .site-footer, .publication-filters, .pub-actions, .back-link, .molecule-margin { display: none; }
   .section, .publication, .cv-section { break-inside: avoid; }
   .page-intro, .hero { padding-top: 0; }
   a { text-decoration: none; }

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "dna",
+    "side": "left",
+    "art": " .         .\n  \\       /\n   A-----T\n    \\   /\n     \\ /\n      X\n     / \\\n    /   \\\n   C-----G\n  /       \\\n .         .\n  \\       /\n   G-----C\n    \\   /\n     \\ /\n      X\n     / \\\n    /   \\\n   T-----A\n  /       \\\n .         ."
+  },
+  {
+    "name": "peptide",
+    "side": "left",
+    "art": "        .--.\n       /    \\\n  .---'      |\n /           |\n.    .-------'\n    /\n   |\n   '---.\n        \\\n   .     |\n    \\    |\n     '---'"
+  },
+  {
+    "name": "glycine",
+    "side": "right",
+    "art": "      H\n      |\n  H---N\n      |\n  H---C---H\n      |\n      C===O\n      |\n      O\n      |\n      H"
+  },
+  {
+    "name": "rna",
+    "side": "right",
+    "art": "      .---.\n     /     \\\n    .       .\n    |       |\n    .       .\n     \\     /\n      G---C\n      |   |\n      C---G\n      |   |\n      A---U\n      |   |\n      G---C\n      |   |\n     5'   3'"
+  }
+]

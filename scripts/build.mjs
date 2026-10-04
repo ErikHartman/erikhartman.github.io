@@ -6,9 +6,10 @@ import { marked } from 'marked';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const out = path.join(root, 'dist');
 const json = async name => JSON.parse(await readFile(path.join(root, 'content', `${name}.json`), 'utf8'));
-const [site, publications, writing, software] = await Promise.all(['site', 'publications', 'writing', 'software'].map(json));
+const [site, publications, writing, software, molecules] = await Promise.all(['site', 'publications', 'writing', 'software', 'molecules'].map(json));
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const date = value => new Intl.DateTimeFormat('en', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${value.slice(0, 10)}T12:00:00Z`));
+const moleculeMargins = ['left', 'right'].map(side => `<div class="molecule-margin molecule-margin--${side}" aria-hidden="true">${molecules.filter(molecule => molecule.side === side).map(molecule => `<pre data-molecule="${esc(molecule.name)}">${esc(molecule.art)}</pre>`).join('')}</div>`).join('');
 const routes = [];
 const redirectRoutes = new Set();
 publications.sort((a, b) => b.year - a.year || (b.month || 0) - (a.month || 0));
@@ -41,6 +42,7 @@ function page({ title, description = site.description, route = '/', active = '',
   <script src="/site.js" defer></script>
 </head>
 <body class="${esc(kind)}">
+  ${moleculeMargins}
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header wrap">
     <nav aria-label="Main navigation">${nav.map(([href, label, key]) => `<a href="${href}"${active === key ? ' aria-current="page"' : ''}>${label}</a>`).join('')}</nav>
