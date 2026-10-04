@@ -4,8 +4,8 @@ The responses included in this FAQ so far are the following:
 
 - [What is AI?](#what-is-ai) (2026-10-03)
 - [What do I do for work?](#what-do-i-do-for-work) (2026-10-03)
-- [Do I think AI is conscious?](#is-ai-conscious)
-- [Do I think AI will make humans extinct?](#do-i-think-ai-will-end-the-world)
+- [Do I think AI is conscious?](#is-ai-conscious) (To be written)
+- [Do I think AI will make humans extinct?](#do-i-think-ai-will-end-the-world) (To be written)
 
 Note the date stamp attached to the posts, since my answers on these matters may change over time - particularly in fields like AI that change rapidly. I have, however, attempted to not make my responses depend too heavily on the current status of the fields.
 
@@ -96,3 +96,5 @@ The second track of my PhD pertains simply to creating mathematical and computat
 To be written
 
 <h2 id="do-i-think-ai-will-end-the-world">Do I think AI will make humans extinct?</h2>
+
+To be written
