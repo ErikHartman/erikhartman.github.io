@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="450" viewBox="0 0 340 450" role="img" aria-labelledby="emergence-mobile-title emergence-mobile-description">
+  <title id="emergence-mobile-title">One water molecule and many molecules together</title>
+  <desc id="emergence-mobile-description">At the top, a single water molecule has one oxygen atom and two hydrogen atoms. Below it, a glass of water contains several small versions of the same molecule. The molecules in the glass are drawn much larger than their real size. This illustrates the water analogy discussed in the essay.</desc>
+  <defs>
+    <g id="emergence-mobile-water" fill="#fff" stroke="#444" stroke-width="1.5" stroke-linecap="round">
+      <path d="M0 0-12-9 M0 0 12-9"/>
+      <circle cx="0" cy="0" r="7"/>
+      <circle cx="-12" cy="-9" r="4"/>
+      <circle cx="12" cy="-9" r="4"/>
+    </g>
+  </defs>
+  <g fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M170 112 135 85 M170 112 205 85"/>
+    <path d="M71 256 85 395Q86 406 97 406H244Q255 406 256 395L270 256"/>
+    <path d="M74 283Q99 278 123 283T171 283 219 283 267 283" stroke="#777"/>
+  </g>
+  <g fill="#fff" stroke="#222" stroke-width="1.5">
+    <circle cx="170" cy="112" r="20"/>
+    <circle cx="135" cy="85" r="14"/>
+    <circle cx="205" cy="85" r="14"/>
+  </g>
+  <use href="#emergence-mobile-water" transform="translate(110 314) rotate(-20)"/>
+  <use href="#emergence-mobile-water" transform="translate(167 317) rotate(22)"/>
+  <use href="#emergence-mobile-water" transform="translate(230 312) rotate(-8)"/>
+  <use href="#emergence-mobile-water" transform="translate(122 361) rotate(30)"/>
+  <use href="#emergence-mobile-water" transform="translate(183 361) rotate(-28)"/>
+  <use href="#emergence-mobile-water" transform="translate(234 374) rotate(16)"/>
+  <use href="#emergence-mobile-water" transform="translate(161 389) rotate(8)"/>
+  <g fill="#000" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">
+    <text x="170" y="28">One molecule</text>
+    <text x="170" y="118">O</text>
+    <text x="135" y="91">H</text>
+    <text x="205" y="91">H</text>
+    <text x="170" y="169">Water molecule</text>
+    <text x="170" y="231">Many molecules together</text>
+    <text x="170" y="440">Water in a glass</text>
+  </g>
+</svg>

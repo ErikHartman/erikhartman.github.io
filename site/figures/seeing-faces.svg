@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="220" viewBox="0 0 640 220" role="img" aria-labelledby="faces-title faces-description">
+  <title id="faces-title">Seeing a face in a rock</title>
+  <desc id="faces-description">Two small hollows and a curved crack in a rock resemble the eyes and mouth of a face. An arrow connects the rock to a simple drawing of the face we recognize.</desc>
+  <defs>
+    <marker id="faces-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M2 1.5 7 4.5 2 7.5" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M92 146 78 111 88 68 119 40 172 31 217 55 235 96 224 132 193 153 142 162Z"/>
+    <path d="M88 68 108 77 103 104 M193 153 190 137 210 126 M172 31 166 49" stroke="#777"/>
+    <ellipse cx="137" cy="83" rx="7" ry="5" transform="rotate(-18 137 83)"/>
+    <ellipse cx="181" cy="83" rx="7" ry="5" transform="rotate(13 181 83)"/>
+    <path d="M128 110 140 118 159 123 177 119 187 109"/>
+    <circle cx="483" cy="96" r="63"/>
+    <circle cx="461" cy="83" r="5"/>
+    <circle cx="505" cy="83" r="5"/>
+    <path d="M454 110Q483 136 512 110"/>
+    <path d="M285 96H356" stroke="#555" marker-end="url(#faces-arrow)"/>
+  </g>
+  <g fill="#000" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">
+    <text x="158" y="200">Marks on a rock</text>
+    <text x="483" y="200">A familiar face</text>
+  </g>
+</svg>

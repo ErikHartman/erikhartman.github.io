@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="600" viewBox="0 0 340 600" role="img" aria-labelledby="ai-futures-mobile-title ai-futures-mobile-description">
+  <title id="ai-futures-mobile-title">Five imagined futures for artificial intelligence</title>
+  <desc id="ai-futures-mobile-description">Three possible paths lead to the five scenarios discussed in this essay. Superintelligence branches into loss of human control or abundance. Gradual improvement branches into tools for oppression or tools for progress. Stalled progress leads to a new AI winter. This is a conceptual map of the author's scenarios, not an exhaustive list or a prediction of their likelihood.</desc>
+  <defs>
+    <marker id="ai-futures-mobile-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M2 1.5 7 4.5 2 7.5" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M29 58V172 M29 284V398 M29 511V560"/>
+    <g marker-end="url(#ai-futures-mobile-arrow)">
+      <path d="M29 103H51"/>
+      <path d="M29 172H51"/>
+      <path d="M29 329H51"/>
+      <path d="M29 398H51"/>
+      <path d="M29 560H51"/>
+    </g>
+  </g>
+  <g fill="#fff" stroke="#222" stroke-width="1.5">
+    <circle cx="75" cy="103" r="15"/>
+    <circle cx="75" cy="172" r="15"/>
+    <circle cx="75" cy="329" r="15"/>
+    <circle cx="75" cy="398" r="15"/>
+    <circle cx="75" cy="560" r="15"/>
+  </g>
+  <g fill="#000" font-family="Arial, sans-serif" font-size="18">
+    <text x="20" y="38">Superintelligence</text>
+    <text x="20" y="264">Gradual improvement</text>
+    <text x="20" y="491">Progress stalls</text>
+    <text x="103" y="97">Loss of human</text>
+    <text x="103" y="121">control</text>
+    <text x="103" y="178">Abundance</text>
+    <text x="103" y="335">Tools for oppression</text>
+    <text x="103" y="404">Tools for progress</text>
+    <text x="103" y="566">A new AI winter</text>
+    <g text-anchor="middle">
+      <text x="75" y="109">1</text>
+      <text x="75" y="178">2</text>
+      <text x="75" y="335">3</text>
+      <text x="75" y="404">4</text>
+      <text x="75" y="566">5</text>
+    </g>
+  </g>
+</svg>

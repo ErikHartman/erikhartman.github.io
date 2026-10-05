@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="260" viewBox="0 0 640 260" role="img" aria-labelledby="emergence-title emergence-description">
+  <title id="emergence-title">One water molecule and many molecules together</title>
+  <desc id="emergence-description">On the left, a single water molecule has one oxygen atom and two hydrogen atoms. On the right, a glass of water contains several small versions of the same molecule. The molecules in the glass are drawn much larger than their real size. This illustrates the water analogy discussed in the essay.</desc>
+  <defs>
+    <g id="emergence-water" fill="#fff" stroke="#444" stroke-width="1.5" stroke-linecap="round">
+      <path d="M0 0-12-9 M0 0 12-9"/>
+      <circle cx="0" cy="0" r="7"/>
+      <circle cx="-12" cy="-9" r="4"/>
+      <circle cx="12" cy="-9" r="4"/>
+    </g>
+  </defs>
+  <g fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M154 129 119 102 M154 129 189 102"/>
+    <path d="M389 55 403 194Q404 205 415 205H562Q573 205 574 194L588 55"/>
+    <path d="M392 82Q417 77 441 82T489 82 537 82 585 82" stroke="#777"/>
+  </g>
+  <g fill="#fff" stroke="#222" stroke-width="1.5">
+    <circle cx="154" cy="129" r="20"/>
+    <circle cx="119" cy="102" r="14"/>
+    <circle cx="189" cy="102" r="14"/>
+  </g>
+  <use href="#emergence-water" transform="translate(428 113) rotate(-20)"/>
+  <use href="#emergence-water" transform="translate(485 116) rotate(22)"/>
+  <use href="#emergence-water" transform="translate(548 111) rotate(-8)"/>
+  <use href="#emergence-water" transform="translate(440 160) rotate(30)"/>
+  <use href="#emergence-water" transform="translate(501 160) rotate(-28)"/>
+  <use href="#emergence-water" transform="translate(552 173) rotate(16)"/>
+  <use href="#emergence-water" transform="translate(479 188) rotate(8)"/>
+  <g fill="#000" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">
+    <text x="154" y="30">One molecule</text>
+    <text x="488" y="30">Many molecules together</text>
+    <text x="154" y="135">O</text>
+    <text x="119" y="108">H</text>
+    <text x="189" y="108">H</text>
+    <text x="154" y="239">Water molecule</text>
+    <text x="488" y="239">Water in a glass</text>
+  </g>
+</svg>

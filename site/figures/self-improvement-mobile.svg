@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="490" viewBox="0 0 340 490" role="img" aria-labelledby="improvement-mobile-title improvement-mobile-description">
+  <title id="improvement-mobile-title">A hypothetical self-improvement loop</title>
+  <desc id="improvement-mobile-description">From top to bottom, an AI system proposes changes to itself. Those changes are built and tested. If they work, the improved system repeats the process, indicated by an arrow returning to the top. This is a hypothetical loop, not a prediction of future capabilities or speed.</desc>
+  <defs>
+    <marker id="improvement-mobile-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M2 1.5 7 4.5 2 7.5" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="88" y="18" width="208" height="78" rx="3"/>
+    <rect x="88" y="156" width="208" height="78" rx="3"/>
+    <rect x="88" y="312" width="208" height="78" rx="3"/>
+  </g>
+  <g fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#improvement-mobile-arrow)">
+    <path d="M192 110V142"/>
+    <path d="M192 249V298"/>
+    <path d="M74 351H40Q32 351 32 343V65Q32 57 40 57H74"/>
+  </g>
+  <g fill="#000" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">
+    <text x="192" y="51">AI proposes</text>
+    <text x="192" y="77">changes</text>
+    <text x="192" y="189">Changes are</text>
+    <text x="192" y="215">built and tested</text>
+    <text x="192" y="345">A more</text>
+    <text x="192" y="371">capable system</text>
+    <text x="208" y="278" text-anchor="start" font-size="17">If they work</text>
+    <text x="170" y="438">The improved system</text>
+    <text x="170" y="464">repeats the process</text>
+  </g>
+</svg>
