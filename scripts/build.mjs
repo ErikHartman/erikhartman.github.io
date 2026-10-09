@@ -6,7 +6,7 @@ import { marked } from 'marked';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const out = path.join(root, 'dist');
 const json = async name => JSON.parse(await readFile(path.join(root, 'content', `${name}.json`), 'utf8'));
-const [site, publications, writing, software, molecules] = await Promise.all(['site', 'publications', 'writing', 'software', 'molecules'].map(json));
+const [site, publications, writing, software, molecules, media] = await Promise.all(['site', 'publications', 'writing', 'software', 'molecules', 'media'].map(json));
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const date = value => new Intl.DateTimeFormat('en', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${value.slice(0, 10)}T12:00:00Z`));
 const moleculeMargins = ['left', 'right'].map(side => `<div class="molecule-margin molecule-margin--${side}" aria-hidden="true">${molecules.filter(molecule => molecule.side === side).map(molecule => `<pre data-molecule="${esc(molecule.name)}">${esc(molecule.art)}</pre>`).join('')}</div>`).join('');
@@ -14,9 +14,10 @@ const routes = [];
 const redirectRoutes = new Set();
 publications.sort((a, b) => b.year - a.year || (b.month || 0) - (a.month || 0));
 writing.sort((a, b) => b.date.localeCompare(a.date));
+media.sort((a, b) => b.date.localeCompare(a.date));
 
 function page({ title, description = site.description, route = '/', active = '', body, kind = '' }) {
-  const nav = [['/', 'About', 'about'], ['/#research', 'Research', 'research'], ['/publications/', 'Publications', 'publications'], ['/blog/', 'Writing', 'writing'], ['/cv/', 'CV', 'cv']];
+  const nav = [['/', 'About', 'about'], ['/#research', 'Research', 'research'], ['/publications/', 'Publications', 'publications'], ['/blog/', 'Writing', 'writing'], ['/#media', 'Media', 'media'], ['/cv/', 'CV', 'cv']];
   const canonical = `${site.url}${route}`;
   const person = JSON.stringify({ '@context': 'https://schema.org', '@type': 'Person', name: site.name, url: site.url, image: `${site.url}/assets/img/prof_pic.jpg`, jobTitle: 'Computational biology PhD student and visiting research scholar', affiliation: [{ '@type': 'Organization', name: 'Lund University' }, { '@type': 'Organization', name: 'University of Pennsylvania' }], sameAs: [site.scholar, site.github, site.orcid, site.linkedin] }).replace(/</g, '\\u003c');
   return `<!doctype html>
@@ -87,6 +88,13 @@ function writingRow(post, level = 3) {
   return `<a class="writing-row" href="${esc(post.route)}"><time datetime="${esc(post.date.slice(0, 10))}">${date(post.date)}</time><div><h${level}>${esc(post.title)}</h${level}><p>${esc(post.description)}</p></div></a>`;
 }
 
+function mediaRow(item) {
+  const published = /^\d{4}$/.test(item.date) ? `<span>${esc(item.date)}</span>` : `<time datetime="${esc(item.date)}">${date(item.date)}</time>`;
+  const language = item.language === 'Swedish' ? 'sv' : 'en';
+  const related = item.related?.length ? `<div class="media-related">${item.related.map(link => `<a href="${esc(link.url)}" hreflang="${link.language === 'Swedish' ? 'sv' : 'en'}">${esc(link.label)}</a>`).join('')}</div>` : '';
+  return `<article class="media-item"><div class="media-meta"><span>${esc(item.outlet)}</span>${published}<span>${esc(item.type)}</span><span>${esc(item.language)}</span></div><h3 lang="${language}"><a href="${esc(item.url)}" hreflang="${language}">${esc(item.title)}</a></h3><p>${esc(item.description)}</p>${related}</article>`;
+}
+
 await rm(out, { recursive: true, force: true });
 await mkdir(out, { recursive: true });
 for (const name of await readdir(path.join(root, 'site'))) await cp(path.join(root, 'site', name), path.join(out, name), { recursive: true });
@@ -116,6 +124,7 @@ await emit('/', page({ active: 'about', body: `
   <section class="section" aria-labelledby="work-title"><div class="section-heading"><h2 id="work-title">Selected publications</h2><a href="/publications/">All publications</a></div><div class="selected-publications">${selected.map(p => pubRow(p, true)).join('')}</div></section>
   <section class="section" id="software" aria-labelledby="software-title"><div class="section-heading"><h2 id="software-title">Software</h2><a href="${site.github}">GitHub</a></div><div class="software-grid">${software.map(item => `<a class="software-item" href="${item.url}"><div><h3>${esc(item.name)}</h3></div><p>${esc(item.description)}</p><span class="software-category">${esc(item.category)}</span></a>`).join('')}</div></section>
   <section class="section" aria-labelledby="writing-title"><div class="section-heading"><h2 id="writing-title">Writing</h2><a href="/blog/">All writing</a></div><div class="writing-list">${writing.slice(0, 3).map(post => writingRow(post)).join('')}</div></section>
+  <section class="section" id="media" aria-labelledby="media-title"><div class="section-heading"><h2 id="media-title">Media</h2></div><div class="media-list">${media.map(mediaRow).join('')}</div></section>
   <aside class="a-little-more"><h2>Background</h2><p>During my PhD, I spent time at <a href="https://www.a-star.edu.sg/">A*STAR in Singapore</a> working with Peter J. Bond. Before my PhD, I worked in research and machine learning at Lund and Qlucore. I have also participated in Unga Forskare, ISEF, and iGEM.</p><a class="text-link" href="/cv/">CV</a></aside>
 ` }));
 

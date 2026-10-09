@@ -1,0 +1,70 @@
+[
+  {
+    "title": "Accelerating antibiotic discovery with ChatGPT",
+    "url": "https://openai.com/index/accelerating-antibiotic-discovery/",
+    "outlet": "OpenAI",
+    "date": "2026-09-09",
+    "type": "Film",
+    "language": "English",
+    "description": "A documentary featuring our work in César de la Fuente’s lab and how we use AI in antibiotic discovery."
+  },
+  {
+    "title": "Revolutionerande AI-lösningar inom lantbruk och infektionsvård prisas med 100 000 kronor",
+    "url": "https://handelskammaren.com/2024/11/28/revolutionerande-ai-losningar-inom-lantbruk-och-infektionsvard-prisas-med-100-000-kronor/",
+    "outlet": "Sydsvenska Handelskammaren",
+    "date": "2024-11-28",
+    "type": "Article",
+    "language": "Swedish",
+    "description": "On receiving the Årets Tekniklöfte award for my work on protein degradation and infection diagnostics."
+  },
+  {
+    "title": "Faster detection of dangerous infections",
+    "url": "https://www.medicine.lu.se/article/faster-detection-dangerous-infections",
+    "outlet": "Lund University",
+    "date": "2024-09-09",
+    "type": "Article",
+    "language": "English",
+    "description": "On our research using peptide clustering and machine learning to study wound infections.",
+    "related": [
+      {
+        "label": "Read in Swedish",
+        "url": "https://www.medicin.lu.se/artikel/snabbare-upptackt-av-farliga-infektioner",
+        "language": "Swedish"
+      }
+    ]
+  },
+  {
+    "title": "Anders Wall-stipendium till forskarlöfte i kampen mot infektionssjukdomar",
+    "url": "https://www.wallstiftelsen.se/nyheter/anders-wall-stipendium-till-forskarl%C3%B6fte-i-kampen-mot-infektionssjukdomar",
+    "outlet": "Anders Walls Stiftelse",
+    "date": "2024-02-26",
+    "type": "Article",
+    "language": "Swedish",
+    "description": "A profile covering my research interests, background, and Anders Wall scholarship.",
+    "related": [
+      {
+        "label": "Watch the video profile",
+        "url": "https://www.youtube.com/watch?v=ythJURpR6gM",
+        "language": "Swedish"
+      }
+    ]
+  },
+  {
+    "title": "SPORT: De ska lyfta Lund till tungt EM-guld",
+    "url": "https://www.lundagard.se/2022/02/08/sport-de-ska-lyfta-lund-till-tungt-em-guld/",
+    "outlet": "Lundagård",
+    "date": "2022-02-08",
+    "type": "Article",
+    "language": "Swedish",
+    "description": "An interview ahead of representing Lund at the European university powerlifting championships."
+  },
+  {
+    "title": "Pressmeddelande: Succé på Intel ISEF för Sveriges unga forskningslandslag",
+    "url": "https://ungaforskare.se/2018/05/19/pressmeddelande-succe-pa-intel-isef-for-sveriges-unga-forskningslandslag/",
+    "outlet": "Unga Forskare",
+    "date": "2018-05-19",
+    "type": "Press release",
+    "language": "Swedish",
+    "description": "Coverage of my third-place award at Intel ISEF for a project on antimicrobial peptides."
+  }
+]
