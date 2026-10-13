@@ -357,6 +357,7 @@ function flowDrawJoins(id){
  layer.innerHTML=`<svg width="${layout.width}" height="${layout.height}" aria-hidden="true">${paths}</svg>`+overlaps.map((o,i)=>{const end=FLOW_LEFT+o.col*FLOW_LANE+FLOW_LANE/2;return `<button class="flow-join-count" style="left:${(x+end)/2}px;top:${y-34-i*9}px" data-tree-node="${esc(flowNodeId(node.era.id,[node.keys[0],o.label.key]))}" aria-label="${o.count} shared references: ${esc(node.labels[0].label)} and ${esc(o.label.label)}, ${node.era.start}–${node.era.end}">${o.count}</button>`;}).join('');
  $('flowFocusHint').textContent=`${node.labels[0].label}, ${node.era.start}–${node.era.end}: ${overlaps.length?'up to 5 strongest visible overlaps; link numbers count shared references.':'no overlaps with the other visible lanes.'}`;
 }
+function focusFlowEra(id){const row=flowState.eras.findIndex(e=>e.id===id),scroll=$('treeCanvas')?.closest('.tree-scroll');if(row<0||!scroll){$('tree').scrollIntoView({block:'start'});return;}scroll.scrollIntoView({behavior:'auto',block:'start'});scroll.scrollTo({top:row*FLOW_ROW,behavior:'auto'});}
 function highlightTree(id){flowState.focus=id;flowDrawJoins(id);}
 function showTreeNode(id){
  const n=flowNode(id);if(!n)return;treeDetailContext=id;highlightTree(id);
@@ -371,7 +372,7 @@ function showTreeNode(id){
 document.addEventListener('click',ev=>{
  const node=ev.target.closest('[data-tree-node]'),era=ev.target.closest('[data-tree-era]'),preset=ev.target.closest('[data-flow-preset]'),add=ev.target.closest('[data-flow-select-group]'),clear=ev.target.closest('[data-flow-clear-group]'),marker=ev.target.closest('[data-flow-event]');
  if(node)showTreeNode(node.dataset.treeNode);
- if(era){const target=$('tree-era-'+era.dataset.treeEra);history.replaceState(null,'','#tree-era-'+era.dataset.treeEra);target?.scrollIntoView({behavior:'auto',block:'start'});}
+ if(era){history.replaceState(null,'','#tree-era-'+era.dataset.treeEra);focusFlowEra(era.dataset.treeEra);}
  if(preset){flowState.preset=preset.dataset.flowPreset;flowState.selected=new Set((flowState.preset==='overview'&&state.hdp?FLOW_HDP_OVERVIEW:FLOW_PRESETS[flowState.preset]).filter(k=>flowState.byKey.has(k)));flowState.focus=null;renderFieldTree();}
  if(add||clear){const facet=add?.dataset.flowSelectGroup||clear.dataset.flowClearGroup;flowState.labels.filter(l=>l.facet===facet).forEach(l=>add?flowState.selected.add(l.key):flowState.selected.delete(l.key));flowState.preset='custom';renderFieldTree();}
  if(marker){treeDetailContext=null;showEvent(marker.dataset.flowEvent);}
@@ -391,6 +392,6 @@ document.addEventListener('keydown',ev=>{
 });
 $('eventDialog')?.addEventListener('close',()=>{treeDetailContext=null;});
 
-syncScopeControls();filter();function handleHash(){const id=decodeURIComponent(location.hash.slice(1));if(FIELD_TREE.eras.some(era=>'tree-era-'+era.id===id)){requestAnimationFrame(()=>($(id)||$('tree')).scrollIntoView());return}if(id==='author-trails'||id==='tree'){if(id==='author-trails')history.replaceState(null,'','#tree');requestAnimationFrame(()=>$('tree').scrollIntoView());return}if(id==='explore'&&state.view==='network'){state.view='chronology';render();return}if(id==='network'){state.view='network';render();$('explore').scrollIntoView();return}if(data.some(e=>e.id===id)){if(state.view!=='chronology'||!$(id)){state.view='chronology';$('reset').click()}requestAnimationFrame(()=>{const el=$(id);el?.scrollIntoView({behavior:'auto'});if(el)el.querySelector('details').open=true})}}window.addEventListener('hashchange',handleHash);handleHash();
+syncScopeControls();filter();function handleHash(){const id=decodeURIComponent(location.hash.slice(1));if(FIELD_TREE.eras.some(era=>'tree-era-'+era.id===id)){requestAnimationFrame(()=>focusFlowEra(id.replace('tree-era-','')));return}if(id==='author-trails'||id==='tree'){if(id==='author-trails')history.replaceState(null,'','#tree');requestAnimationFrame(()=>$('tree').scrollIntoView());return}if(id==='explore'&&state.view==='network'){state.view='chronology';render();return}if(id==='network'){state.view='network';render();$('explore').scrollIntoView();return}if(data.some(e=>e.id===id)){if(state.view!=='chronology'||!$(id)){state.view='chronology';$('reset').click()}requestAnimationFrame(()=>{const el=$(id);el?.scrollIntoView({behavior:'auto'});if(el)el.querySelector('details').open=true})}}window.addEventListener('hashchange',handleHash);handleHash();
 </script>
 </body></html>
