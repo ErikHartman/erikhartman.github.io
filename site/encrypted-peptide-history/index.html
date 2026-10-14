@@ -942,7 +942,7 @@ const studyPCA = (() => {
 function renderStudyPCA(){studyPCA.render();}
 
 // An editorial map of selected concepts, with dates taken from the cited atlas records.
-// Integration: mount #ideaBranchesPanel, then call IdeaBranches.render(filtered, scopeEvents()).
+// Integration: mount #ideaBranchesPanel, then call IdeaBranches.render(filtered, scopeEvents(), scope).
 // Study buttons use the atlas's existing delegated [data-event] / showEvent handler.
 (() => {
  'use strict';
@@ -964,7 +964,7 @@ function renderStudyPCA(){studyPCA.render();}
     "color": "#9a742d"
   }
 };
- const SHARED=[
+ const HOST_LATER=[
   {
     "id": "peptidomics",
     "anchor": "dm-peptidomics-definition",
@@ -976,9 +976,7 @@ function renderStudyPCA(){studyPCA.render();}
     ],
     "description": "Peptidomics shifts the unit of study from an isolated peptide to the naturally occurring peptide mixture. Fractionation and mass spectrometry make those mixtures available for both sequence discovery and activity-guided investigation.",
     "support": [
-      "cam-hemofiltrate-bank"
-    ],
-    "broadSupport": [
+      "cam-hemofiltrate-bank",
       "dm-peptidomics-verhaert",
       "dm-locust-peptidomics",
       "sf-plasma-lcms-map1999"
@@ -998,8 +996,7 @@ function renderStudyPCA(){studyPCA.render();}
       "cf-cryptides-pimenta",
       "cf-cryptides-ueki",
       "ev-cryptomics-samir-link"
-    ],
-    "broadSupport": []
+    ]
   },
   {
     "id": "turnover-defense",
@@ -1014,8 +1011,7 @@ function renderStudyPCA(){studyPCA.render();}
     "support": [
       "dm-autophagic-cryptides",
       "cf-keratin-proteasome"
-    ],
-    "broadSupport": []
+    ]
   },
   {
     "id": "sequence-mining",
@@ -1030,8 +1026,7 @@ function renderStudyPCA(){studyPCA.render();}
     "support": [
       "cm-human-genome",
       "cm-ampa"
-    ],
-    "broadSupport": []
+    ]
   },
   {
     "id": "proteome-mining",
@@ -1045,8 +1040,7 @@ function renderStudyPCA(){studyPCA.render();}
     "description": "Whole-proteome searches expand earlier genome-wide screens into large collections of encrypted candidates. Experimental follow-up adds activity, combinations and infection-model evidence for selected synthesized sequences.",
     "support": [
       "cm-human-genome"
-    ],
-    "broadSupport": []
+    ]
   },
   {
     "id": "proteasome-defense",
@@ -1061,8 +1055,7 @@ function renderStudyPCA(){studyPCA.render();}
     "support": [
       "cf-keratin-proteasome",
       "mx-mapp"
-    ],
-    "broadSupport": []
+    ]
   },
   {
     "id": "ai-mining",
@@ -1077,8 +1070,7 @@ function renderStudyPCA(){studyPCA.render();}
     "support": [
       "cm-pancleave",
       "fpm-prionins2026"
-    ],
-    "broadSupport": []
+    ]
   },
   {
     "id": "large-inventory",
@@ -1093,8 +1085,7 @@ function renderStudyPCA(){studyPCA.render();}
     "support": [
       "lp-large-scale-hypothalamus",
       "s18-sweat-32818-peptidome"
-    ],
-    "broadSupport": []
+    ]
   },
   {
     "id": "proteolysis-maps",
@@ -1109,9 +1100,7 @@ function renderStudyPCA(){studyPCA.render();}
     "support": [
       "hp-native-thrombin-wound-signatures",
       "user-cai-wound-proteases2024",
-      "na-hartman-wound-mining"
-    ],
-    "broadSupport": [
+      "na-hartman-wound-mining",
       "lp-mechanistic-milk-peptidomics"
     ]
   },
@@ -1129,8 +1118,7 @@ function renderStudyPCA(){studyPCA.render();}
       "cf-cape1",
       "fpp-saliva-antimicrobial-mining",
       "s18-tear-lacritin-peptidomics"
-    ],
-    "broadSupport": []
+    ]
   },
   {
     "id": "functional-switch",
@@ -1146,8 +1134,7 @@ function renderStudyPCA(){studyPCA.render();}
       "fpp-skin-kallikreins2006",
       "hd-rosacea-processing",
       "ie-bacterial-fyt21"
-    ],
-    "broadSupport": []
+    ]
   },
   {
     "id": "coagulation-defense",
@@ -1163,8 +1150,7 @@ function renderStudyPCA(){studyPCA.render();}
       "hdi-kininogen-contact-system",
       "mc-tfpi-ggl27",
       "ie-thrombin-sepsis"
-    ],
-    "broadSupport": []
+    ]
   }
 ];
  const HOST=[
@@ -1181,8 +1167,7 @@ function renderStudyPCA(){studyPCA.render();}
     "support": [
       "hd-hirsch-histone",
       "hd-lysosomal-cationic-proteins"
-    ],
-    "broadSupport": []
+    ]
   },
   {
     "id": "processed-signals",
@@ -1198,8 +1183,7 @@ function renderStudyPCA(){studyPCA.render();}
       "hd-tuftsin",
       "cf-collagen-monocytes",
       "cf-pgp"
-    ],
-    "broadSupport": []
+    ]
   },
   {
     "id": "turnover",
@@ -1213,8 +1197,7 @@ function renderStudyPCA(){studyPCA.render();}
     "description": "Ubiquitin conjugation and the proteasome establish controlled routes for intracellular protein breakdown. This mechanistic groundwork later supports the question of what the resulting peptide products can do.",
     "support": [
       "dm-proteasome-ring"
-    ],
-    "broadSupport": []
+    ]
   },
   {
     "id": "hidden-fragments",
@@ -1229,8 +1212,7 @@ function renderStudyPCA(){studyPCA.render();}
     "support": [
       "cf-buforin",
       "cf-tick-hemoglobin"
-    ],
-    "broadSupport": []
+    ]
   },
   {
     "id": "native-release",
@@ -1245,90 +1227,288 @@ function renderStudyPCA(){studyPCA.render();}
     "support": [
       "cf-parasin-processing",
       "cf-thrombin-defense"
-    ],
-    "broadSupport": []
+    ]
   }
 ];
- const BROAD=[
+ const BROAD_NODES=[
   {
-    "id": "early-activity",
+    "id": "bioactive-release",
     "anchor": "oh-bradykinin",
     "group": "function",
-    "y": 169,
+    "y": 220,
     "label": [
       "Proteolysis releases",
       "bioactive signals"
     ],
     "description": "Bradykinin links cleavage of a larger protein to a peptide with a distinct physiological activity. It is an early example of the broader relationship between proteolysis and biological signaling.",
-    "support": [],
-    "broadSupport": []
+    "support": []
   },
   {
-    "id": "processed-signals",
+    "id": "precursor-signals",
     "anchor": "oh-proinsulin",
     "group": "function",
-    "y": 323,
+    "y": 70,
     "label": [
-      "Precursors become",
-      "active signals"
+      "Precursor processing",
+      "diversifies signals"
     ],
-    "description": "Proinsulin and complement establish controlled protein processing as a route to active peptide signals. Dedicated precursor maturation provides a parallel framework for understanding fragments released from proteins with other roles.",
+    "description": "Proinsulin establishes precursor processing as a route to active hormones. POMC and proglucagon extend the idea: one precursor can supply several signals, and tissue-specific processing can change the products released.",
     "support": [
-      "hd-complement-anaphylatoxins",
-      "hd-tuftsin"
-    ],
-    "broadSupport": []
+      "oh-pomc-common",
+      "oh-pomc-cdna",
+      "oh-proglucagon-tissue",
+      "oh-active-glp1"
+    ]
   },
   {
-    "id": "turnover",
+    "id": "dietary-activities",
+    "anchor": "cf-exorphins",
+    "group": "function",
+    "y": 400,
+    "label": [
+      "Dietary proteins",
+      "contain latent activities"
+    ],
+    "description": "Digestion can expose sequences with activities beyond the nutritional roles of their parent proteins. Opioid fragments and ACE-inhibitory casein peptides connect food proteins with receptor and enzyme regulation.",
+    "support": [
+      "cf-casomorphins",
+      "cf-casein-ace",
+      "cf-rubiscolin",
+      "cf-soymorphins"
+    ]
+  },
+  {
+    "id": "protein-turnover",
     "anchor": "dm-ubiquitin-conjugation",
     "group": "release",
-    "y": 508,
+    "y": 580,
     "label": [
       "Regulated",
       "protein turnover"
     ],
-    "description": "Ubiquitin conjugation and the proteasome establish controlled routes for intracellular protein breakdown. This mechanistic groundwork later supports the question of what the resulting peptide products can do.",
+    "description": "Ubiquitin conjugation and the proteasome establish controlled routes for intracellular protein breakdown. This mechanistic groundwork supports later questions about antigen presentation and the signaling activities of degradation products.",
     "support": [
       "dm-proteasome-ring"
-    ],
-    "broadSupport": []
+    ]
   },
   {
-    "id": "hidden-fragments",
+    "id": "hidden-ligands",
     "anchor": "cf-hemorphins",
     "group": "function",
-    "y": 169,
+    "y": 220,
     "label": [
-      "Hidden activities",
-      "inside proteins"
+      "Receptor ligands",
+      "hidden in proteins"
     ],
-    "description": "Opioid sequences within hemoglobin and antimicrobial sequences within lactoferrin and histones reveal functions beyond the familiar activities of the parent proteins. The emerging pattern crosses receptors, tissues and physiological systems.",
+    "description": "Hemoglobin and other proteins contain fragments with receptor activity beyond the familiar functions of their parents. Native-peptide measurements help connect the activity of experimentally generated fragments with peptides found in tissues.",
     "support": [
+      "cf-odn",
       "cf-pituitary-hemorphin",
-      "cf-lactoferricin",
-      "cf-buforin"
-    ],
-    "broadSupport": []
+      "cf-extended-hemopressins"
+    ]
   },
   {
-    "id": "native-release",
-    "anchor": "cf-buforin-processing",
-    "group": "release",
-    "y": 66,
+    "id": "antimicrobial-fragments",
+    "anchor": "cf-lactoferricin",
+    "group": "function",
+    "y": 310,
     "label": [
-      "Proteases release",
-      "hidden defenses"
+      "Antimicrobial",
+      "protein fragments"
     ],
-    "description": "Matching a naturally occurring peptide to its parent protein and processing enzyme connects sequence activity to a biological route of release. Buforin, parasin and thrombin provide complementary examples in tissues and injury-related fluids.",
+    "description": "Lactoferrin, histone and thrombin fragments establish host defense as one branch of hidden peptide function. Activity assays and processing studies connect larger proteins with antimicrobial sequences and biological routes of release.",
     "support": [
-      "cf-parasin-processing",
+      "cf-buforin",
+      "cf-buforin-processing",
       "cf-thrombin-defense"
+    ]
+  },
+  {
+    "id": "antigen-processing",
+    "anchor": "dm-proteasome-antigen",
+    "group": "release",
+    "y": 665,
+    "label": [
+      "Protein fragments",
+      "become antigens"
     ],
-    "broadSupport": []
+    "description": "Proteasomal processing supplies peptides for MHC class I presentation. Natural-ligand sequencing and immunopeptidomics make this antigen repertoire measurable, forming a distinct branch of peptide biology.",
+    "support": [
+      "dm-ctl-fragments",
+      "dm-natural-mhc-ligand",
+      "dm-hplc-esi-mhc",
+      "dm-systemhc"
+    ]
+  },
+  {
+    "id": "matrix-signals",
+    "anchor": "cf-endostatin",
+    "group": "function",
+    "y": 410,
+    "label": [
+      "Matrix fragments",
+      "regulate tissue"
+    ],
+    "description": "Endostatin and related fragments connect concealed protein activities with control of vessel growth. Matrikines and endotrophin extend the matrix’s role from structural support to cell recruitment, repair and tumor-associated remodeling.",
+    "support": [
+      "cf-angiostatin",
+      "cf-matrikines",
+      "tf-endotrophin-cancer",
+      "tf-endotrophin-metabolism"
+    ]
+  },
+  {
+    "id": "searchable-motifs",
+    "anchor": "cm-biopep",
+    "group": "mining",
+    "y": 90,
+    "label": [
+      "Bioactive motifs",
+      "become searchable"
+    ],
+    "description": "Curated sequences make known peptide activities searchable within larger proteins. BIOPEP connects food-protein sequences with documented bioactive motifs, providing an early framework for systematic in-silico screening.",
+    "support": [
+      "cf-casein-ace"
+    ]
+  },
+  {
+    "id": "native-inventories",
+    "anchor": "dm-peptidomics-definition",
+    "group": "inventory",
+    "y": 785,
+    "label": [
+      "Systematic native",
+      "peptide inventories"
+    ],
+    "description": "Peptidomics shifts the unit of study from an isolated peptide to the naturally occurring peptide mixture. Fractionation and mass spectrometry make those mixtures accessible across tissues, plasma and other biological samples.",
+    "support": [
+      "cam-hemofiltrate-bank",
+      "dm-peptidomics-verhaert",
+      "dm-locust-peptidomics",
+      "sf-plasma-lcms-map1999"
+    ]
+  },
+  {
+    "id": "broad-cryptome",
+    "anchor": "cf-cryptome",
+    "group": "function",
+    "y": 220,
+    "label": [
+      "The cryptome",
+      "concept"
+    ],
+    "description": "Receptor ligands, antimicrobial fragments and tissue-regulating peptides become parts of a shared biological question: what other activities are concealed within familiar proteins? Cryptome and cryptide syntheses connect these previously separate examples.",
+    "support": [
+      "cf-cryptides-pimenta",
+      "cf-cryptides-ueki",
+      "ev-cryptomics-samir-link"
+    ]
+  },
+  {
+    "id": "intracellular-regulators",
+    "anchor": "dm-intracellular-signalling",
+    "group": "function",
+    "y": 550,
+    "label": [
+      "Intracellular fragments",
+      "regulate signaling"
+    ],
+    "description": "Peptides detected within cells become candidates for signaling and metabolic regulation. Peptide treatments, peptidase perturbations and tissue profiling connect protein fragments with GPCR responses, protein interactions and glucose handling.",
+    "support": [
+      "cs-thop1-substrates",
+      "cs-protein-interaction-modulation",
+      "sm-adipose-intracellular",
+      "sm-thop1-metabolism",
+      "sm-ric4"
+    ]
+  },
+  {
+    "id": "general-prediction",
+    "anchor": "cm-ranker",
+    "group": "mining",
+    "y": 70,
+    "label": [
+      "General bioactivity",
+      "prediction"
+    ],
+    "description": "PeptideRanker learns sequence features associated with bioactivity across peptide classes. PeptideLocator extends this approach to locating potentially bioactive regions within larger proteins, broadening screening beyond one activity or a library of known motifs.",
+    "support": [
+      "cm-locator"
+    ]
+  },
+  {
+    "id": "broad-large-inventory",
+    "anchor": "lp-large-scale-hypothalamus",
+    "group": "inventory",
+    "y": 785,
+    "label": [
+      "Large-scale native",
+      "peptidomics"
+    ],
+    "description": "Inventories reach tens of thousands of endogenous sequences across neural tissue, plant cells and human secretions. Greater coverage makes overlapping fragments, processing diversity and sample context central to studying the native peptide repertoire.",
+    "support": [
+      "lpc-moss-20000-peptidome",
+      "s18-sweat-32818-peptidome"
+    ]
+  },
+  {
+    "id": "neuronal-products",
+    "anchor": "pm-neuronal-membrane-proteasome",
+    "group": "release",
+    "y": 640,
+    "label": [
+      "Degradation products",
+      "signal to neurons"
+    ],
+    "description": "Neuronal membrane proteasomes generate extracellular peptide mixtures that influence calcium signaling and gene expression. These experiments connect protein turnover with communication between cells and neuronal plasticity.",
+    "support": [
+      "pm-neuronal-proteasome-plasticity",
+      "pm-neuronal-peptide-nmdar"
+    ]
+  },
+  {
+    "id": "multiple-activities",
+    "anchor": "cm-multipep",
+    "group": "mining",
+    "y": 158,
+    "label": [
+      "Predicting multiple",
+      "peptide activities"
+    ],
+    "description": "MultiPep treats peptide bioactivity as a collection of potentially overlapping classes. Multi-label prediction distinguishes different types of activity while allowing a sequence to have more than one predicted function.",
+    "support": []
+  },
+  {
+    "id": "pattern-discovery",
+    "anchor": "na-madsen-ppv",
+    "group": "inventory",
+    "y": 470,
+    "label": [
+      "Peptide patterns guide",
+      "functional discovery"
+    ],
+    "description": "Peptide coverage and cleavage patterns help prioritize candidates within large native peptidomes. Peptidomic data, known product features and sequence-based bioactivity predictions guide synthesis and experiments on selected new candidates.",
+    "support": [
+      "lp-large-scale-hypothalamus",
+      "cm-ranker"
+    ]
+  },
+  {
+    "id": "peptide-boundaries",
+    "anchor": "na-deeppeptide",
+    "group": "mining",
+    "y": 315,
+    "label": [
+      "Predicting mature",
+      "peptide boundaries"
+    ],
+    "description": "DeepPeptide predicts the positions of mature peptides and propeptides within precursor proteins. Learning where processing products begin and end complements activity prediction and helps define sequences for experimental study. Rule-based cleavage screening offers another route, illustrated by the later BRP search.",
+    "support": [
+      "cm-brp"
+    ]
   }
 ];
- const CONNECTIONS=[
+ const HOST_CONNECTIONS=[
   {
     "from": "early-activity",
     "to": "hidden-fragments",
@@ -1430,16 +1610,137 @@ function renderStudyPCA(){studyPCA.render();}
     "reason": "Proteasome-derived defense joins the native-detection and functional-testing approaches in one mechanistic investigation."
   }
 ];
+ const BROAD_CONNECTIONS=[
+  {
+    "from": "bioactive-release",
+    "to": "precursor-signals",
+    "reason": "Bradykinin release and hormone maturation illustrate related ways that processing generates active signals from larger proteins."
+  },
+  {
+    "from": "precursor-signals",
+    "to": "hidden-ligands",
+    "reason": "Receptor-active peptides occur in both dedicated signal precursors and proteins with other primary functions, extending the questions asked about peptide production."
+  },
+  {
+    "from": "dietary-activities",
+    "to": "hidden-ligands",
+    "reason": "Food-derived opioid fragments and hemorphins reveal a related principle: receptor-active sequences can be embedded within larger proteins."
+  },
+  {
+    "from": "dietary-activities",
+    "to": "searchable-motifs",
+    "reason": "Documented food-derived activities provide sequences that can be catalogued and searched for within other protein substrates."
+  },
+  {
+    "from": "hidden-ligands",
+    "to": "broad-cryptome",
+    "reason": "Receptor-active fragments provide one of the biological foundations brought together by the cryptome concept."
+  },
+  {
+    "from": "antimicrobial-fragments",
+    "to": "broad-cryptome",
+    "reason": "Antimicrobial fragments supply a distinct functional branch within the broader hidden-peptide framework."
+  },
+  {
+    "from": "matrix-signals",
+    "to": "broad-cryptome",
+    "reason": "Angiogenesis inhibitors and matrikines connect hidden protein activities to tissue-level regulation."
+  },
+  {
+    "from": "protein-turnover",
+    "to": "antigen-processing",
+    "reason": "Proteasome inhibition experiments connect regulated protein breakdown with the generation of peptides presented by MHC class I."
+  },
+  {
+    "from": "protein-turnover",
+    "to": "intracellular-regulators",
+    "reason": "Once degradation products can be detected, their possible effects on intracellular signaling can be tested alongside their routes of production and clearance."
+  },
+  {
+    "from": "precursor-signals",
+    "to": "native-inventories",
+    "reason": "Peptidomics extends the study of processed hormone and neuropeptide products to measurements of whole native mixtures."
+  },
+  {
+    "from": "native-inventories",
+    "to": "intracellular-regulators",
+    "reason": "Identifying intracellular peptide sequences provides candidates for synthesis and experiments on signaling and protein interactions."
+  },
+  {
+    "from": "broad-cryptome",
+    "to": "intracellular-regulators",
+    "reason": "The hidden-function framework extends to intracellular fragments that may affect signaling and metabolism."
+  },
+  {
+    "from": "native-inventories",
+    "to": "broad-large-inventory",
+    "reason": "Improvements in sample preparation and mass spectrometry expand native inventories to tens of thousands of sequences."
+  },
+  {
+    "from": "protein-turnover",
+    "to": "neuronal-products",
+    "reason": "Membrane-associated neuronal proteasomes provide a specific route by which protein breakdown generates extracellular signaling material."
+  },
+  {
+    "from": "intracellular-regulators",
+    "to": "neuronal-products",
+    "reason": "Intracellular-fragment studies and neuronal peptide-mixture experiments offer complementary connections between protein turnover and cell signaling."
+  },
+  {
+    "from": "searchable-motifs",
+    "to": "general-prediction",
+    "reason": "Sequence-based models expand screening from matches to known motifs toward predicted activity in previously uncharacterized sequences."
+  },
+  {
+    "from": "general-prediction",
+    "to": "multiple-activities",
+    "reason": "General bioactivity scoring is complemented by models that distinguish multiple, potentially overlapping activity classes."
+  },
+  {
+    "from": "broad-large-inventory",
+    "to": "pattern-discovery",
+    "reason": "Broad native-peptide coverage makes recurring boundaries and patterns around processed products available for computational prioritization."
+  },
+  {
+    "from": "general-prediction",
+    "to": "pattern-discovery",
+    "reason": "The Madsen study compares PPV’s mass-spectrometric patterns with PeptideRanker scores to help prioritize candidates."
+  },
+  {
+    "from": "precursor-signals",
+    "to": "peptide-boundaries",
+    "reason": "Knowledge of processed precursor products supplies the biological targets and annotated examples for learning mature-peptide boundaries."
+  },
+  {
+    "from": "general-prediction",
+    "to": "peptide-boundaries",
+    "reason": "Predicting product boundaries complements prediction of activity: the two approaches address which sequence is released and what it might do."
+  }
+];
+ const MAPS={
+  'host-defense':{
+   nodes:[...HOST,...HOST_LATER],connections:HOST_CONNECTIONS,
+   label:'Host-defense peptides',heading:'How host-defense ideas branch through time.',
+   description:'Follow the connections between antimicrobial fragments, immune regulation, biological processing and antibiotic discovery. Explore the studies supporting each idea.'
+  },
+  all:{
+   nodes:BROAD_NODES,connections:BROAD_CONNECTIONS,
+   label:'All peptides',heading:'How peptide biology branches through time.',
+   description:'Follow the connections between hormone processing, food-derived activities, tissue and cellular signaling, antigen presentation and peptide discovery. Host defense is one branch of this broader map.'
+  }
+ };
  const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  let selected=null;
+ let activeScope=null;
+ let activeConnections=[];
  let scene=[];
  let panel=null;
- const studiesFor=(definition,records)=>[...new Set([definition.anchor,...(definition.support||[]),...(definition.broadSupport||[])])].map(id=>records.get(id)).filter(Boolean);
+ const studiesFor=(definition,records)=>[...new Set([definition.anchor,...(definition.support||[])])].map(id=>records.get(id)).filter(Boolean);
  function inspector(){
   const target=panel.querySelector('.ideas-inspector');
   const node=scene.find(n=>n.id===selected&&n.matches.length);
   if(!node){target.innerHTML='<p class="ideas-prompt">Select an idea to explore the studies behind it. Dates mark selected examples, not the first appearance of every idea.</p>';return;}
-  const related=CONNECTIONS.filter(edge=>edge.from===node.id||edge.to===node.id).map(edge=>({edge,other:scene.find(n=>n.id===(edge.from===node.id?edge.to:edge.from))})).filter(item=>item.other);
+  const related=activeConnections.filter(edge=>edge.from===node.id||edge.to===node.id).map(edge=>({edge,other:scene.find(n=>n.id===(edge.from===node.id?edge.to:edge.from))})).filter(item=>item.other);
   target.innerHTML=`<div class="ideas-inspector-copy"><div class="eyebrow" style="color:${GROUPS[node.group].color}">${node.year} · ${escape(GROUPS[node.group].label)}</div><h3>${escape(node.label.join(' '))}</h3><p>${escape(node.description)}</p><details class="ideas-connections"><summary>Why these connections?</summary><ul>${related.map(({edge,other})=>`<li><button data-idea-neighbor="${other.id}" ${other.matches.length?'':'disabled'}>${escape(other.label.join(' '))}</button><p>${escape(edge.reason)}</p></li>`).join('')}</ul></details></div><div class="ideas-studies"><div class="eyebrow">${node.matches.length} supporting ${node.matches.length===1?'study':'studies'}</div>${node.matches.map(e=>`<button data-event="${escape(e.id)}"><span>${e.year} · Read study & sources ↗</span>${escape(e.title)}</button>`).join('')}</div>`;
  }
  function select(id,focus=false){
@@ -1455,13 +1756,17 @@ function renderStudyPCA(){studyPCA.render();}
   panel.querySelectorAll('[data-idea-edge]').forEach(el=>el.classList.toggle('is-connected',el.dataset.ideaEdge.split('|').includes(id)));
   inspector();
  }
- function render(list=[],scopeList=list){
+ function render(list=[],scopeList=list,scope='all'){
   panel=document.getElementById('ideaBranchesPanel');
   if(!panel)return;
   const records=new Map(scopeList.map(e=>[e.id,e]));
   const matching=new Set(list.map(e=>e.id));
-  const broad=scopeList.some(e=>e.labels?.hdp?.include===false);
-  const definitions=[...(broad?BROAD:HOST),...SHARED];
+  const scopeKey=scope==='host-defense'?'host-defense':'all';
+  const map=MAPS[scopeKey];
+  if(activeScope!==scopeKey)selected=null;
+  activeScope=scopeKey;
+  activeConnections=map.connections;
+  const definitions=map.nodes;
   const allRecords=new Map(data.map(e=>[e.id,e]));
   scene=definitions.map(n=>({...n,year:allRecords.get(n.anchor).year,studies:studiesFor(n,records)})).filter(n=>n.studies.length).sort((a,b)=>a.year-b.year||a.y-b.y);
   scene.forEach(n=>{n.matches=n.studies.filter(e=>matching.has(e.id));});
@@ -1474,7 +1779,7 @@ function renderStudyPCA(){studyPCA.render();}
   scene.forEach(n=>{n.x=scale(n.year);});
   const ticks=[];
   for(let year=first;year<=last;year+=10)ticks.push(`<line x1="${scale(year)}" x2="${scale(year)}" y1="30" y2="844" class="ideas-grid"/><text x="${scale(year)}" y="872" class="ideas-axis-label" text-anchor="middle">${year}</text>`);
-  const paths=CONNECTIONS.map(({from,to,reason})=>{
+  const paths=activeConnections.map(({from,to,reason})=>{
    const a=byId.get(from),b=byId.get(to);
    if(!a||!b||a.year>=b.year)return '';
    const dx=(b.x-a.x)*.45;
@@ -1485,7 +1790,7 @@ function renderStudyPCA(){studyPCA.render();}
    return `<g class="ideas-node${enabled?'':' is-muted'}${selected===n.id?' is-selected':''}" data-idea-node="${n.id}" role="button" tabindex="${enabled?'0':'-1'}" aria-disabled="${!enabled}" aria-pressed="${selected===n.id}" aria-label="${n.year}: ${escape(n.label.join(' '))}. ${enabled?n.matches.length+' matching '+(n.matches.length===1?'study':'studies'):'No supporting studies match the filters'}" transform="translate(${n.x} ${n.y})" style="--idea-color:${GROUPS[n.group].color}"><title>${n.year} · ${escape(n.label.join(' '))}</title><rect class="ideas-hit" x="-15" y="-27" width="180" height="75" rx="7"/><circle class="ideas-ring" r="12"/><circle class="ideas-dot" r="5.5"/><text class="ideas-node-year" x="16" y="-12">${n.year}</text><text class="ideas-node-label" x="16" y="9">${n.label.map((line,i)=>`<tspan x="16" dy="${i?19:0}">${escape(line)}</tspan>`).join('')}</text></g>`;
   }).join('');
   const message=!list.length?'No studies match these filters. Reset or broaden the filters to explore the branches.':!active.length?'The matching studies are in the chronology below; none is a selected anchor in this overview.':active.length<scene.length?`${active.length} of ${scene.length} ideas have supporting studies in the current filters. Faded ideas provide context.`:`${scene.length} selected ideas · follow the branches from left to right`;
-  panel.innerHTML=`<div class="ideas-shell"><div class="ideas-heading"><div><div class="eyebrow">A few ideas, many directions</div><h2>How the field branches through time.</h2><p>Follow the conceptual advances that connect hidden peptide functions, biological processing, native peptidomes and sequence mining. Explore the studies supporting each idea.</p></div></div><div class="ideas-legend">${Object.values(GROUPS).map(g=>`<span><i style="background:${g.color}"></i>${escape(g.label)}</span>`).join('')}</div><p class="ideas-status" role="status">${escape(message)}</p><div class="ideas-scroll" tabindex="0" role="region" aria-label="Branching ideas through time. Scroll horizontally on smaller screens."><svg class="ideas-svg" viewBox="0 0 1440 900" role="group" aria-label="Selected conceptual branches ${first} to ${last}. Years determine horizontal position; vertical position separates labels."><g aria-hidden="true">${ticks.join('')}${paths}</g><g>${nodes}</g><text x="1390" y="872" class="ideas-time-arrow" text-anchor="end" aria-hidden="true">Time →</text></svg></div><div class="ideas-inspector" aria-live="polite"></div><p class="ideas-method">Each node groups related advances around a representative dated study. Select an idea for its supporting papers and an explanation of the connections. Lines trace conceptual relationships rather than a complete citation history; horizontal spacing follows calendar years.</p></div>`;
+  panel.innerHTML=`<div class="ideas-shell"><div class="ideas-heading"><div><div class="eyebrow">${escape(map.label)}</div><h2>${escape(map.heading)}</h2><p>${escape(map.description)}</p></div></div><div class="ideas-legend">${Object.values(GROUPS).map(g=>`<span><i style="background:${g.color}"></i>${escape(g.label)}</span>`).join('')}</div><p class="ideas-status" role="status">${escape(message)}</p><div class="ideas-scroll" tabindex="0" role="region" aria-label="Branching ideas through time. Scroll horizontally on smaller screens."><svg class="ideas-svg" viewBox="0 0 1440 900" role="group" aria-label="Selected conceptual branches ${first} to ${last}. Years determine horizontal position; vertical position separates labels."><g aria-hidden="true">${ticks.join('')}${paths}</g><g>${nodes}</g><text x="1390" y="872" class="ideas-time-arrow" text-anchor="end" aria-hidden="true">Time →</text></svg></div><div class="ideas-inspector" aria-live="polite"></div><p class="ideas-method">Each node groups related advances around a representative dated study. Select an idea for its supporting papers and an explanation of the connections. Lines trace conceptual relationships rather than a complete citation history; horizontal spacing follows calendar years.</p></div>`;
   panel.onclick=event=>{const node=event.target.closest('[data-idea-node]'),neighbor=event.target.closest('[data-idea-neighbor]');if(node&&panel.contains(node))select(node.dataset.ideaNode);if(neighbor&&panel.contains(neighbor))select(neighbor.dataset.ideaNeighbor,true);};
   panel.onkeydown=event=>{
    const node=event.target.closest('[data-idea-node]');
@@ -1525,7 +1830,7 @@ function renderHistoryView(){
  $('pcaPanel').hidden=historyView!=='pca';
  $('network').hidden=historyView!=='network';
  document.querySelectorAll('button[data-history-view]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.historyView===historyView)));
- if(historyView==='branches')IdeaBranches.render(state.filtered,data.filter(isInScope));
+ if(historyView==='branches')IdeaBranches.render(state.filtered,data.filter(isInScope),state.hdp?'host-defense':'all');
  else if(historyView==='pca')renderStudyPCA();
  else if(historyView==='network')renderNetwork();
  else{flowState.view='waterfall';renderFieldTree();}
