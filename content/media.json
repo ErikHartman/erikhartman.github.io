@@ -55,6 +55,22 @@
     ]
   },
   {
+    "title": "Erik, 24, är prisad för sin forskning: ”Helt sinnessjukt”",
+    "url": "https://www.sydsvenskan.se/lund/erik-24-ar-prisad-for-sin-forskning-helt-sinnessjukt/",
+    "outlet": "Sydsvenskan",
+    "date": "2024-07-01",
+    "type": "Front-page article",
+    "language": "Swedish",
+    "description": "A front-page profile about my research in infection medicine and the Anders Wall scholarship.",
+    "image": {
+      "src": "/figures/media/sydsvenskan-erik-feature.jpg",
+      "alt": "Erik Hartman speaking in an infection research laboratory.",
+      "width": 640,
+      "height": 360,
+      "credit": "Photo: Lovisa Henriksson / Sydsvenskan"
+    }
+  },
+  {
     "title": "Anders Wall-stipendium till forskarlöfte i kampen mot infektionssjukdomar",
     "url": "https://www.wallstiftelsen.se/nyheter/anders-wall-stipendium-till-forskarl%C3%B6fte-i-kampen-mot-infektionssjukdomar",
     "outlet": "Anders Walls Stiftelse",
