@@ -116,7 +116,8 @@ function mediaRow(item) {
   const published = /^\d{4}$/.test(item.date) ? `<span>${esc(item.date)}</span>` : `<time datetime="${esc(item.date)}">${date(item.date)}</time>`;
   const language = item.language === 'Swedish' ? 'sv' : 'en';
   const related = item.related?.length ? `<div class="media-related">${item.related.map(link => `<a href="${esc(link.url)}" hreflang="${link.language === 'Swedish' ? 'sv' : 'en'}">${esc(link.label)}</a>`).join('')}</div>` : '';
-  return `<article class="media-item"><div class="media-meta"><span>${esc(item.outlet)}</span>${published}<span>${esc(item.type)}</span><span>${esc(item.language)}</span></div><h3 lang="${language}"><a href="${esc(item.url)}" hreflang="${language}">${esc(item.title)}</a></h3><p>${esc(item.description)}</p>${related}</article>`;
+  const image = item.image ? `<figure class="media-figure"><a href="${esc(item.url)}" aria-label="Open ${esc(item.title)}"><img src="${esc(item.image.src)}" width="${Number(item.image.width)}" height="${Number(item.image.height)}" alt="${esc(item.image.alt)}" loading="lazy" decoding="async"></a>${item.image.credit ? `<figcaption>${esc(item.image.credit)}</figcaption>` : ''}</figure>` : '';
+  return `<article class="media-item${image ? ' media-item--illustrated' : ''}">${image}<div class="media-copy"><div class="media-meta"><span>${esc(item.outlet)}</span>${published}<span>${esc(item.type)}</span><span>${esc(item.language)}</span></div><h3 lang="${language}"><a href="${esc(item.url)}" hreflang="${language}">${esc(item.title)}</a></h3><p>${esc(item.description)}</p>${related}</div></article>`;
 }
 
 await rm(out, { recursive: true, force: true });

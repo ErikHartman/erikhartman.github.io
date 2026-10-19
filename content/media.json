@@ -6,7 +6,14 @@
     "date": "2026-09-09",
     "type": "Film",
     "language": "English",
-    "description": "A documentary featuring our work in César de la Fuente’s lab and how we use AI in antibiotic discovery."
+    "description": "A documentary featuring our work in César de la Fuente’s lab and how we use AI in antibiotic discovery.",
+    "image": {
+      "src": "/figures/media/openai-antibiotic-discovery.webp",
+      "alt": "César de la Fuente interviewed in a laboratory.",
+      "width": 640,
+      "height": 360,
+      "credit": "Image: OpenAI"
+    }
   },
   {
     "title": "Revolutionerande AI-lösningar inom lantbruk och infektionsvård prisas med 100 000 kronor",
@@ -15,7 +22,14 @@
     "date": "2024-11-28",
     "type": "Article",
     "language": "Swedish",
-    "description": "On receiving the Årets Tekniklöfte award for my work on protein degradation and infection diagnostics."
+    "description": "On receiving the Årets Tekniklöfte award for my work on protein degradation and infection diagnostics.",
+    "image": {
+      "src": "/figures/media/arets-tekniklofte.jpg",
+      "alt": "Erik Hartman and another recipient pictured with the 2024 technology awards.",
+      "width": 1600,
+      "height": 840,
+      "credit": "Image: Sydsvenska Handelskammaren"
+    }
   },
   {
     "title": "Faster detection of dangerous infections",
@@ -25,6 +39,13 @@
     "type": "Article",
     "language": "English",
     "description": "On our research using peptide clustering and machine learning to study wound infections.",
+    "image": {
+      "src": "/figures/media/lund-infection-research.webp",
+      "alt": "Johan Malmström, Erik Hartman, and Artur Schmidtchen together outdoors.",
+      "width": 960,
+      "height": 540,
+      "credit": "Photo: Åsa Hansdotter / Lund University"
+    },
     "related": [
       {
         "label": "Read in Swedish",
@@ -41,6 +62,13 @@
     "type": "Article",
     "language": "Swedish",
     "description": "A profile covering my research interests, background, and Anders Wall scholarship.",
+    "image": {
+      "src": "/figures/media/anders-wall-scholarship.jpg",
+      "alt": "Erik Hartman wearing a laboratory coat.",
+      "width": 1200,
+      "height": 800,
+      "credit": "Image: Anders Walls Stiftelse"
+    },
     "related": [
       {
         "label": "Watch the video profile",
@@ -56,7 +84,14 @@
     "date": "2022-02-08",
     "type": "Article",
     "language": "Swedish",
-    "description": "An interview ahead of representing Lund at the European university powerlifting championships."
+    "description": "An interview ahead of representing Lund at the European university powerlifting championships.",
+    "image": {
+      "src": "/figures/media/lundagard-powerlifting-small.jpg",
+      "alt": "Erik Hartman and Simon Söderlund in a weightlifting gym.",
+      "width": 768,
+      "height": 513,
+      "credit": "Photo: Eskil Högman / Lundagård"
+    }
   },
   {
     "title": "Pressmeddelande: Succé på Intel ISEF för Sveriges unga forskningslandslag",
@@ -65,6 +100,13 @@
     "date": "2018-05-19",
     "type": "Press release",
     "language": "Swedish",
-    "description": "Coverage of my third-place award at Intel ISEF for a project on antimicrobial peptides."
+    "description": "Coverage of my third-place award at Intel ISEF for a project on antimicrobial peptides.",
+    "image": {
+      "src": "/figures/media/unga-forskare-isef-small.jpg",
+      "alt": "Nikita and Erik Hartman wearing prize rosettes at Intel ISEF.",
+      "width": 768,
+      "height": 524,
+      "credit": "Photo: Marika Mourujärvi / Unga Forskare"
+    }
   }
 ]
