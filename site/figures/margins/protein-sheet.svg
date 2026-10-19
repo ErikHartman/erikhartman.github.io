@@ -1,17 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" aria-hidden="true" focusable="false">
-  <!-- Three antiparallel strands make a different, open protein silhouette. -->
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M47 40c-10-20-24-12-25 4-2 16 7 31 18 31M55 126c14 17 35 15 48 0M109 37c10-13 27-12 32 3 6 18-4 29-19 31" stroke="#42515c" stroke-width="8"/>
-    <path d="M47 40c-10-20-24-12-25 4-2 16 7 31 18 31M55 126c14 17 35 15 48 0M109 37c10-13 27-12 32 3 6 18-4 29-19 31" stroke="#b9d0dc" stroke-width="5"/>
-  </g>
-  <g stroke="#42515c" stroke-width="2" stroke-linejoin="round">
-    <path d="M38 42h19v53h9l-19 26-18-26h9Z" fill="#b9d0dc"/>
-    <path d="M80 121H62V68h-9l18-26 18 26h-9Z" fill="#95aebf"/>
-    <path d="M103 42h19v53h9l-19 26-18-26h9Z" fill="#b9d0dc"/>
-  </g>
-  <g fill="none" stroke="#42515c" stroke-width="1.8" stroke-linecap="round">
-    <path d="M42 51v37M107 51v37" opacity=".42"/>
-  </g>
-  <path d="M69 78c8 7 15 8 24 4" fill="none" stroke="#42515c" stroke-width="7" stroke-linecap="round"/>
-  <path d="M69 78c8 7 15 8 24 4" fill="none" stroke="#ff9274" stroke-width="4" stroke-linecap="round"/>
+  <!-- Human ubiquitin β-grasp, PDB 1UBQ chain A; -25° elevation, 180° azimuth; residues 1–72. Secondary structure from deposited HELIX/SHEET records. Source: https://www.rcsb.org/structure/1UBQ -->
+  <!-- Continuous connected backbone, projected from deposited chain A Cα atoms. -->
+  <path d="M100.4,87.9 Q97.7,101.0 99.1,100.0 Q100.4,99.0 99.1,104.4 Q97.8,109.7 93.5,107.9 Q89.3,106.2 91.1,111.6 Q92.9,117.0 87.1,117.5 Q81.3,118.1 82.4,121.0 Q83.5,123.8 79.5,131.7 Q75.5,139.6 80.9,142.6 Q86.3,145.7 81.5,143.8 Q76.6,142.0 80.1,137.1 Q83.7,132.3 78.8,127.7 Q73.9,123.2 76.5,120.4 Q79.1,117.5 76.5,109.6 Q73.9,101.6 74.9,97.3 Q76.0,92.9 78.3,84.1 Q80.7,75.3 85.2,68.2 Q89.7,61.0 95.8,55.7 Q101.9,50.4 96.7,43.4 Q91.5,36.3 84.9,39.4 Q78.3,42.5 76.7,39.0 Q75.1,35.6 75.1,39.9 Q75.0,44.3 66.3,42.9 Q57.5,41.5 56.1,45.9 Q54.6,50.2 59.2,57.3 Q63.8,64.5 59.0,65.4 Q54.1,66.3 46.6,66.3 Q39.0,66.4 41.9,73.1 Q44.9,79.9 46.4,84.8 Q48.0,89.7 39.7,88.4 Q31.4,87.0 27.9,89.6 Q24.4,92.2 28.7,100.0 Q33.1,107.8 33.4,110.5 Q33.6,113.2 27.5,108.1 Q21.5,103.1 26.1,98.4 Q30.8,93.8 28.3,85.2 Q25.7,76.5 31.8,70.1 Q37.8,63.7 37.6,60.1 Q37.3,56.4 40.6,63.9 Q43.9,71.3 51.2,72.1 Q58.6,72.8 67.2,70.4 Q75.8,68.1 82.1,69.2 Q88.3,70.4 97.4,71.2 Q106.4,72.0 113.8,71.9 Q121.1,71.7 129.8,71.0 Q138.5,70.2 136.4,68.0 Q134.3,65.8 128.9,58.7 Q123.6,51.6 114.5,51.0 Q105.3,50.4 101.5,47.8 Q97.6,45.1 92.1,37.8 Q86.7,30.4 79.0,29.6 Q71.3,28.8 73.0,21.7 Q74.6,14.6 82.7,17.1 Q90.9,19.6 92.5,25.1 Q94.2,30.7 99.0,38.4 Q103.9,46.0 110.3,41.8 Q116.7,37.5 118.2,32.0 Q119.6,26.5 122.9,33.3 Q126.2,40.1 130.9,44.2 Q135.5,48.2 130.8,55.9 Q126.1,63.6 128.4,68.8 Q130.7,73.9 127.1,81.4 Q123.5,88.9 122.8,96.2 Q122.2,103.5 123.1,99.5 Q124.1,95.5 119.8,98.3 Q115.6,101.0 110.8,95.7 Q106.1,90.4 103.3,92.9 Q100.5,95.4 91.9,94.3 Q83.4,93.3 81.3,92.3 Q79.1,91.3 70.5,90.2 Q61.8,89.1 59.2,83.0 Q56.5,76.9 56.5,76.9" fill="none" stroke="#42515c" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100.4,87.9 Q97.7,101.0 99.1,100.0 Q100.4,99.0 99.1,104.4 Q97.8,109.7 93.5,107.9 Q89.3,106.2 91.1,111.6 Q92.9,117.0 87.1,117.5 Q81.3,118.1 82.4,121.0 Q83.5,123.8 79.5,131.7 Q75.5,139.6 80.9,142.6 Q86.3,145.7 81.5,143.8 Q76.6,142.0 80.1,137.1 Q83.7,132.3 78.8,127.7 Q73.9,123.2 76.5,120.4 Q79.1,117.5 76.5,109.6 Q73.9,101.6 74.9,97.3 Q76.0,92.9 78.3,84.1 Q80.7,75.3 85.2,68.2 Q89.7,61.0 95.8,55.7 Q101.9,50.4 96.7,43.4 Q91.5,36.3 84.9,39.4 Q78.3,42.5 76.7,39.0 Q75.1,35.6 75.1,39.9 Q75.0,44.3 66.3,42.9 Q57.5,41.5 56.1,45.9 Q54.6,50.2 59.2,57.3 Q63.8,64.5 59.0,65.4 Q54.1,66.3 46.6,66.3 Q39.0,66.4 41.9,73.1 Q44.9,79.9 46.4,84.8 Q48.0,89.7 39.7,88.4 Q31.4,87.0 27.9,89.6 Q24.4,92.2 28.7,100.0 Q33.1,107.8 33.4,110.5 Q33.6,113.2 27.5,108.1 Q21.5,103.1 26.1,98.4 Q30.8,93.8 28.3,85.2 Q25.7,76.5 31.8,70.1 Q37.8,63.7 37.6,60.1 Q37.3,56.4 40.6,63.9 Q43.9,71.3 51.2,72.1 Q58.6,72.8 67.2,70.4 Q75.8,68.1 82.1,69.2 Q88.3,70.4 97.4,71.2 Q106.4,72.0 113.8,71.9 Q121.1,71.7 129.8,71.0 Q138.5,70.2 136.4,68.0 Q134.3,65.8 128.9,58.7 Q123.6,51.6 114.5,51.0 Q105.3,50.4 101.5,47.8 Q97.6,45.1 92.1,37.8 Q86.7,30.4 79.0,29.6 Q71.3,28.8 73.0,21.7 Q74.6,14.6 82.7,17.1 Q90.9,19.6 92.5,25.1 Q94.2,30.7 99.0,38.4 Q103.9,46.0 110.3,41.8 Q116.7,37.5 118.2,32.0 Q119.6,26.5 122.9,33.3 Q126.2,40.1 130.9,44.2 Q135.5,48.2 130.8,55.9 Q126.1,63.6 128.4,68.8 Q130.7,73.9 127.1,81.4 Q123.5,88.9 122.8,96.2 Q122.2,103.5 123.1,99.5 Q124.1,95.5 119.8,98.3 Q115.6,101.0 110.8,95.7 Q106.1,90.4 103.3,92.9 Q100.5,95.4 91.9,94.3 Q83.4,93.3 81.3,92.3 Q79.1,91.3 70.5,90.2 Q61.8,89.1 59.2,83.0 Q56.5,76.9 56.5,76.9" fill="none" stroke="#b9d0dc" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Main α-helix 23–34: axis fitted to its Cα trace. -->
+  <path d="M75.2,44.8 Q63.9,47.9 61.8,50.5 Q59.6,53.0 57.9,56.2 Q56.1,59.4 54.0,62.5 Q51.9,65.6 49.7,68.7 Q47.5,71.7 45.6,75.0 Q43.8,78.3 41.9,81.4 Q40.0,84.6 37.8,87.5 Q35.6,90.4 34.0,93.6 Q32.5,96.7 32.2,100.2 Q32.0,103.7 33.0,108.5 Q34.0,113.4 34.0,113.4" fill="none" stroke="#42515c" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M75.2,44.8 Q63.9,47.9 61.8,50.5 Q59.6,53.0 57.9,56.2 Q56.1,59.4 54.0,62.5 Q51.9,65.6 49.7,68.7 Q47.5,71.7 45.6,75.0 Q43.8,78.3 41.9,81.4 Q40.0,84.6 37.8,87.5 Q35.6,90.4 34.0,93.6 Q32.5,96.7 32.2,100.2 Q32.0,103.7 33.0,108.5 Q34.0,113.4 34.0,113.4" fill="none" stroke="#b9d0dc" stroke-width="11.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M64.3,53.7L54.9,52.3" fill="none" stroke="#42515c" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M52.1,72.4L42.7,71.1" fill="none" stroke="#42515c" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M40.3,91.0L30.9,89.8" fill="none" stroke="#42515c" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- Short 3₁₀ helix 56–59: axis fitted to its Cα trace. -->
+  <path d="M104.1,46.5 Q113.9,38.9 116.5,37.9 Q119.1,36.8 122.5,38.5 Q125.9,40.2 125.9,40.2" fill="none" stroke="#42515c" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M104.1,46.5 Q113.9,38.9 116.5,37.9 Q119.1,36.8 122.5,38.5 Q125.9,40.2 125.9,40.2" fill="none" stroke="#d6e3e9" stroke-width="11.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Strand 10–17: Cα-guided β-strand; arrow points N to C. -->
+  <polygon points="91.7,145.6 88.4,82.6 80.5,75.2 74.1,83.9 82.3,146.4" fill="#b9d0dc" stroke="#42515c" stroke-width="1.7" stroke-linejoin="round"/>
+  <path d="M89.7,145.8L83.9,83.0" fill="none" stroke="#d6e3e9" stroke-opacity=".7" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Strand 1–7: Cα-guided β-strand; arrow points N to C. -->
+  <polygon points="96.5,85.0 79.1,107.3 80.8,118.0 91.2,115.1 104.4,90.0" fill="#95aebf" stroke="#42515c" stroke-width="1.7" stroke-linejoin="round"/>
+  <path d="M98.2,86.0L82.9,109.8" fill="none" stroke="#d6e3e9" stroke-opacity=".7" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Strand 64–72: Cα-guided β-strand; arrow points N to C. -->
+  <polygon points="123.9,99.9 66.6,73.0 56.4,76.5 60.9,86.2 120.2,108.6" fill="#d6e3e9" stroke="#42515c" stroke-width="1.7" stroke-linejoin="round"/>
+  <path d="M123.1,101.8L64.8,77.1" fill="none" stroke="#d6e3e9" stroke-opacity=".7" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Strand 40–45: Cα-guided β-strand; arrow points N to C. -->
+  <polygon points="43.6,76.5 113.0,79.0 121.0,71.8 113.0,64.6 43.6,67.1" fill="#95aebf" stroke="#42515c" stroke-width="1.7" stroke-linejoin="round"/>
+  <path d="M43.6,74.5L113.0,74.5" fill="none" stroke="#d6e3e9" stroke-opacity=".7" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Strand 48–50: Cα-guided β-strand; arrow points N to C. -->
+  <polygon points="124.8,46.6 107.0,40.2 97.7,45.5 103.9,54.2 122.8,55.8" fill="#b9d0dc" stroke="#42515c" stroke-width="1.7" stroke-linejoin="round"/>
+  <path d="M124.4,48.6L106.1,44.5" fill="none" stroke="#d6e3e9" stroke-opacity=".7" stroke-width="1.8" stroke-linecap="round"/>
 </svg>

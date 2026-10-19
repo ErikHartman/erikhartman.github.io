@@ -27,7 +27,7 @@
       "description": "I develop methods for protein and peptide design using machine learning, Bayesian optimization, and biological information.",
       "figure": {
         "src": "/figures/sequence-design.svg",
-        "alt": "Folded peptide candidates move through iterative design to a coral peptide fitted into a blue protein surface.",
+        "alt": "Four structure-informed protein and peptide folds lead through a sequence-refinement cycle to a coral peptide helix in a blue-gray protein cleft.",
         "caption": "Learning from candidate sequences to guide molecular design.",
         "width": 520,
         "height": 260

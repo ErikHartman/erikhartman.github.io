@@ -1,23 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" aria-hidden="true" focusable="false">
-  <defs>
-    <g id="ribbon" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M0 0c12-19 17 19 29 0s17-19 29 0 17 19 29 0" stroke="#42515c" stroke-width="19"/>
-      <path d="M0 0c12-19 17 19 29 0s17-19 29 0 17 19 29 0" stroke="#b9d0dc" stroke-width="15"/>
-      <path d="M8-7l9 14M37 7l9-14M66-7l9 14" stroke="#42515c" stroke-width="1.7"/>
-      <path d="M5-6l6 10M34 5l6-9M63-5l6 10" stroke="#95aebf" stroke-width="3"/>
-    </g>
-  </defs>
-
-  <!-- Small loops connect three helices into a compact, rounded fold. -->
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M39 48C48 23 77 19 94 38M119 52c23 8 30 33 12 51M112 114c-17 20-48 21-65 6M36 102C17 91 17 67 37 53" stroke="#42515c" stroke-width="8"/>
-    <path d="M39 48C48 23 77 19 94 38M119 52c23 8 30 33 12 51M112 114c-17 20-48 21-65 6M36 102C17 91 17 67 37 53" stroke="#b9d0dc" stroke-width="5"/>
-    <path d="M47 119c-10-7-11-17-2-25" stroke="#42515c" stroke-width="8"/>
-    <path d="M47 119c-10-7-11-17-2-25" stroke="#ff9274" stroke-width="5"/>
-  </g>
-  <use href="#ribbon" transform="translate(45 50) rotate(71) scale(.72)"/>
-  <use href="#ribbon" transform="translate(76 51) rotate(-16) scale(.62)"/>
-  <use href="#ribbon" transform="translate(48 81) rotate(8) scale(.72)"/>
-  <use href="#ribbon" transform="translate(112 57) rotate(84) scale(.52)"/>
-  <use href="#ribbon" transform="translate(111 109) rotate(166) scale(.67)"/>
+  <!-- Protein A B domain, PDB 1BDD chain A; 0° elevation, 300° azimuth; residues 9–56. Three helices follow deposited HELIX records: 10–19, 25–37, 42–55. Source: https://www.rcsb.org/structure/1BDD -->
+  <!-- Continuous connected backbone, projected from deposited chain A Cα atoms. -->
+  <path d="M101.7,19.0 Q83.3,27.0 81.8,25.6 Q80.2,24.2 88.5,28.4 Q96.7,32.5 97.3,39.1 Q97.9,45.6 88.7,49.5 Q79.5,53.4 80.8,56.0 Q82.0,58.7 90.4,63.3 Q98.8,67.9 96.2,73.9 Q93.5,79.9 87.2,84.1 Q80.9,88.4 88.2,93.6 Q95.6,98.9 101.8,103.6 Q107.9,108.2 109.2,117.5 Q110.5,126.7 113.6,131.7 Q116.8,136.7 108.3,136.7 Q99.8,136.7 89.7,138.7 Q79.6,140.7 72.4,133.7 Q65.1,126.7 59.2,129.6 Q53.2,132.5 59.3,128.4 Q65.3,124.3 68.8,116.9 Q72.3,109.6 63.5,106.8 Q54.6,103.9 52.7,103.0 Q50.8,102.1 56.1,93.7 Q61.5,85.4 58.3,80.6 Q55.0,75.9 45.8,78.9 Q36.5,82.0 36.8,74.5 Q37.1,67.0 41.1,60.5 Q45.1,54.0 36.9,54.0 Q28.7,54.0 21.7,55.0 Q14.7,56.0 19.3,48.9 Q24.0,41.9 31.2,36.2 Q38.4,30.6 41.6,26.1 Q44.8,21.7 53.3,26.6 Q61.8,31.4 63.7,36.3 Q65.5,41.2 75.1,38.5 Q84.7,35.7 87.0,40.1 Q89.3,44.5 86.1,53.6 Q82.9,62.7 89.0,62.2 Q95.1,61.8 102.9,62.1 Q110.7,62.3 107.3,70.9 Q104.0,79.4 103.8,84.0 Q103.7,88.6 113.0,87.2 Q122.3,85.8 124.8,89.8 Q127.4,93.8 122.1,102.3 Q116.8,110.7 121.3,111.5 Q125.7,112.3 135.5,110.8 Q145.3,109.2 144.8,116.8 Q144.3,124.4 139.5,131.4 Q134.6,138.3 134.6,138.3" fill="none" stroke="#42515c" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M101.7,19.0 Q83.3,27.0 81.8,25.6 Q80.2,24.2 88.5,28.4 Q96.7,32.5 97.3,39.1 Q97.9,45.6 88.7,49.5 Q79.5,53.4 80.8,56.0 Q82.0,58.7 90.4,63.3 Q98.8,67.9 96.2,73.9 Q93.5,79.9 87.2,84.1 Q80.9,88.4 88.2,93.6 Q95.6,98.9 101.8,103.6 Q107.9,108.2 109.2,117.5 Q110.5,126.7 113.6,131.7 Q116.8,136.7 108.3,136.7 Q99.8,136.7 89.7,138.7 Q79.6,140.7 72.4,133.7 Q65.1,126.7 59.2,129.6 Q53.2,132.5 59.3,128.4 Q65.3,124.3 68.8,116.9 Q72.3,109.6 63.5,106.8 Q54.6,103.9 52.7,103.0 Q50.8,102.1 56.1,93.7 Q61.5,85.4 58.3,80.6 Q55.0,75.9 45.8,78.9 Q36.5,82.0 36.8,74.5 Q37.1,67.0 41.1,60.5 Q45.1,54.0 36.9,54.0 Q28.7,54.0 21.7,55.0 Q14.7,56.0 19.3,48.9 Q24.0,41.9 31.2,36.2 Q38.4,30.6 41.6,26.1 Q44.8,21.7 53.3,26.6 Q61.8,31.4 63.7,36.3 Q65.5,41.2 75.1,38.5 Q84.7,35.7 87.0,40.1 Q89.3,44.5 86.1,53.6 Q82.9,62.7 89.0,62.2 Q95.1,61.8 102.9,62.1 Q110.7,62.3 107.3,70.9 Q104.0,79.4 103.8,84.0 Q103.7,88.6 113.0,87.2 Q122.3,85.8 124.8,89.8 Q127.4,93.8 122.1,102.3 Q116.8,110.7 121.3,111.5 Q125.7,112.3 135.5,110.8 Q145.3,109.2 144.8,116.8 Q144.3,124.4 139.5,131.4 Q134.6,138.3 134.6,138.3" fill="none" stroke="#b9d0dc" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Helix 10–19: axis fitted to its Cα trace. -->
+  <path d="M82.9,27.5 Q86.6,30.6 87.8,33.3 Q89.1,36.1 89.3,40.0 Q89.5,43.8 89.0,48.0 Q88.4,52.2 88.5,56.4 Q88.5,60.6 89.2,65.0 Q89.9,69.4 90.2,73.9 Q90.5,78.5 90.7,82.8 Q90.9,87.1 93.3,92.8 Q95.6,98.6 95.6,98.6" fill="none" stroke="#42515c" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M82.9,27.5 Q86.6,30.6 87.8,33.3 Q89.1,36.1 89.3,40.0 Q89.5,43.8 89.0,48.0 Q88.4,52.2 88.5,56.4 Q88.5,60.6 89.2,65.0 Q89.9,69.4 90.2,73.9 Q90.5,78.5 90.7,82.8 Q90.9,87.1 93.3,92.8 Q95.6,98.6 95.6,98.6" fill="none" stroke="#d6e3e9" stroke-width="11.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M92.9,33.2L85.4,38.9" fill="none" stroke="#42515c" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M92.6,58.2L84.4,62.9" fill="none" stroke="#42515c" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- Helix 25–37: axis fitted to its Cα trace. -->
+  <path d="M65.0,126.1 Q62.2,124.9 62.3,122.4 Q62.5,120.0 62.2,116.4 Q61.9,112.8 60.6,108.9 Q59.4,105.0 58.0,100.9 Q56.6,96.9 55.2,92.8 Q53.8,88.8 51.7,85.1 Q49.6,81.4 47.0,78.0 Q44.4,74.5 42.1,71.0 Q39.7,67.4 37.3,64.2 Q34.8,61.1 31.5,59.2 Q28.1,57.3 21.3,56.9 Q14.4,56.5 14.4,56.5" fill="none" stroke="#42515c" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M65.0,126.1 Q62.2,124.9 62.3,122.4 Q62.5,120.0 62.2,116.4 Q61.9,112.8 60.6,108.9 Q59.4,105.0 58.0,100.9 Q56.6,96.9 55.2,92.8 Q53.8,88.8 51.7,85.1 Q49.6,81.4 47.0,78.0 Q44.4,74.5 42.1,71.0 Q39.7,67.4 37.3,64.2 Q34.8,61.1 31.5,59.2 Q28.1,57.3 21.3,56.9 Q14.4,56.5 14.4,56.5" fill="none" stroke="#95aebf" stroke-width="11.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M58.3,122.1L66.8,118.0" fill="none" stroke="#42515c" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M53.2,100.2L60.0,93.6" fill="none" stroke="#42515c" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M42.1,78.6L46.7,70.4" fill="none" stroke="#42515c" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- Helix 42–55: axis fitted to its Cα trace. -->
+  <path d="M65.4,41.8 Q78.8,43.7 81.8,46.2 Q84.8,48.8 87.5,52.1 Q90.2,55.5 93.2,58.9 Q96.1,62.2 98.9,65.6 Q101.8,69.0 104.1,72.7 Q106.4,76.4 108.8,80.0 Q111.2,83.6 113.9,86.9 Q116.5,90.2 118.8,93.7 Q121.1,97.2 123.2,100.7 Q125.2,104.2 128.0,107.1 Q130.7,110.0 133.9,112.5 Q137.1,115.0 140.7,119.6 Q144.3,124.2 144.3,124.2" fill="none" stroke="#42515c" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M65.4,41.8 Q78.8,43.7 81.8,46.2 Q84.8,48.8 87.5,52.1 Q90.2,55.5 93.2,58.9 Q96.1,62.2 98.9,65.6 Q101.8,69.0 104.1,72.7 Q106.4,76.4 108.8,80.0 Q111.2,83.6 113.9,86.9 Q116.5,90.2 118.8,93.7 Q121.1,97.2 123.2,100.7 Q125.2,104.2 128.0,107.1 Q130.7,110.0 133.9,112.5 Q137.1,115.0 140.7,119.6 Q144.3,124.2 144.3,124.2" fill="none" stroke="#b9d0dc" stroke-width="11.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M86.6,44.3L83.1,53.1" fill="none" stroke="#42515c" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M104.1,64.8L99.5,73.1" fill="none" stroke="#42515c" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M118.9,86.1L114.3,94.4" fill="none" stroke="#42515c" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M132.1,105.5L129.3,114.6" fill="none" stroke="#42515c" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
 </svg>
