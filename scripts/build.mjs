@@ -6,7 +6,7 @@ import { marked } from 'marked';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const out = path.join(root, 'dist');
 const json = async name => JSON.parse(await readFile(path.join(root, 'content', `${name}.json`), 'utf8'));
-const [site, publications, writing, software, molecules, media] = await Promise.all(['site', 'publications', 'writing', 'software', 'molecules', 'media'].map(json));
+const [site, publications, writing, software, molecules, media, structure] = await Promise.all(['site', 'publications', 'writing', 'software', 'molecules', 'media', 'structure'].map(json));
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const date = value => new Intl.DateTimeFormat('en', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${value.slice(0, 10)}T12:00:00Z`));
 const moleculeMargins = ['left', 'right'].map(side => `<div class="molecule-margin molecule-margin--${side}" aria-hidden="true">${molecules.filter(molecule => molecule.side === side).map(molecule => `<pre data-molecule="${esc(molecule.name)}">${esc(molecule.art)}</pre>`).join('')}</div>`).join('');
@@ -41,6 +41,7 @@ function page({ title, description = site.description, route = '/', active = '',
   <link rel="alternate" type="application/atom+xml" title="Erik Hartman — Writing" href="/feed.xml">
   <script type="application/ld+json">${person}</script>
   <script src="/site.js" defer></script>
+  ${route === '/' ? '<link rel="stylesheet" href="/structure-viewer.css"><script src="/structure-viewer.js" defer></script>' : ''}
 </head>
 <body class="${esc(kind)}">
   ${moleculeMargins}
@@ -76,12 +77,35 @@ function bibtex(item) {
 }
 
 function pubRow(item, compact = false) {
-  return `<article class="publication${compact ? ' compact' : ''}"${compact ? '' : ` data-publication data-type="${esc(item.status)}" data-search="${esc(`${item.title} ${item.authors} ${item.venue} ${item.year} ${item.status}`.toLocaleLowerCase())}"`}>
+  const figure = compact && item.figure;
+  return `<article class="publication${compact ? ' compact' : ''}${figure ? ' publication--illustrated' : ''}"${compact ? '' : ` data-publication data-type="${esc(item.status)}" data-search="${esc(`${item.title} ${item.authors} ${item.venue} ${item.year} ${item.status}`.toLocaleLowerCase())}"`}>
+    ${figure ? `<figure class="publication-figure"><a href="${esc(figure.src)}" data-publication-image data-title="${esc(item.title)}" data-caption="${esc(figure.caption)}" data-source="${esc(figure.source || item.url)}" data-credit="${esc(figure.credit || '')}" data-license="${esc(figure.license || '')}" data-license-url="${esc(figure.licenseUrl || '')}" aria-label="Enlarge figure from ${esc(item.title)}"><img src="${esc(figure.src)}" width="${Number(figure.width)}" height="${Number(figure.height)}" alt="${esc(figure.alt)}" loading="lazy" decoding="async"><span class="figure-expand">View figure <span aria-hidden="true">↗</span></span></a></figure>` : ''}
+    <div class="publication-copy">
     <div class="pub-meta"><span>${esc(item.venue)}</span><span>${item.year}</span>${item.status !== 'Article' ? `<span class="status">${esc(item.status)}</span>` : ''}</div>
     <h3><a href="${esc(item.url || `https://doi.org/${item.doi}`)}">${esc(item.title)}</a></h3>
     <p class="authors">${authorMarkup(item.authors)}</p>
     ${compact ? '' : `<div class="pub-actions"><a href="https://doi.org/${esc(item.doi)}">${item.status === 'Preprint' ? 'Read preprint' : 'Read paper'}</a><details class="citation"><summary>BibTeX</summary><div class="citation-content"><pre><code>${esc(bibtex(item))}</code></pre><button type="button" data-copy hidden>Copy BibTeX</button></div></details></div>`}
+    </div>
   </article>`;
+}
+
+function structureViewer() {
+  const config = JSON.stringify(structure).replace(/</g, '\\u003c');
+  return `<figure class="structure-viewer" id="structure-title" data-structure-viewer aria-label="Interactive protein–peptide structure">
+    <script type="application/json" data-structure-config>${config}</script>
+    <figcaption class="structure-caption"><span class="structure-eyebrow">Interactive structure${structure.example ? ' · example' : ''}</span><a href="${esc(structure.sourceUrl)}">${esc(structure.sourceLabel)}</a></figcaption>
+    <div class="structure-stage">
+      <div class="structure-canvas" data-structure-canvas tabindex="0" role="img" aria-label="Interactive 3D structure. Arrow keys rotate, plus and minus zoom, R resets." aria-describedby="structure-help"></div>
+      <div class="structure-status" data-structure-status role="status"><span data-structure-message>Loading interactive structure…</span><button type="button" data-structure-retry hidden>Try again</button></div>
+      <div class="structure-legend"><span><i class="structure-protein-dot"></i>${esc(structure.proteinLabel)}</span><span><i class="structure-peptide-dot"></i>${esc(structure.peptideLabel)}</span></div>
+    </div>
+    <div class="structure-toolbar">
+      <div class="structure-style-controls" role="group" aria-label="Protein display"><button type="button" data-structure-style="surface" aria-pressed="true" disabled>Surface</button><button type="button" data-structure-style="ribbon" aria-pressed="false" disabled>Ribbon</button></div>
+      <div class="structure-view-controls"><button type="button" data-structure-spin aria-pressed="false" disabled>Rotate</button><button type="button" data-structure-reset disabled>Reset view</button></div>
+      <p id="structure-help">Drag to rotate · scroll or pinch to zoom. Keyboard: arrows, +/−, R.</p>
+    </div>
+    <noscript><style>.structure-stage, .structure-toolbar { display: none; }</style><p class="structure-noscript">Enable JavaScript to explore this structure in 3D, or follow the PDB link above.</p></noscript>
+  </figure>`;
 }
 
 function writingRow(post, level = 3) {
@@ -113,13 +137,14 @@ const selectedDois = ['10.48550/ARXIV.2511.09216', '10.1101/2025.01.20.633551', 
 const selected = selectedDois.map(doi => publications.find(p => p.doi.toLowerCase() === doi.toLowerCase())).filter(Boolean);
 await emit('/', page({ active: 'about', body: `
   <section class="hero" aria-labelledby="intro-title">
-    <div class="hero-copy"><h1 id="intro-title">Erik Hartman</h1><p class="hero-bio">I’m a PhD student in computational biology at <a href="https://www.lunduniversity.lu.se/">Lund University</a>, currently a visiting research scholar in <a href="https://delafuentelab.seas.upenn.edu/">César de la Fuente’s Machine Biology Group</a> at the University of Pennsylvania.</p><p class="hero-statement">${esc(site.focus)}</p></div>
+    <div class="hero-copy"><h1 id="intro-title">Erik Hartman</h1><p class="hero-bio">I’m a PhD student in computational biology at <a href="https://www.lunduniversity.lu.se/"><strong>Lund University</strong></a>, working with Johan Malmström. I’m currently a visiting research scholar in <a href="https://delafuentelab.seas.upenn.edu/">César de la Fuente’s Machine Biology Group</a> at the <strong>University of Pennsylvania</strong>. During my PhD, I also spent time at <a href="https://www.a-star.edu.sg/"><strong>A*STAR</strong></a> in Singapore, working with Peter J. Bond.</p><p class="hero-statement">${esc(site.focus)}</p></div>
     <figure class="portrait"><img src="/assets/img/prof_pic.jpg" width="1023" height="1355" alt="Erik Hartman" fetchpriority="high"></figure>
   </section>
   <section class="research-section section" id="research" aria-labelledby="research-title">
     <h2 id="research-title">Research</h2>
     <div class="research-intro"><p>${esc(site.introduction)}</p></div>
-    <div class="research-topics">${site.research.map(item => `<article class="research-topic"><div><h3>${esc(item.title)}</h3><p>${esc(item.description)}</p></div>${item.figure ? `<figure class="research-figure"><img src="${esc(item.figure.src)}" width="440" height="200" alt="${esc(item.figure.alt)}"><figcaption>${esc(item.figure.caption)}</figcaption></figure>` : ''}</article>`).join('')}</div>
+    <div class="research-topics">${site.research.map(item => `<article class="research-topic"><div><h3>${esc(item.title)}</h3><p>${esc(item.description)}</p></div>${item.figure ? `<figure class="research-figure"><img src="${esc(item.figure.src)}" width="${Number(item.figure.width || 440)}" height="${Number(item.figure.height || 200)}" alt="${esc(item.figure.alt)}"><figcaption>${esc(item.figure.caption)}</figcaption></figure>` : ''}</article>`).join('')}</div>
+    ${structureViewer()}
   </section>
   <section class="section" aria-labelledby="work-title"><div class="section-heading"><h2 id="work-title">Selected publications</h2><a href="/publications/">All publications</a></div><div class="selected-publications">${selected.map(p => pubRow(p, true)).join('')}</div></section>
   <section class="section" id="software" aria-labelledby="software-title"><div class="section-heading"><h2 id="software-title">Software</h2><a href="${site.github}">GitHub</a></div><div class="software-grid">${software.map(item => `<a class="software-item" href="${item.url}"><div><h3>${esc(item.name)}</h3></div><p>${esc(item.description)}</p><span class="software-category">${esc(item.category)}</span></a>`).join('')}</div></section>

@@ -1,0 +1,14 @@
+{
+  "example": true,
+  "src": "/structures/1ycr.pdb",
+  "format": "pdb",
+  "proteinChains": ["A"],
+  "peptideChains": ["B"],
+  "proteinLabel": "MDM2 protein",
+  "peptideLabel": "p53 peptide",
+  "proteinColor": "#95aebf",
+  "peptideColor": "#ff9274",
+  "initialQuaternion": [0.057435, 0.824913, -0.527735, 0.194203],
+  "sourceUrl": "https://www.rcsb.org/structure/1YCR",
+  "sourceLabel": "Example structure · PDB 1YCR"
+}

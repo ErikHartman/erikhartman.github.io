@@ -1,30 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="440" height="200" viewBox="0 0 440 200" role="img" aria-labelledby="peptide-title peptide-description">
-  <title id="peptide-title">Protein cleavage and peptide discovery</title>
-  <desc id="peptide-description">A folded protein chain is cleaved into shorter peptide fragments. One fragment is outlined as a candidate for testing biological activity. This is a conceptual illustration.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="260" viewBox="0 0 520 260" role="img" aria-labelledby="peptide-title peptide-description">
+  <title id="peptide-title">Encrypted peptides within folded proteins</title>
+  <desc id="peptide-description">A folded protein made of blue-gray ribbon helices contains a coral peptide that joins two helices at its left edge. An arrow shows this same folded coral fragment released from the parent protein.</desc>
   <defs>
-    <marker id="peptide-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M1 1 6 3.5 1 6" fill="none" stroke="#555" stroke-width="1.2"/></marker>
+    <marker id="peptide-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="m2 1 6 4-6 4" fill="none" stroke="#42515c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <!-- The two faces of each ribbon turn stay flat, with no lighting effects. -->
+    <path id="ribbon-back" d="M0 12C7 12 7-12 14-12h9C16-12 16 12 9 12Z"/>
+    <path id="ribbon-front" d="M14-12C21-12 21 12 28 12h9C30 12 30-12 23-12Z"/>
+    <g id="coral-ribbon-two" stroke="#42515c" stroke-width="1.35" stroke-linejoin="round">
+      <g fill="#dc795f">
+        <use href="#ribbon-back"/><use href="#ribbon-back" x="28"/>
+      </g>
+      <g fill="#ff9274">
+        <use href="#ribbon-front"/><use href="#ribbon-front" x="28"/>
+      </g>
+    </g>
+    <g id="ribbon-three" stroke="#42515c" stroke-width="1.35" stroke-linejoin="round">
+      <g fill="#95aebf">
+        <use href="#ribbon-back"/><use href="#ribbon-back" x="28"/><use href="#ribbon-back" x="56"/>
+      </g>
+      <g fill="#b9d0dc">
+        <use href="#ribbon-front"/><use href="#ribbon-front" x="28"/><use href="#ribbon-front" x="56"/>
+      </g>
+    </g>
+    <g id="ribbon-four" stroke="#42515c" stroke-width="1.35" stroke-linejoin="round">
+      <g fill="#95aebf">
+        <use href="#ribbon-back"/><use href="#ribbon-back" x="28"/><use href="#ribbon-back" x="56"/><use href="#ribbon-back" x="84"/>
+      </g>
+      <g fill="#b9d0dc">
+        <use href="#ribbon-front"/><use href="#ribbon-front" x="28"/><use href="#ribbon-front" x="56"/><use href="#ribbon-front" x="84"/>
+      </g>
+    </g>
+    <g id="ribbon-five" stroke="#42515c" stroke-width="1.35" stroke-linejoin="round">
+      <g fill="#95aebf">
+        <use href="#ribbon-back"/><use href="#ribbon-back" x="28"/><use href="#ribbon-back" x="56"/><use href="#ribbon-back" x="84"/><use href="#ribbon-back" x="112"/>
+      </g>
+      <g fill="#b9d0dc">
+        <use href="#ribbon-front"/><use href="#ribbon-front" x="28"/><use href="#ribbon-front" x="56"/><use href="#ribbon-front" x="84"/><use href="#ribbon-front" x="112"/>
+      </g>
+    </g>
+    <g id="encrypted-fragment">
+      <path d="M4 10C-12 18-19 31-15 44S-4 65 10 70l7-4C3 61-4 52-7 41S-3 22 12 9Z" fill="#ff9274" stroke="#42515c" stroke-width="1.35" stroke-linejoin="round"/>
+      <use href="#coral-ribbon-two" transform="rotate(-16)"/>
+      <use href="#coral-ribbon-two" transform="translate(6 58) rotate(-16)"/>
+    </g>
   </defs>
-  <g fill="none" stroke="#888" stroke-width="1.5" stroke-linecap="round">
-    <path d="M24 94C37 17 107 22 102 85S24 161 49 101 160 33 179 87 134 171 97 130 174 65 198 108"/>
-    <path d="M219 98H274" stroke="#555" marker-end="url(#peptide-arrow)"/>
-    <path d="M306 49H396M322 98H379M306 147H378"/>
+
+  <!-- Connecting loops sit behind the folded ribbon bundle. -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M182 47C190 28 207 29 207 46M208 136C232 147 226 174 193 154M86 187C64 202 51 185 65 164S94 155 100 165M145 101C159 76 180 76 190 106M200 51C220 41 235 49 231 67S225 88 232 102 225 126 212 129" stroke="#42515c" stroke-width="6.7"/>
+    <path d="M182 47C190 28 207 29 207 46M208 136C232 147 226 174 193 154M86 187C64 202 51 185 65 164S94 155 100 165M145 101C159 76 180 76 190 106M200 51C220 41 235 49 231 67S225 88 232 102 225 126 212 129" stroke="#b9d0dc" stroke-width="4"/>
   </g>
-  <g fill="#fff" stroke="#555" stroke-width="1.5">
-    <circle cx="24" cy="94" r="3.5"/><circle cx="39" cy="50" r="3.5"/><circle cx="75" cy="37" r="3.5"/>
-    <circle cx="101" cy="67" r="3.5"/><circle cx="90" cy="111" r="3.5"/><circle cx="54" cy="134" r="3.5"/>
-    <circle cx="47" cy="103" r="3.5"/><circle cx="83" cy="71" r="3.5"/><circle cx="128" cy="56" r="3.5"/>
-    <circle cx="164" cy="68" r="3.5"/><circle cx="181" cy="101" r="3.5"/><circle cx="166" cy="140" r="3.5"/>
-    <circle cx="128" cy="146" r="3.5"/><circle cx="99" cy="126" r="3.5"/><circle cx="132" cy="98" r="3.5"/>
-    <circle cx="174" cy="92" r="3.5"/><circle cx="198" cy="108" r="3.5"/>
-    <circle cx="306" cy="49" r="3.5"/><circle cx="324" cy="49" r="3.5"/><circle cx="342" cy="49" r="3.5"/>
-    <circle cx="360" cy="49" r="3.5"/><circle cx="378" cy="49" r="3.5"/><circle cx="396" cy="49" r="3.5"/>
-    <circle cx="306" cy="147" r="3.5"/><circle cx="324" cy="147" r="3.5"/><circle cx="342" cy="147" r="3.5"/>
-    <circle cx="360" cy="147" r="3.5"/><circle cx="378" cy="147" r="3.5"/>
-    <rect x="308" y="82" width="85" height="32" rx="16" stroke="#000"/>
-  </g>
-  <path d="M322 98H379" stroke="#000" stroke-width="1.5"/>
-  <g fill="#000"><circle cx="322" cy="98" r="3.5"/><circle cx="341" cy="98" r="3.5"/><circle cx="360" cy="98" r="3.5"/><circle cx="379" cy="98" r="3.5"/></g>
-  <g font-family="Arial, sans-serif" font-size="13" fill="#000" text-anchor="middle">
-    <text x="109" y="188">Protein</text><text x="246" y="78">Cleavage</text><text x="351" y="188">Peptides</text>
+  <use href="#ribbon-three" transform="translate(200 43) rotate(78)"/>
+  <use href="#ribbon-four" transform="translate(78 177) rotate(-17)"/>
+  <use href="#ribbon-three" transform="translate(91 159) rotate(-54) scale(.88)"/>
+  <use href="#ribbon-five" transform="translate(41 77) rotate(-16)"/>
+  <use href="#ribbon-five" transform="translate(47 135) rotate(-16)"/>
+  <use href="#encrypted-fragment" transform="translate(41 77)"/>
+
+  <path d="M258 122h63" fill="none" stroke="#42515c" stroke-width="1.8" stroke-linecap="round" marker-end="url(#peptide-arrow)"/>
+  <use href="#encrypted-fragment" transform="translate(382 87) scale(1.15)"/>
+
+  <g font-family="Arial, sans-serif" font-size="16" fill="#42515c" text-anchor="middle">
+    <text x="128" y="238">Parent protein</text>
+    <text x="289" y="101">Release</text>
+    <text x="408" y="238">Encrypted peptide</text>
   </g>
 </svg>

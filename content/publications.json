@@ -33,7 +33,18 @@
     "status": "Article",
     "doi": "10.1371/journal.pcbi.1013972",
     "url": "https://doi.org/10.1371/journal.pcbi.1013972",
-    "selected": true
+    "selected": true,
+    "figure": {
+      "src": "/figures/publications/degradation-graphs-figure-2.png",
+      "alt": "A degradation graph linking a protein to peptide fragments and their measured abundances.",
+      "caption": "Figure 2 · Modeling sequential proteolysis with degradation graphs.",
+      "source": "https://doi.org/10.1371/journal.pcbi.1013972.g002",
+      "credit": "© 2026 Hartman et al.",
+      "width": 2246,
+      "height": 784,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
   },
   {
     "id": "controllable-protein-design-through-feynman-kac-steering",
@@ -47,7 +58,16 @@
     "url": "https://doi.org/10.48550/ARXIV.2511.09216",
     "selected": true,
     "source": "https://arxiv.org/abs/2511.09216",
-    "updated": "2026-04"
+    "updated": "2026-04",
+    "figure": {
+      "src": "/figures/publications/feynman-kac-figure-1.png",
+      "alt": "Particle trajectories and a workflow showing Feynman–Kac steering of protein diffusion.",
+      "caption": "Figure 1 · Particle-based steering of protein diffusion models.",
+      "source": "https://arxiv.org/html/2511.09216v2#S2.F1",
+      "credit": "Hartman et al., arXiv (2026 revision).",
+      "width": 3334,
+      "height": 1730
+    }
   },
   {
     "id": "mass-spectrometry-peptidomics-data-from-infected-and-uninfected-porcine-wounds",
@@ -112,7 +132,16 @@
     "status": "Preprint",
     "doi": "10.1101/2025.01.20.633551",
     "url": "https://doi.org/10.1101/2025.01.20.633551",
-    "selected": true
+    "selected": true,
+    "figure": {
+      "src": "/figures/publications/bopep-overview.png",
+      "alt": "BoPep overview showing three sources of peptide candidates and the Bayesian optimization cycle.",
+      "caption": "BoPep overview · From the author’s project repository.",
+      "source": "https://github.com/ErikHartman/bopep/blob/main/assets/bopep.png",
+      "credit": "Erik Hartman · BoPep project.",
+      "width": 2196,
+      "height": 1161
+    }
   },
   {
     "id": "peptide-clustering-enhances-large-scale-analyses-and-reveals-proteolytic-signatures-in-mass-spectrometry-data",
@@ -124,7 +153,18 @@
     "status": "Article",
     "doi": "10.1038/s41467-024-51589-y",
     "url": "https://doi.org/10.1038/s41467-024-51589-y",
-    "selected": true
+    "selected": true,
+    "figure": {
+      "src": "/figures/publications/peptide-clustering-figure-1.png",
+      "alt": "Overview of wound fluid peptidomics, peptide networks, and community-based peptide clustering.",
+      "caption": "Figure 1 · Generating wound fluid peptidomic clusters.",
+      "source": "https://www.nature.com/articles/s41467-024-51589-y/figures/1",
+      "credit": "© 2024 Hartman et al.",
+      "width": 1959,
+      "height": 2389,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
   },
   {
     "id": "selective-protein-aggregation-confines-and-inhibits-endotoxins-in-wounds-linking-host-defense-to-amyloid-formation",

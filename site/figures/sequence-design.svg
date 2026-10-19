@@ -1,65 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="440" height="200" viewBox="0 0 440 200" role="img" aria-labelledby="sequence-design-title sequence-design-desc">
-  <title id="sequence-design-title">Computational peptide design</title>
-  <desc id="sequence-design-desc">Candidate peptide sequences pass through a computational model to produce a ranked set. A return arrow indicates another round of design. This is a schematic, not measured data.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="260" viewBox="0 0 520 260" role="img" aria-labelledby="sequence-design-title sequence-design-desc">
+  <title id="sequence-design-title">Protein and peptide design</title>
+  <desc id="sequence-design-desc">Different folded peptide candidates pass through an iterative design model. A coral peptide fits into the blue molecular surface of a protein.</desc>
   <defs>
-    <marker id="sequence-design-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse">
-      <path d="M1 1 L5 3 L1 5" fill="none" stroke="#777" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+    <marker id="sequence-design-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="m2 1 4 3-4 3" fill="none" stroke="#42515c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
     </marker>
-    <g id="sequence-design-row" fill="#fff" stroke="#222" stroke-width="1.1">
-      <path d="M0 0 H60" fill="none" stroke="#888"/>
-      <circle cx="0" cy="0" r="3.5"/>
-      <circle cx="12" cy="0" r="3.5"/>
-      <circle cx="24" cy="0" r="3.5"/>
-      <circle cx="36" cy="0" r="3.5"/>
-      <circle cx="48" cy="0" r="3.5"/>
-      <circle cx="60" cy="0" r="3.5"/>
-    </g>
+    <path id="sequence-design-helix-back" d="M17-3C32 5 24 17-16 26L-18 13C2 8 16 9 17-3Z"/>
+    <path id="sequence-design-helix-front" d="M-17-5C-7-12 8-9 17-3L18 10C7 4-8 0-17 8Z"/>
   </defs>
-  <g fill="#222" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">
-    <text x="62" y="42">Candidates</text>
-    <text x="210" y="42">Model</text>
-    <text x="359" y="42">Ranked candidates</text>
+
+  <!-- Distinct candidate folds, each drawn as a little continuous ribbon. -->
+  <g stroke="#42515c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M27 74C32 57 63 53 74 63S68 85 53 83 35 86 44 97L34 104C15 82 39 68 55 73S73 69 63 65 38 68 37 78Z" fill="#ff9274"/>
+    <path d="m79 103 12-15 18 12-9 13 14 11-10 11-23-20 9-13-7-4Z" fill="#b8c9b5"/>
+    <path d="M29 151C43 131 59 148 60 162S77 178 88 157L98 164C83 193 53 188 48 167S36 155 34 159Z" fill="#b9d0dc"/>
+    <path d="M58 67C64 68 69 73 68 77M86 112l14 11M48 156c6 4 3 17 12 22" fill="none" stroke="#42515c" stroke-opacity=".45"/>
   </g>
-  <g>
-    <use href="#sequence-design-row" x="32" y="76"/>
-    <use href="#sequence-design-row" x="32" y="98"/>
-    <use href="#sequence-design-row" x="32" y="120"/>
-    <g fill="#e5e5e5" stroke="#222" stroke-width="1.1">
-      <circle cx="44" cy="76" r="3.5"/>
-      <circle cx="80" cy="76" r="3.5"/>
-      <circle cx="56" cy="98" r="3.5"/>
-      <circle cx="68" cy="120" r="3.5"/>
-      <circle cx="92" cy="120" r="3.5"/>
+
+  <!-- A compact model and a two-way cycle communicate iterative design. -->
+  <g fill="none" stroke="#42515c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M123 125h38" marker-end="url(#sequence-design-arrow)"/>
+    <path d="M184 91a51 51 0 0 1 84 5" marker-end="url(#sequence-design-arrow)"/>
+    <path d="M272 157a51 51 0 0 1-84 3" marker-end="url(#sequence-design-arrow)"/>
+    <path d="M292 125h38" marker-end="url(#sequence-design-arrow)"/>
+  </g>
+  <path d="m226 91 31 19-5 34-29 19-28-24 4-32Z" fill="#edf4f7"/>
+  <g fill="none" stroke="#95aebf" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m201 111 23-14 26 18-5 30-23 13-24-22 3-25 44 34m-21-48-2 61m28-43-52 21m3-25 49 4m-52 21 47 9"/>
+  </g>
+  <g stroke="#42515c" stroke-width="1.7">
+    <circle cx="224" cy="97" r="6" fill="#b9d0dc"/>
+    <circle cx="201" cy="111" r="5" fill="#fff"/>
+    <circle cx="250" cy="115" r="6" fill="#ff9274"/>
+    <circle cx="198" cy="136" r="5" fill="#b9d0dc"/>
+    <circle cx="222" cy="158" r="6" fill="#fff"/>
+    <circle cx="245" cy="145" r="5" fill="#b8c9b5"/>
+    <circle cx="223" cy="126" r="7" fill="#ff9274"/>
+  </g>
+
+  <!-- A molecular surface with broad, gently outlined lobes and a binding cleft. -->
+  <g stroke="#42515c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M365 94C359 78 374 62 390 64 399 47 420 47 431 56 446 43 467 52 471 64 492 64 503 80 497 95 512 107 513 127 501 139 510 157 499 173 484 179 486 199 468 211 450 205 434 217 415 211 406 202 387 209 372 197 372 182 353 177 348 160 355 145 342 131 347 112 360 109 357 102 360 97 365 94Z" fill="#b9d0dc"/>
+    <path d="M391 93C402 80 422 85 431 98 447 94 461 104 459 120 472 133 463 150 450 155 449 171 431 181 418 171 403 180 386 166 389 153 376 146 375 130 385 119 381 108 383 99 391 93Z" fill="#95aebf" stroke="none"/>
+    <g fill="none" stroke="#6f8c9e" stroke-width="1.5">
+      <path d="M367 93c9 1 17-4 21-12m3-17c9 2 16 9 17 17m24-25c-5 8-2 18 7 22m31-13c-9 4-12 13-8 20m35 10c-12-5-23 0-27 10m31 34c-6-7-15-8-24-4m7 44c-6-10-17-14-27-9m-7 35c-1-10-6-15-15-18m-29 15c3-10-1-17-10-22m-24 2c11-2 17-9 16-19m-33-18c9 4 18 2 22-4m-17-32c8-3 17-1 22 6"/>
+    </g>
+    <path d="M391 93c-8 7-10 17-6 26-10 11-9 27 4 34m42-55c16-4 30 6 28 22 13 13 4 30-9 35" fill="none" stroke="#6f8c9e" stroke-width="1.5"/>
+  </g>
+
+  <!-- The selected peptide keeps a folded cartoon ribbon representation. -->
+  <g transform="translate(413 103) rotate(-24)" stroke="#42515c" stroke-width="1.6" stroke-linejoin="round">
+    <path d="M-18-5l-3-12 9-3 5 13ZM-17 49l3 16 10-3-4-13Z" fill="#ff9274"/>
+    <g fill="#dc795f">
+      <use href="#sequence-design-helix-back"/>
+      <use href="#sequence-design-helix-back" y="22"/>
+    </g>
+    <g fill="#ff9274">
+      <use href="#sequence-design-helix-front"/>
+      <use href="#sequence-design-helix-front" y="22"/>
+      <use href="#sequence-design-helix-front" y="44"/>
     </g>
   </g>
-  <g fill="none" stroke="#777" stroke-width="1.1" marker-end="url(#sequence-design-arrow)">
-    <path d="M107 98 H153"/>
-    <path d="M267 98 H311"/>
+
+  <g fill="#42515c" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">
+    <text x="68" y="235">Candidate folds</text>
+    <text x="227" y="235">Design + refine</text>
+    <text x="426" y="235">Designed complex</text>
   </g>
-  <rect x="166" y="65" width="88" height="66" rx="3" fill="#f7f7f7" stroke="#999" stroke-width="1"/>
-  <g stroke="#aaa" stroke-width="1" fill="none">
-    <path d="M184 80 L210 87 L236 98 M184 98 L210 87 M184 116 L210 87 M184 80 L210 109 L236 98 M184 98 L210 109 M184 116 L210 109"/>
-  </g>
-  <g fill="#fff" stroke="#333" stroke-width="1.1">
-    <circle cx="184" cy="80" r="3.5"/>
-    <circle cx="184" cy="98" r="3.5"/>
-    <circle cx="184" cy="116" r="3.5"/>
-    <circle cx="210" cy="87" r="3.5"/>
-    <circle cx="210" cy="109" r="3.5"/>
-    <circle cx="236" cy="98" r="3.5"/>
-  </g>
-  <g>
-    <use href="#sequence-design-row" x="329" y="76"/>
-    <use href="#sequence-design-row" x="329" y="98"/>
-    <use href="#sequence-design-row" x="329" y="120"/>
-    <g fill="#e5e5e5" stroke="#222" stroke-width="1.1">
-      <circle cx="365" cy="76" r="3.5"/>
-      <circle cx="389" cy="76" r="3.5"/>
-      <circle cx="341" cy="98" r="3.5"/>
-      <circle cx="377" cy="98" r="3.5"/>
-      <circle cx="353" cy="120" r="3.5"/>
-    </g>
-  </g>
-  <path d="M359 138 V162 Q359 166 355 166 H66 Q62 166 62 162 V138" fill="none" stroke="#888" stroke-width="1.1" marker-end="url(#sequence-design-arrow)"/>
-  <text x="210" y="189" fill="#555" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Next round</text>
 </svg>

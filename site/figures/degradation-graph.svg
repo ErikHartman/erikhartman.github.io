@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="440" height="200" viewBox="0 0 440 200" role="img" aria-labelledby="degradation-graph-title degradation-graph-desc">
   <title id="degradation-graph-title">A peptide degradation cascade</title>
-  <desc id="degradation-graph-desc">A long peptide separates into two fragments, which each divide into shorter fragments through sequential cleavage. The number of beads is conserved at each division. This is a schematic, not measured data.</desc>
+  <desc id="degradation-graph-desc">A long peptide separates into two fragments, which each divide into shorter fragments through sequential cleavage. The number of beads is conserved at each division.</desc>
   <defs>
     <marker id="degradation-graph-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M1 1 L5 3 L1 5" fill="none" stroke="#777" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>

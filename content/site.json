@@ -8,16 +8,18 @@
   "orcid": "https://orcid.org/0000-0001-9997-2405",
   "linkedin": "https://www.linkedin.com/in/erik-hartman-155b98170/",
   "updated": "2026-10-03",
-  "introduction": "I study how proteins give rise to bioactive peptides, and build computational methods to discover and design them.",
-  "focus": "I’m interested in how mathematics and machine learning can help us understand biology, from interpreting molecular data to designing proteins and peptides. A particular interest is encrypted peptides: fragments of proteins that can have biological functions of their own. I study how these fragments are generated and what roles they may play across the tree of life.",
+  "introduction": "I study how proteins give rise to bioactive peptides, build computational methods to discover and design them, and model molecular changes during infection.",
+  "focus": "I’m interested in how mathematics and machine learning can help us understand biology, from interpreting molecular data to designing proteins and peptides. I am particularly interested in fragments of proteins that have biological functions of their own, so-called encrypted peptides. I study how these fragments are generated and what roles they may play across the tree of life.",
   "research": [
     {
       "title": "Encrypted peptides",
       "description": "I investigate bioactive peptides released through protein degradation, particularly antimicrobial peptides and their role in host defense.",
       "figure": {
         "src": "/figures/encrypted-peptides.svg",
-        "alt": "A folded protein is cleaved into peptide fragments, with one candidate fragment outlined.",
-        "caption": "Protein cleavage and candidate peptide discovery. Schematic."
+        "alt": "A folded protein made of blue-gray ribbons contains a coral peptide segment, shown separately after release.",
+        "caption": "Discovering bioactive fragments hidden within proteins.",
+        "width": 520,
+        "height": 260
       }
     },
     {
@@ -25,17 +27,21 @@
       "description": "I develop methods for protein and peptide design using machine learning, Bayesian optimization, and biological information.",
       "figure": {
         "src": "/figures/sequence-design.svg",
-        "alt": "Candidate sequences are evaluated by a computational model, ranked, and used to guide the next design round.",
-        "caption": "An iterative approach to sequence design. Schematic."
+        "alt": "Folded peptide candidates move through iterative design to a coral peptide fitted into a blue protein surface.",
+        "caption": "Learning from candidate sequences to guide molecular design.",
+        "width": 520,
+        "height": 260
       }
     },
     {
-      "title": "Protein degradation",
-      "description": "I use peptidomics, graph models, and interpretable machine learning to study protein degradation and molecular changes during infection.",
+      "title": "Infectious disease modelling",
+      "description": "I use proteomics and machine learning to study molecular changes during infection and model how disease progresses over time.",
       "figure": {
-        "src": "/figures/degradation-graph.svg",
-        "alt": "A directed graph traces sequential cleavage from longer peptides to shorter fragments.",
-        "caption": "Representing peptide degradation as a graph. Schematic."
+        "src": "/figures/infectious-disease-modelling.svg",
+        "alt": "Host molecular measurements feeding into branching disease trajectories, with one path highlighted in coral.",
+        "caption": "Connecting molecular measurements with disease trajectories.",
+        "width": 520,
+        "height": 260
       }
     }
   ],
