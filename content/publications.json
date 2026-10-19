@@ -11,14 +11,15 @@
     "url": "https://doi.org/10.64898/2026.07.08.737311",
     "selected": true,
     "figure": {
-      "kind": "illustration",
-      "src": "/figures/publications/flow-matching-topic.svg",
-      "alt": "Original illustration of proteomic states linked by curved trajectories across disease time.",
-      "caption": "Topic illustration · Proteomic disease trajectories.",
+      "src": "/figures/publications/flow-matching-figure-1.png",
+      "alt": "Four-panel overview of flow matching, its training workflow, disease trajectory modeling, and proteome velocity.",
+      "caption": "Figure 1 · Flow matching for proteomic trajectory inference.",
       "source": "https://www.biorxiv.org/content/10.64898/2026.07.08.737311v1.full",
-      "credit": "Original illustration for this site.",
-      "width": 500,
-      "height": 320
+      "credit": "© 2026 Hartman, Karlsson and Malmström.",
+      "width": 440,
+      "height": 399,
+      "license": "CC BY-NC-ND 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     }
   },
   {
