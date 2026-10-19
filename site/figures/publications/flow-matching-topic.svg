@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="320" viewBox="0 0 500 320" role="img" aria-labelledby="title desc">
+  <title id="title">Proteomic disease trajectories</title>
+  <desc id="desc">Original topic illustration: discrete proteome states at early, middle, and late disease stages are connected by curved flow trajectories.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M1 1l6 3-6 3" fill="none" stroke="#42515c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <g id="state" fill="none" stroke="#42515c" stroke-linejoin="round">
+      <circle r="23" fill="#f7fafb" stroke-width="1.8"/>
+      <path d="M-12 10v-12m7 12v-22m7 22v-16m7 16v-28m7 28v-19" stroke="#95aebf" stroke-width="4.6" stroke-linecap="round"/>
+      <path d="M-12-2v-5m14 1v-6m7-6v-5" stroke="#ff9274" stroke-width="4.6" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <path d="M44 252H463" stroke="#42515c" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M60 67v185M240 67v185M421 67v185" stroke="#e3ecef" stroke-width="1.7" stroke-dasharray="5 7"/>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M70 176C130 178 146 92 236 115S349 187 420 121" stroke="#42515c" stroke-width="9"/>
+    <path d="M70 176C130 178 146 92 236 115S349 187 420 121" stroke="#b9d0dc" stroke-width="5"/>
+    <path d="M71 194C145 232 156 197 236 180S356 135 420 163" stroke="#42515c" stroke-width="9"/>
+    <path d="M71 194C145 232 156 197 236 180S356 135 420 163" stroke="#95aebf" stroke-width="5"/>
+    <path d="M70 127C135 89 171 122 237 151S349 93 420 78" stroke="#42515c" stroke-width="10"/>
+    <path d="M70 127C135 89 171 122 237 151S349 93 420 78" stroke="#ff9274" stroke-width="6"/>
+  </g>
+
+  <use href="#state" x="70" y="127"/>
+  <use href="#state" x="237" y="151"/>
+  <use href="#state" x="420" y="78"/>
+  <circle cx="70" cy="176" r="8" fill="#b9d0dc" stroke="#42515c" stroke-width="2"/>
+  <circle cx="236" cy="115" r="8" fill="#b9d0dc" stroke="#42515c" stroke-width="2"/>
+  <circle cx="420" cy="121" r="8" fill="#b9d0dc" stroke="#42515c" stroke-width="2"/>
+  <circle cx="71" cy="194" r="8" fill="#95aebf" stroke="#42515c" stroke-width="2"/>
+  <circle cx="236" cy="180" r="8" fill="#95aebf" stroke="#42515c" stroke-width="2"/>
+  <circle cx="420" cy="163" r="8" fill="#95aebf" stroke="#42515c" stroke-width="2"/>
+
+  <g fill="#42515c" font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="60" y="286" font-size="16">Early</text>
+    <text x="240" y="286" font-size="16">Intermediate</text>
+    <text x="420" y="286" font-size="16">Late</text>
+    <text x="250" y="311" font-size="13" letter-spacing="1.1">DISEASE TIME</text>
+  </g>
+</svg>

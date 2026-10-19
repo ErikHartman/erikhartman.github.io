@@ -80,9 +80,10 @@ function bibtex(item) {
 }
 
 function pubRow(item, compact = false) {
-  const figure = compact && item.figure;
+  const figure = item.figure;
+  const illustration = figure?.kind === 'illustration';
   return `<article class="publication${compact ? ' compact' : ''}${figure ? ' publication--illustrated' : ''}"${compact ? '' : ` data-publication data-type="${esc(item.status)}" data-search="${esc(`${item.title} ${item.authors} ${item.venue} ${item.year} ${item.status}`.toLocaleLowerCase())}"`}>
-    ${figure ? `<figure class="publication-figure"><a href="${esc(figure.src)}" data-publication-image data-title="${esc(item.title)}" data-caption="${esc(figure.caption)}" data-source="${esc(figure.source || item.url)}" data-credit="${esc(figure.credit || '')}" data-license="${esc(figure.license || '')}" data-license-url="${esc(figure.licenseUrl || '')}" aria-label="Enlarge figure from ${esc(item.title)}"><img src="${esc(figure.src)}" width="${Number(figure.width)}" height="${Number(figure.height)}" alt="${esc(figure.alt)}" loading="lazy" decoding="async"><span class="figure-expand">View figure <span aria-hidden="true">↗</span></span></a></figure>` : ''}
+    ${figure ? `<figure class="publication-figure"><a href="${esc(figure.src)}" data-publication-image data-title="${esc(item.title)}" data-caption="${esc(figure.caption)}" data-source="${esc(figure.source || item.url)}" data-source-label="${illustration ? 'Related paper' : 'Figure source'}" data-credit="${esc(figure.credit || '')}" data-license="${esc(figure.license || '')}" data-license-url="${esc(figure.licenseUrl || '')}" aria-label="${illustration ? 'Enlarge illustration for' : 'Enlarge figure from'} ${esc(item.title)}"><img src="${esc(figure.src)}" width="${Number(figure.width)}" height="${Number(figure.height)}" alt="${esc(figure.alt)}" loading="lazy" decoding="async"><span class="figure-expand">View ${illustration ? 'illustration' : 'figure'} <span aria-hidden="true">↗</span></span></a></figure>` : ''}
     <div class="publication-copy">
     <div class="pub-meta"><span>${esc(item.venue)}</span><span>${item.year}</span>${item.status !== 'Article' ? `<span class="status">${esc(item.status)}</span>` : ''}</div>
     <h3><a href="${esc(item.url || `https://doi.org/${item.doi}`)}">${esc(item.title)}</a></h3>

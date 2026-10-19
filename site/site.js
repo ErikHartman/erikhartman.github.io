@@ -79,7 +79,9 @@ if (publicationImages.length && typeof HTMLDialogElement !== 'undefined') {
       credit.append(' · ', license);
     }
     credit.hidden = !credit.textContent;
-    dialog.querySelector('.figure-dialog-source').href = link.dataset.source;
+    const source = dialog.querySelector('.figure-dialog-source');
+    source.href = link.dataset.source;
+    source.textContent = link.dataset.sourceLabel;
     dialog.showModal();
   }));
 }

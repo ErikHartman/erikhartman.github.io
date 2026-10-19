@@ -95,9 +95,16 @@ try {
     if (entries.length !== publications.length) problems.push(`Bibliography contains ${entries.length} entries for ${publications.length} publications`);
     const publicationPage = await document(path.join(root, 'publications/index.html'));
     const paperLinks = new Set(publicationPage.tags.map(tag => tag.attrs.href).filter(Boolean));
+    const figureImages = new Set(publicationPage.tags.filter(tag => tag.name === 'img').map(tag => tag.attrs.src).filter(Boolean));
     for (const publication of publications) {
       const link = publication.url || (publication.doi && `https://doi.org/${publication.doi}`);
       if (link && !paperLinks.has(link)) problems.push(`Publication missing from listing: ${publication.title}`);
+      const figure = publication.figure;
+      if (!figure?.src || !figure.alt?.trim() || !figure.caption?.trim() || !figure.source?.trim() || !figure.credit?.trim() || !Number.isFinite(figure.width) || figure.width <= 0 || !Number.isFinite(figure.height) || figure.height <= 0) {
+        problems.push(`Publication image or attribution missing: ${publication.title}`);
+      } else if (!figureImages.has(figure.src)) {
+        problems.push(`Publication image missing from listing: ${publication.title}`);
+      }
     }
   }
 } catch (error) {

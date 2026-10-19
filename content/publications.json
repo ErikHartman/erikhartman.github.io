@@ -9,7 +9,17 @@
     "status": "Preprint",
     "doi": "10.64898/2026.07.08.737311",
     "url": "https://doi.org/10.64898/2026.07.08.737311",
-    "selected": true
+    "selected": true,
+    "figure": {
+      "kind": "illustration",
+      "src": "/figures/publications/flow-matching-topic.svg",
+      "alt": "Original illustration of proteomic states linked by curved trajectories across disease time.",
+      "caption": "Topic illustration · Proteomic disease trajectories.",
+      "source": "https://www.biorxiv.org/content/10.64898/2026.07.08.737311v1.full",
+      "credit": "Original illustration for this site.",
+      "width": 500,
+      "height": 320
+    }
   },
   {
     "id": "deep-learning-guided-evolutionary-optimization-for-protein-design",
@@ -21,7 +31,16 @@
     "status": "Preprint",
     "doi": "10.48550/ARXIV.2603.02753",
     "url": "https://doi.org/10.48550/ARXIV.2603.02753",
-    "selected": true
+    "selected": true,
+    "figure": {
+      "src": "/figures/publications/evolutionary-optimization-figure-1.png",
+      "alt": "BoGA workflow combining peptide mutation, surrogate modeling, acquisition, and evaluation.",
+      "caption": "Figure 1 · Bayesian-guided evolutionary protein design.",
+      "source": "https://arxiv.org/html/2603.02753v1#S2.F1",
+      "credit": "Hartman et al., arXiv (2026).",
+      "width": 1846,
+      "height": 1528
+    }
   },
   {
     "id": "degradation-graphs-reveal-hidden-proteolytic-activity-in-peptidomes",
@@ -82,7 +101,18 @@
     "selected": false,
     "source": "https://www.nature.com/articles/s41597-025-05842-8",
     "volume": "12",
-    "articleNumber": "1533"
+    "articleNumber": "1533",
+    "figure": {
+      "src": "/figures/publications/porcine-wounds-figure-1.png",
+      "alt": "Porcine wound sampling, peptide purification, and mass spectrometry workflow.",
+      "caption": "Figure 1 · Wound-fluid sample preparation and analysis.",
+      "source": "https://www.nature.com/articles/s41597-025-05842-8/figures/1",
+      "credit": "© 2025 Forsberg et al.",
+      "width": 685,
+      "height": 439,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
   },
   {
     "id": "temporal-dynamics-and-interrelations-of-cytokines-neutrophil-proteins-exudation-and-bacterial-colonization-in-epidermal-wound-healing",
@@ -95,7 +125,18 @@
     "doi": "10.3389/fmed.2025.1609347",
     "url": "https://doi.org/10.3389/fmed.2025.1609347",
     "selected": false,
-    "supersededDoi": "10.1101/2023.12.07.23299659"
+    "supersededDoi": "10.1101/2023.12.07.23299659",
+    "figure": {
+      "src": "/figures/publications/wound-healing-figure-5.webp",
+      "alt": "Heatmaps and scatterplot relating cytokines, neutrophil proteins, exudation, and wound bacteria over time.",
+      "caption": "Figure 5 · Inflammation and neutrophil proteins in relation to bacterial levels.",
+      "source": "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2025.1609347/full#F5",
+      "credit": "© 2025 Lundgren et al.",
+      "width": 1417,
+      "height": 1499,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
   },
   {
     "id": "authors-must-follow-the-editorial-guidelines-on-the-use-of-large-language-models-in-review-papers",
@@ -108,7 +149,17 @@
     "doi": "10.1007/s00210-025-04102-1",
     "url": "https://doi.org/10.1007/s00210-025-04102-1",
     "selected": false,
-    "source": "https://link.springer.com/article/10.1007/s00210-025-04102-1"
+    "source": "https://link.springer.com/article/10.1007/s00210-025-04102-1",
+    "figure": {
+      "kind": "illustration",
+      "src": "/figures/publications/llm-editorial-topic.svg",
+      "alt": "Original illustration of a review manuscript, LLM tool, and editorial checks.",
+      "caption": "Topic illustration · LLM use in review papers.",
+      "source": "https://link.springer.com/article/10.1007/s00210-025-04102-1",
+      "credit": "Original illustration for this site.",
+      "width": 500,
+      "height": 320
+    }
   },
   {
     "id": "epitope-mapping-with-sidewinder-an-xl-ms-and-structural-modeling-approach",
@@ -120,7 +171,18 @@
     "status": "Article",
     "doi": "10.3390/ijms26041488",
     "url": "https://doi.org/10.3390/ijms26041488",
-    "selected": false
+    "selected": false,
+    "figure": {
+      "src": "/figures/publications/sidewinder-figure-1.jpg",
+      "alt": "Sidewinder workflow from antibody-antigen cross-linking and mass spectrometry to computational epitope mapping.",
+      "caption": "Figure 1 · The Sidewinder epitope-mapping workflow.",
+      "source": "https://www.mdpi.com/1422-0067/26/4/1488",
+      "credit": "© 2025 Ströbaek et al.",
+      "width": 728,
+      "height": 459,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
   },
   {
     "id": "navigating-the-peptide-sequence-space-in-search-for-peptide-binders-with-bopep",
@@ -176,7 +238,18 @@
     "status": "Article",
     "doi": "10.1016/j.isci.2023.107951",
     "url": "https://doi.org/10.1016/j.isci.2023.107951",
-    "selected": false
+    "selected": false,
+    "figure": {
+      "src": "/figures/publications/selective-aggregation-figure-3.jpg",
+      "alt": "Fluorescence microscopy comparing protein aggregates in LPS-exposed and control porcine wounds, with quantitative plots below.",
+      "caption": "Figure 3 · Protein aggregation in porcine wounds in vivo.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10561040/figure/fig3/",
+      "credit": "© 2023 Petrlova et al.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "width": 748,
+      "height": 623
+    }
   },
   {
     "id": "interpreting-biologically-informed-neural-networks-for-enhanced-proteomic-biomarker-discovery-and-pathway-analysis",
@@ -188,7 +261,18 @@
     "status": "Article",
     "doi": "10.1038/s41467-023-41146-4",
     "url": "https://doi.org/10.1038/s41467-023-41146-4",
-    "selected": true
+    "selected": true,
+    "figure": {
+      "src": "/figures/publications/binn-pathway-figure-3.jpg",
+      "alt": "Two Sankey diagrams trace important protein and pathway connections in sepsis and COVID-19 biologically informed neural networks.",
+      "caption": "Figure 3 · Important pathways in the sepsis and COVID-19 networks.",
+      "source": "https://www.nature.com/articles/s41467-023-41146-4/figures/3",
+      "credit": "© 2023 Hartman et al.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "width": 683,
+      "height": 617
+    }
   },
   {
     "id": "bioactive-suture-with-added-innate-defense-functionality-for-the-reduction-of-bacterial-infection-and-inflammation",
@@ -200,7 +284,18 @@
     "status": "Article",
     "doi": "10.1002/adhm.202300987",
     "url": "https://doi.org/10.1002/adhm.202300987",
-    "selected": false
+    "selected": false,
+    "figure": {
+      "src": "/figures/publications/bioactive-suture-figure-1.jpg",
+      "alt": "Peptide coating and release measurements alongside in vivo imaging of peptide-coated sutures.",
+      "caption": "Figure 1 · Coating and release of TCP-25 from bioactive sutures.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11468473/figure/adhm202300987-fig-0001/",
+      "credit": "© 2023 Puthia et al.",
+      "license": "CC BY-NC-ND 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "width": 546,
+      "height": 706
+    }
   },
   {
     "id": "explainable-machine-learning-for-the-identification-of-proteome-states-via-the-data-processing-kitchen-sink",
@@ -212,7 +307,18 @@
     "status": "Preprint",
     "doi": "10.1101/2023.08.30.555506",
     "url": "https://doi.org/10.1101/2023.08.30.555506",
-    "selected": false
+    "selected": false,
+    "figure": {
+      "src": "/figures/publications/dpks-overview-figure-1.png",
+      "alt": "DPKS workflow showing proteomics preprocessing, statistical analysis, explainable machine learning, and software interfaces.",
+      "caption": "DPKS overview · Data processing and explainable machine learning.",
+      "source": "https://github.com/InfectionMedicineProteomics/DPKS/blob/main/docs/img/overview_figure.png",
+      "credit": "© Aaron Scott / DPKS project",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/InfectionMedicineProteomics/DPKS/blob/main/LICENSE",
+      "width": 1976,
+      "height": 906
+    }
   },
   {
     "id": "generalized-precursor-prediction-boosts-identification-rates-and-accuracy-in-mass-spectrometry-based-proteomics",
@@ -224,7 +330,18 @@
     "status": "Article",
     "doi": "10.1038/s42003-023-04977-x",
     "url": "https://doi.org/10.1038/s42003-023-04977-x",
-    "selected": false
+    "selected": false,
+    "figure": {
+      "src": "/figures/publications/generalized-precursor-figure-2.jpg",
+      "alt": "Line plots compare precursor identification across yeast, mouse kidney, and human plasma data, with a precision comparison below.",
+      "caption": "Figure 2 · GPS generalization across three sample types.",
+      "source": "https://www.nature.com/articles/s42003-023-04977-x/figures/2",
+      "credit": "© 2023 Scott et al.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "width": 683,
+      "height": 425
+    }
   },
   {
     "id": "peptimetric-quantifying-and-visualizing-differences-in-peptidomic-data",
@@ -236,7 +353,18 @@
     "status": "Article",
     "doi": "10.3389/fbinf.2021.722466",
     "url": "https://doi.org/10.3389/fbinf.2021.722466",
-    "selected": false
+    "selected": false,
+    "figure": {
+      "src": "/figures/publications/peptimetric-figure-1.webp",
+      "alt": "Workflow diagram from peptide data upload and normalization to protein and peptide views in Peptimetric.",
+      "caption": "Figure 1 · Peptimetric analysis workflow.",
+      "source": "https://www.frontiersin.org/journals/bioinformatics/articles/10.3389/fbinf.2021.722466/full#F1",
+      "credit": "© 2021 Hartman, Mahdavi, Kjellström and Schmidtchen.",
+      "width": 1734,
+      "height": 1006,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
   },
   {
     "id": "bioinformatic-analysis-of-the-wound-peptidome-reveals-potential-biomarkers-and-antimicrobial-peptides",
@@ -248,7 +376,18 @@
     "status": "Article",
     "doi": "10.3389/fimmu.2020.620707",
     "url": "https://doi.org/10.3389/fimmu.2020.620707",
-    "selected": false
+    "selected": false,
+    "figure": {
+      "src": "/figures/publications/wound-peptidome-figure-5.webp",
+      "alt": "Peptide alignments and coverage profiles for the antimicrobial C-terminal region of hemoglobin beta across infected, non-infected, and acute wound samples.",
+      "caption": "Figure 5 · Hemoglobin-derived peptides across wound fluids.",
+      "source": "https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2020.620707/full#f5",
+      "credit": "© 2021 Hartman, Wallblom, van der Plas, Petrlova, Cai, Saleh, Kjellström and Schmidtchen.",
+      "width": 1464,
+      "height": 1229,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
   },
   {
     "id": "the-role-of-full-length-apoe-in-clearance-of-gram-negative-bacteria-and-their-endotoxins",
@@ -260,6 +399,17 @@
     "status": "Article",
     "doi": "10.1016/j.jlr.2021.100086",
     "url": "https://doi.org/10.1016/j.jlr.2021.100086",
-    "selected": false
+    "selected": false,
+    "figure": {
+      "src": "/figures/publications/apoe-graphical-abstract.jpg",
+      "alt": "Graphical abstract illustrating apoE aggregation of Pseudomonas aeruginosa and LPS and a controlled infection outcome.",
+      "caption": "Graphical abstract · ApoE, bacteria, and endotoxin clearance.",
+      "source": "https://www.jlr.org/article/S0022-2275(21)00068-7/fulltext",
+      "credit": "© 2021 The Authors (Petruk et al.).",
+      "width": 1038,
+      "height": 1085,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
   }
 ]

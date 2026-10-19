@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="320" viewBox="0 0 500 320" role="img" aria-labelledby="title desc">
+  <title id="title">Editorial guidelines for LLMs in review papers</title>
+  <desc id="desc">Original topic illustration: a review manuscript, an LLM tool, and a set of editorial checks.</desc>
+
+  <path d="M83 37h208l37 38v211H83z" fill="#f7fafb" stroke="#42515c" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M291 37v38h37" fill="#d6e3e9" stroke="#42515c" stroke-width="2.2" stroke-linejoin="round"/>
+  <text x="108" y="77" fill="#42515c" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="1.1">REVIEW PAPER</text>
+  <path d="M108 103h168M108 119h147M108 135h157M108 151h127" stroke="#95aebf" stroke-width="6" stroke-linecap="round"/>
+
+  <rect x="112" y="181" width="95" height="57" rx="10" fill="#ff9274" stroke="#42515c" stroke-width="2"/>
+  <text x="159.5" y="216" text-anchor="middle" fill="#42515c" font-family="Arial, sans-serif" font-size="22" font-weight="700">LLM</text>
+  <path d="M210 209h34" stroke="#42515c" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="m238 203 7 6-7 6" fill="none" stroke="#42515c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="255" y="191" width="46" height="37" rx="6" fill="#d6e3e9" stroke="#42515c" stroke-width="2"/>
+  <path d="m266 209 8 7 15-16" fill="none" stroke="#42515c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M345 89h65M345 141h65M345 193h65" stroke="#b9d0dc" stroke-width="10" stroke-linecap="round"/>
+  <g fill="#f7fafb" stroke="#42515c" stroke-width="2.2">
+    <circle cx="347" cy="89" r="19"/><circle cx="347" cy="141" r="19"/><circle cx="347" cy="193" r="19"/>
+  </g>
+  <g fill="none" stroke="#42515c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m338 89 7 7 12-15"/><path d="m338 141 7 7 12-15"/><path d="m338 193 7 7 12-15"/>
+  </g>
+  <text x="350" y="264" text-anchor="middle" fill="#42515c" font-family="Arial, sans-serif" font-size="14" letter-spacing="1.1">EDITORIAL CHECKS</text>
+</svg>
