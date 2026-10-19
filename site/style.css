@@ -49,22 +49,23 @@ h3 { font-size: 18px; line-height: 1.45; }
     align-items: center;
     justify-content: space-around;
     gap: 32px;
-    color: #888;
     pointer-events: none;
     user-select: none;
   }
   .molecule-margin--left { left: 0; }
   .molecule-margin--right { right: 0; }
-  .molecule-margin pre {
-    margin: 0;
+  .margin-motif {
+    display: block;
+    width: min(150px, calc(100% - 20px));
+    height: auto;
     flex: none;
-    font: 400 clamp(10px, .9vw, 12px) / 1.35 var(--mono);
-    font-variant-ligatures: none;
-    white-space: pre;
+    opacity: .78;
   }
+  .margin-motif--encrypted-peptide { width: min(118px, calc(100% - 20px)); }
+  .molecule-margin--right .margin-motif { transform: scaleX(-1); }
 }
 @media (max-height: 640px) {
-  .molecule-margin pre + pre { display: none; }
+  .molecule-margin img + img { display: none; }
 }
 
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 48px; align-items: start; padding: 44px 0; }
