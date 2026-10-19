@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" aria-hidden="true" focusable="false">
+  <!-- A compact beta hairpin: two flat strands joined by a rounded turn. -->
+  <g stroke="#42515c" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M22 24C38 19 56 22 76 33L72 45C53 33 38 32 19 38Z" fill="#dc795f" stroke-width="2.2"/>
+    <path d="M22 24C38 19 56 22 76 33L72 39C51 28 37 27 20 32Z" fill="#ff9274" stroke-width="1.8"/>
+    <path d="M76 35C93 39 102 51 99 65C97 78 85 87 72 84" fill="none" stroke-width="12"/>
+    <path d="M76 35C93 39 102 51 99 65C97 78 85 87 72 84" fill="none" stroke="#ff9274" stroke-width="8"/>
+    <path d="M74 78C58 78 42 82 28 94L17 89L23 106C39 93 56 91 73 92Z" fill="#dc795f" stroke-width="2.2"/>
+    <path d="M74 78C58 78 42 82 28 94L17 89L20 98C38 85 55 84 74 85Z" fill="#ff9274" stroke-width="1.8"/>
+  </g>
+</svg>

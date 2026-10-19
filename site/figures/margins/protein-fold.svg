@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="ribbon" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0 0c12-19 17 19 29 0s17-19 29 0 17 19 29 0" stroke="#42515c" stroke-width="19"/>
+      <path d="M0 0c12-19 17 19 29 0s17-19 29 0 17 19 29 0" stroke="#b9d0dc" stroke-width="15"/>
+      <path d="M8-7l9 14M37 7l9-14M66-7l9 14" stroke="#42515c" stroke-width="1.7"/>
+      <path d="M5-6l6 10M34 5l6-9M63-5l6 10" stroke="#95aebf" stroke-width="3"/>
+    </g>
+  </defs>
+
+  <!-- Small loops connect three helices into a compact, rounded fold. -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M39 48C48 23 77 19 94 38M119 52c23 8 30 33 12 51M112 114c-17 20-48 21-65 6M36 102C17 91 17 67 37 53" stroke="#42515c" stroke-width="8"/>
+    <path d="M39 48C48 23 77 19 94 38M119 52c23 8 30 33 12 51M112 114c-17 20-48 21-65 6M36 102C17 91 17 67 37 53" stroke="#b9d0dc" stroke-width="5"/>
+    <path d="M47 119c-10-7-11-17-2-25" stroke="#42515c" stroke-width="8"/>
+    <path d="M47 119c-10-7-11-17-2-25" stroke="#ff9274" stroke-width="5"/>
+  </g>
+  <use href="#ribbon" transform="translate(45 50) rotate(71) scale(.72)"/>
+  <use href="#ribbon" transform="translate(76 51) rotate(-16) scale(.62)"/>
+  <use href="#ribbon" transform="translate(48 81) rotate(8) scale(.72)"/>
+  <use href="#ribbon" transform="translate(112 57) rotate(84) scale(.52)"/>
+  <use href="#ribbon" transform="translate(111 109) rotate(166) scale(.67)"/>
+</svg>

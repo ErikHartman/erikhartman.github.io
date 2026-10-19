@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" aria-hidden="true" focusable="false">
+  <!-- Three antiparallel strands make a different, open protein silhouette. -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M47 40c-10-20-24-12-25 4-2 16 7 31 18 31M55 126c14 17 35 15 48 0M109 37c10-13 27-12 32 3 6 18-4 29-19 31" stroke="#42515c" stroke-width="8"/>
+    <path d="M47 40c-10-20-24-12-25 4-2 16 7 31 18 31M55 126c14 17 35 15 48 0M109 37c10-13 27-12 32 3 6 18-4 29-19 31" stroke="#b9d0dc" stroke-width="5"/>
+  </g>
+  <g stroke="#42515c" stroke-width="2" stroke-linejoin="round">
+    <path d="M38 42h19v53h9l-19 26-18-26h9Z" fill="#b9d0dc"/>
+    <path d="M80 121H62V68h-9l18-26 18 26h-9Z" fill="#95aebf"/>
+    <path d="M103 42h19v53h9l-19 26-18-26h9Z" fill="#b9d0dc"/>
+  </g>
+  <g fill="none" stroke="#42515c" stroke-width="1.8" stroke-linecap="round">
+    <path d="M42 51v37M107 51v37" opacity=".42"/>
+  </g>
+  <path d="M69 78c8 7 15 8 24 4" fill="none" stroke="#42515c" stroke-width="7" stroke-linecap="round"/>
+  <path d="M69 78c8 7 15 8 24 4" fill="none" stroke="#ff9274" stroke-width="4" stroke-linecap="round"/>
+</svg>

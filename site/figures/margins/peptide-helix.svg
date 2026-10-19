@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" aria-hidden="true" focusable="false">
+  <!-- A diagonal three-turn helix with loose peptide tails. -->
+  <g fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M31 30C25 23 19 19 14 21S13 32 23 35" stroke="#42515c" stroke-width="9"/>
+    <path d="M31 30C25 23 19 19 14 21S13 32 23 35" stroke="#ff9274" stroke-width="5.3"/>
+    <path d="M91 91C98 96 104 94 110 101S110 113 103 116" stroke="#42515c" stroke-width="9"/>
+    <path d="M91 91C98 96 104 94 110 101S110 113 103 116" stroke="#ff9274" stroke-width="5.3"/>
+  </g>
+  <g stroke="#42515c" stroke-width="2.2" stroke-linejoin="round">
+    <path d="M29 38C35 25 49 20 63 25C76 30 80 43 72 51L62 46C67 41 63 35 56 34C48 32 41 37 38 45Z" fill="#dc795f"/>
+    <path d="M44 57C50 44 64 39 78 44C91 49 95 62 87 70L77 65C82 60 78 54 71 53C63 51 56 56 53 64Z" fill="#dc795f"/>
+    <path d="M59 76C65 63 79 58 93 63C106 68 110 81 102 89L92 84C97 79 93 73 86 72C78 70 71 75 68 83Z" fill="#dc795f"/>
+    <path d="M30 34C37 42 46 47 61 47L67 55C48 57 34 51 24 42Z" fill="#ff9274"/>
+    <path d="M45 53C52 61 61 66 76 66L82 74C63 76 49 70 39 61Z" fill="#ff9274"/>
+    <path d="M60 72C67 80 76 85 91 85L97 93C78 95 64 89 54 80Z" fill="#ff9274"/>
+  </g>
+</svg>

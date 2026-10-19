@@ -61,8 +61,7 @@ h3 { font-size: 18px; line-height: 1.45; }
     flex: none;
     opacity: .78;
   }
-  .margin-motif--encrypted-peptide { width: min(118px, calc(100% - 20px)); }
-  .molecule-margin--right .margin-motif { transform: scaleX(-1); }
+  .margin-motif--peptide { width: min(118px, calc(100% - 20px)); }
 }
 @media (max-height: 640px) {
   .molecule-margin img + img { display: none; }

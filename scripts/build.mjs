@@ -10,8 +10,8 @@ const [site, publications, writing, software, media, structure] = await Promise.
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const date = value => new Intl.DateTimeFormat('en', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${value.slice(0, 10)}T12:00:00Z`));
 const marginArt = ['left', 'right'].map(side => {
-  const motifs = side === 'left' ? ['parent-protein', 'encrypted-peptide'] : ['encrypted-peptide', 'parent-protein'];
-  return `<div class="molecule-margin molecule-margin--${side}" aria-hidden="true">${motifs.map(motif => `<img class="margin-motif margin-motif--${motif}" src="/figures/margins/${motif}.svg" alt="" loading="lazy" decoding="async">`).join('')}</div>`;
+  const motifs = side === 'left' ? ['protein-fold', 'peptide-turn'] : ['peptide-helix', 'protein-sheet'];
+  return `<div class="molecule-margin molecule-margin--${side}" aria-hidden="true">${motifs.map(motif => `<img class="margin-motif margin-motif--${motif.startsWith('peptide-') ? 'peptide' : 'protein'}" src="/figures/margins/${motif}.svg" alt="" loading="lazy" decoding="async">`).join('')}</div>`;
 }).join('');
 const routes = [];
 const redirectRoutes = new Set();
