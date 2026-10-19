@@ -134,9 +134,6 @@ html:has(.figure-dialog[open]) { overflow: hidden; }
 .media-item h3 { margin: 5px 0 7px; }
 .media-item p { font-size: 14px; color: var(--muted); }
 .media-related { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 10px; font-size: 14px; }
-.a-little-more { border-top: 1px solid var(--line); padding: 30px 0 36px; }
-.a-little-more p { max-width: 780px; margin-top: 16px; }
-.a-little-more > a { display: inline-block; margin-top: 14px; }
 .text-link { font-size: 14px; }
 
 .site-footer { border-top: 1px solid var(--line); padding-top: 30px; }
@@ -216,7 +213,7 @@ html:has(.figure-dialog[open]) { overflow: hidden; }
   .site-header nav a { font-size: 14px; }
   .hero { grid-template-columns: minmax(0, 1fr) 150px; gap: 28px; padding-block: 32px; }
   .portrait img { width: 150px; height: 198px; }
-  .section, .a-little-more { padding-block: 26px 30px; }
+  .section { padding-block: 26px 30px; }
   .research-topic { grid-template-columns: 1fr; gap: 12px; }
   .research-topics { gap: 30px; }
   .publication--illustrated { grid-template-columns: 180px minmax(0, 1fr); gap: 22px; }

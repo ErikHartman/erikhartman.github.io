@@ -141,7 +141,7 @@ const selectedDois = ['10.48550/ARXIV.2511.09216', '10.1101/2025.01.20.633551', 
 const selected = selectedDois.map(doi => publications.find(p => p.doi.toLowerCase() === doi.toLowerCase())).filter(Boolean);
 await emit('/', page({ active: 'about', body: `
   <section class="hero" aria-labelledby="intro-title">
-    <div class="hero-copy"><h1 id="intro-title">Erik Hartman</h1><p class="hero-bio">I’m a PhD student in computational biology at <a href="https://www.lunduniversity.lu.se/"><strong>Lund University</strong></a>, working with Johan Malmström. I’m currently a visiting research scholar in <a href="https://delafuentelab.seas.upenn.edu/">César de la Fuente’s Machine Biology Group</a> at the <strong>University of Pennsylvania</strong>. During my PhD, I also spent time at <a href="https://www.a-star.edu.sg/"><strong>A*STAR</strong></a> in Singapore, working with Peter J. Bond.</p><p class="hero-statement">${esc(site.focus)}</p></div>
+    <div class="hero-copy"><h1 id="intro-title">Erik Hartman</h1><p class="hero-bio">I’m a PhD student in computational biology at <a href="https://www.lunduniversity.lu.se/"><strong>Lund University</strong></a>, working with Johan Malmström. I’m currently a visiting research scholar in <a href="https://delafuentelab.seas.upenn.edu/">César de la Fuente’s Machine Biology Group</a> at the <strong>University of Pennsylvania</strong>. During my PhD, I also spent time at <a href="https://www.a-star.edu.sg/"><strong>A*STAR</strong></a> in Singapore, working with Peter J. Bond.</p><p class="hero-statement">${esc(site.focus).replace('encrypted peptides', '<strong>encrypted peptides</strong>')}</p></div>
     <figure class="portrait"><img src="/assets/img/erik-hartman-headshot.jpg" width="1306" height="1205" alt="Erik Hartman" fetchpriority="high"></figure>
   </section>
   <section class="research-section section" id="research" aria-labelledby="research-title">
@@ -154,7 +154,6 @@ await emit('/', page({ active: 'about', body: `
   <section class="section" id="software" aria-labelledby="software-title"><div class="section-heading"><h2 id="software-title">Software</h2><a href="${site.github}">GitHub</a></div><div class="software-grid">${software.map(item => `<a class="software-item" href="${item.url}"><div><h3>${esc(item.name)}</h3></div><p>${esc(item.description)}</p><span class="software-category">${esc(item.category)}</span></a>`).join('')}</div></section>
   <section class="section" aria-labelledby="writing-title"><div class="section-heading"><h2 id="writing-title">Writing</h2><a href="/blog/">All writing</a></div><div class="writing-list">${writing.slice(0, 3).map(post => writingRow(post)).join('')}</div></section>
   <section class="section" id="media" aria-labelledby="media-title"><div class="section-heading"><h2 id="media-title">Media</h2></div><div class="media-list">${media.map(mediaRow).join('')}</div></section>
-  <aside class="a-little-more"><h2>Background</h2><p>During my PhD, I spent time at <a href="https://www.a-star.edu.sg/">A*STAR in Singapore</a> working with Peter J. Bond. Before my PhD, I worked in research and machine learning at Lund and Qlucore. I have also participated in Unga Forskare, ISEF, and iGEM.</p><a class="text-link" href="/cv/">CV</a></aside>
 ` }));
 
 const years = [...new Set(publications.map(p => p.year))];
