@@ -22,7 +22,7 @@ media.sort((a, b) => b.date.localeCompare(a.date));
 function page({ title, description = site.description, route = '/', active = '', body, kind = '' }) {
   const nav = [['/', 'About', 'about'], ['/#research', 'Research', 'research'], ['/publications/', 'Publications', 'publications'], ['/blog/', 'Writing', 'writing'], ['/#media', 'Media', 'media'], ['/cv/', 'CV', 'cv']];
   const canonical = `${site.url}${route}`;
-  const person = JSON.stringify({ '@context': 'https://schema.org', '@type': 'Person', name: site.name, url: site.url, image: `${site.url}/assets/img/prof_pic.jpg`, jobTitle: 'Computational biology PhD student and visiting research scholar', affiliation: [{ '@type': 'Organization', name: 'Lund University' }, { '@type': 'Organization', name: 'University of Pennsylvania' }], sameAs: [site.scholar, site.github, site.orcid, site.linkedin] }).replace(/</g, '\\u003c');
+  const person = JSON.stringify({ '@context': 'https://schema.org', '@type': 'Person', name: site.name, url: site.url, image: `${site.url}/assets/img/erik-hartman-headshot.jpg`, jobTitle: 'Computational biology PhD student and visiting research scholar', affiliation: [{ '@type': 'Organization', name: 'Lund University' }, { '@type': 'Organization', name: 'University of Pennsylvania' }], sameAs: [site.scholar, site.github, site.orcid, site.linkedin] }).replace(/</g, '\\u003c');
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -36,7 +36,7 @@ function page({ title, description = site.description, route = '/', active = '',
   <meta property="og:title" content="${esc(title || `${site.name} — Computational biology`)}">
   <meta property="og:description" content="${esc(description)}">
   <meta property="og:url" content="${esc(canonical)}">
-  <meta property="og:image" content="${site.url}/assets/img/prof_pic.jpg">
+  <meta property="og:image" content="${site.url}/assets/img/erik-hartman-headshot.jpg">
   <meta property="og:image:alt" content="Portrait of Erik Hartman">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="data:,">
@@ -128,7 +128,7 @@ await mkdir(out, { recursive: true });
 for (const name of await readdir(path.join(root, 'site'))) await cp(path.join(root, 'site', name), path.join(out, name), { recursive: true });
 await mkdir(path.join(out, 'assets/img'), { recursive: true });
 await mkdir(path.join(out, 'assets/pdf'), { recursive: true });
-for (const name of ['prof_pic.jpg', 'phd_background.png', 'md_pdf.png', 'md_word.png', 'running_man.jpg', 'utopia_dystopia.jpg', 'MPE.png']) {
+for (const name of ['erik-hartman-headshot.jpg', 'phd_background.png', 'md_pdf.png', 'md_word.png', 'running_man.jpg', 'utopia_dystopia.jpg', 'MPE.png']) {
   await cp(path.join(root, 'assets/img', name), path.join(out, 'assets/img', name));
 }
 for (const name of ['cv.pdf', 'sb_for_beginners.pdf']) await cp(path.join(root, 'assets/pdf', name), path.join(out, 'assets/pdf', name));
@@ -142,7 +142,7 @@ const selected = selectedDois.map(doi => publications.find(p => p.doi.toLowerCas
 await emit('/', page({ active: 'about', body: `
   <section class="hero" aria-labelledby="intro-title">
     <div class="hero-copy"><h1 id="intro-title">Erik Hartman</h1><p class="hero-bio">I’m a PhD student in computational biology at <a href="https://www.lunduniversity.lu.se/"><strong>Lund University</strong></a>, working with Johan Malmström. I’m currently a visiting research scholar in <a href="https://delafuentelab.seas.upenn.edu/">César de la Fuente’s Machine Biology Group</a> at the <strong>University of Pennsylvania</strong>. During my PhD, I also spent time at <a href="https://www.a-star.edu.sg/"><strong>A*STAR</strong></a> in Singapore, working with Peter J. Bond.</p><p class="hero-statement">${esc(site.focus)}</p></div>
-    <figure class="portrait"><img src="/assets/img/prof_pic.jpg" width="1023" height="1355" alt="Erik Hartman" fetchpriority="high"></figure>
+    <figure class="portrait"><img src="/assets/img/erik-hartman-headshot.jpg" width="1306" height="1205" alt="Erik Hartman" fetchpriority="high"></figure>
   </section>
   <section class="research-section section" id="research" aria-labelledby="research-title">
     <h2 id="research-title">Research</h2>
