@@ -46,3 +46,9 @@
   .structure-stage, .structure-toolbar { display: none; }
   .structure-caption { break-inside: avoid; }
 }
+
+.structure-ascii { position: absolute; inset: 12px 0 48px; background: var(--paper); z-index: 1; }
+.structure-ascii[hidden] { display: none; }
+.structure-legend { z-index: 1; }
+.structure-credit { margin: 0; }
+.structure-ascii pre { border: 0; padding: 0; background: transparent; overflow: visible; }

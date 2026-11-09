@@ -104,8 +104,9 @@ function structureViewer() {
       <div class="structure-legend"><span><i class="structure-protein-dot"></i>${esc(structure.proteinLabel)}</span><span><i class="structure-peptide-dot"></i>${esc(structure.peptideLabel)}</span></div>
     </div>
     <div class="structure-toolbar">
-      <div class="structure-style-controls" role="group" aria-label="Protein display"><button type="button" data-structure-style="surface" aria-pressed="true" disabled>Surface</button><button type="button" data-structure-style="ribbon" aria-pressed="false" disabled>Ribbon</button></div>
+      <div class="structure-style-controls" role="group" aria-label="Protein display"><button type="button" data-structure-style="ascii" aria-pressed="true" disabled>ASCII</button><button type="button" data-structure-style="blend" aria-pressed="false" disabled>ASCII + ribbon</button><button type="button" data-structure-style="surface" aria-pressed="false" disabled>Surface</button><button type="button" data-structure-style="ribbon" aria-pressed="false" disabled>Ribbon</button></div>
       <div class="structure-view-controls"><button type="button" data-structure-spin aria-pressed="false" disabled>Rotate</button><button type="button" data-structure-reset disabled>Reset view</button></div>
+      <p class="structure-credit">ASCII renderer adapted from <a href="https://github.com/mitsenkov/ascii-fold">ASCII Fold</a>.</p>
       <p id="structure-help">Drag to rotate · scroll or pinch to zoom. Keyboard: arrows, +/−, R.</p>
     </div>
     <noscript><style>.structure-stage, .structure-toolbar { display: none; }</style><p class="structure-noscript">Enable JavaScript to explore this structure in 3D, or follow the PDB link above.</p></noscript>

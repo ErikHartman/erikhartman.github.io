@@ -39,6 +39,7 @@
     const resetButton = root.querySelector('[data-structure-reset]');
     const controls = [...styles, spinButton, resetButton];
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let ascii, asciiHost, activeStyle = 'ascii';
     let config, viewer, initialView, proteinSelection, peptideSelection, displayedAtoms;
     let loading = false, ready = false, spinning = false, visible = true, surfacePending = false;
     let surfaceId = null;
@@ -51,7 +52,8 @@
     }
 
     function updateSpin() {
-      if (viewer) viewer.spin(spinning && visible && !document.hidden ? 'vy' : false, 0.35);
+      if (ascii) ascii.set({ spin: activeStyle === 'ascii' || activeStyle === 'blend' ? (spinning && visible && !document.hidden ? 0.35 : 0) : 0 });
+      if (viewer) viewer.spin(!['ascii', 'blend'].includes(activeStyle) && spinning && visible && !document.hidden ? 'vy' : false, 0.35);
       spinButton.setAttribute('aria-pressed', String(spinning));
       spinButton.textContent = spinning ? 'Pause rotation' : 'Rotate';
     }
@@ -81,6 +83,12 @@
 
     async function changeStyle(style) {
       if (!ready || surfacePending) return;
+      activeStyle = style;
+      const useAscii = style === 'ascii' || style === 'blend';
+      asciiHost.hidden = !useAscii;
+      root.dataset.structureDisplay = useAscii ? 'ascii' : 'molecular';
+      if (ascii) ascii.set({ layout: style === 'blend' ? 'lr' : 'ascii' });
+      updateSpin();
       if (style === 'surface' && surfaceId === null) {
         surfacePending = true;
         styles.forEach(button => { button.disabled = true; });
@@ -141,6 +149,7 @@
     function resetView() {
       if (!ready) return;
       stopSpin();
+      if (ascii) ascii.resetView();
       viewer.setView(initialView);
       fitView();
     }
@@ -209,7 +218,22 @@
         initialView = viewer.getView().slice();
         ready = true;
         styles.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.structureStyle === 'ribbon')));
-        await changeStyle('surface');
+        const [{ createAsciiFold }, { parsePDB }] = await Promise.all([
+          import('/vendor/ascii-fold/engine.js'), import('/vendor/ascii-fold/parse.js'),
+        ]);
+        if (ascii) { ascii.destroy(); asciiHost.remove(); }
+        asciiHost = document.createElement('div');
+        asciiHost.className = 'structure-ascii';
+        host.append(asciiHost);
+        ascii = createAsciiFold(asciiHost, { layout: 'ascii', detail: 'medium', spin: 0, background: false });
+        const lines = data.split(/\r?\n/);
+        const chains = [...config.proteinChains, ...config.peptideChains].map(chain => ({
+          ...parsePDB(lines.filter(line => !line.startsWith('ATOM  ') || line[21] === chain).join('\n')),
+          color: config.peptideChains.includes(chain) ? config.peptideColor : config.proteinColor,
+        }));
+        if (chains.some(chain => chain.rows.length < 5)) throw new Error('A chain has too few residues for ASCII Fold.');
+        ascii.setStructure({ chains, chain: chains.map(c => c.chain).join(', ') }, { title: `${config.proteinLabel} and ${config.peptideLabel}` });
+        await changeStyle('ascii');
         root.dataset.structureState = 'ready';
         host.setAttribute('aria-busy', 'false');
         controls.forEach(button => { button.disabled = false; });
@@ -236,6 +260,17 @@
     host.addEventListener('pointerdown', stopSpin);
     host.addEventListener('keydown', event => {
       if (!ready || event.altKey || event.ctrlKey || event.metaKey) return;
+      const useAscii = ['ascii', 'blend'].includes(activeStyle);
+      if (useAscii && ascii) {
+        const steps = { ArrowLeft: [-0.14, 0], ArrowRight: [0.14, 0], ArrowUp: [0, -0.14], ArrowDown: [0, 0.14] }[event.key];
+        if (steps) { stopSpin(); ascii.setRotation(ascii.rotation.y + steps[0], ascii.rotation.x + steps[1]); }
+        else if (['+', '='].includes(event.key)) ascii.zoomBy(1.1);
+        else if (['-', '_'].includes(event.key)) ascii.zoomBy(0.9);
+        else if (event.key.toLowerCase() === 'r') resetView();
+        else return;
+        event.preventDefault();
+        return;
+      }
       const rotation = { ArrowLeft: [-8, 'vy'], ArrowRight: [8, 'vy'], ArrowUp: [-8, 'vx'], ArrowDown: [8, 'vx'] }[event.key];
       if (rotation) { stopSpin(); viewer.rotate(...rotation); }
       else if (event.key === '+' || event.key === '=') viewer.zoom(1.1);
