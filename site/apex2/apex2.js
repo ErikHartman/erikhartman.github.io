@@ -33,23 +33,3 @@ if (figureDialog?.showModal && figureImage && figureTitle && figureCaption && fi
   });
   figureDialog.addEventListener('close', () => figureOpener?.focus({ preventScroll: true }));
 }
-
-if ('IntersectionObserver' in window) {
-  const navigation = [...document.querySelectorAll('.section-nav a[href^="#"]')]
-    .map(link => ({ link, section: document.getElementById(link.hash.slice(1)) }))
-    .filter(item => item.section);
-  const visible = new Set();
-  const observer = new IntersectionObserver(entries => {
-    for (const entry of entries) {
-      if (entry.isIntersecting) visible.add(entry.target);
-      else visible.delete(entry.target);
-    }
-    const current = navigation.find(item => visible.has(item.section));
-    if (!current) return;
-    for (const item of navigation) {
-      if (item === current) item.link.setAttribute('aria-current', 'location');
-      else item.link.removeAttribute('aria-current');
-    }
-  }, { rootMargin: '-15% 0px -50% 0px' });
-  for (const { section } of navigation) observer.observe(section);
-}
