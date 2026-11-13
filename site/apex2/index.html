@@ -11,6 +11,7 @@
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="/apex2/apex2.css">
   <script src="/apex2/apex2.js" defer></script>
+  <script type="module" src="/apex2/peptide.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -31,27 +32,12 @@
             <p><sup>3</sup> Department of Computer Science and Engineering, The Chinese University of Hong Kong, Hong Kong SAR, China.</p>
           </div></details>
         </div>
-        <svg class="model-graphic" viewBox="0 0 250 145" role="img" aria-labelledby="graphic-title graphic-desc">
-          <title id="graphic-title">APEX2, ApexTox and ApexHemo</title>
-          <desc id="graphic-desc">A schematic peptide branches to antimicrobial activity, cytotoxicity and hemolysis predictions.</desc>
-          <g fill="none" stroke-linecap="round">
-            <path d="M30 25 C0 40 66 53 32 70 S0 99 32 116" stroke="#d9cce8" stroke-width="8"/>
-            <path d="M30 25 C62 40 0 53 32 70 S65 99 32 116" stroke="#8b6aae" stroke-width="8"/>
-            <path d="M53 70 H76 Q87 70 87 59 V30 Q87 24 98 24 H111" stroke="#a18bb9"/>
-            <path d="M53 70 H111" stroke="#729c9a"/>
-            <path d="M53 70 H76 Q87 70 87 81 V109 Q87 116 98 116 H111" stroke="#bf8b95"/>
-          </g>
-          <g font-family="Arial, sans-serif" font-size="14" font-weight="600">
-            <text x="120" y="23" fill="#7956a2">APEX2</text>
-            <text x="120" y="69" fill="#367f7e">ApexTox</text>
-            <text x="120" y="115" fill="#a6384b">ApexHemo</text>
-          </g>
-          <g font-family="Arial, sans-serif" font-size="10" fill="#696370">
-            <text x="120" y="39">Antimicrobial activity</text>
-            <text x="120" y="85">Cytotoxicity</text>
-            <text x="120" y="131">Hemolysis</text>
-          </g>
-        </svg>
+        <figure class="peptide-figure">
+          <div class="peptide-ascii" data-ascii-peptide tabindex="0" role="img" aria-label="Purple ASCII rendering of the p53 peptide, chain B of PDB 1YCR. Drag or use arrow keys to rotate, plus and minus to zoom, R to reset." aria-busy="true"></div>
+          <p class="peptide-status" data-peptide-status role="status">Loading peptide…</p>
+          <figcaption><a href="https://www.rcsb.org/structure/1YCR">p53 peptide · 1YCR</a><button type="button" data-peptide-spin aria-pressed="false" hidden>Rotate</button><button type="button" data-peptide-reset hidden>Reset</button></figcaption>
+          <noscript><style>.peptide-ascii,.peptide-status{display:none}</style><p class="peptide-fallback">Enable JavaScript to view the ASCII peptide.</p></noscript>
+        </figure>
       </div>
       <div class="paper-links">
         <a href="/apex2/assets/apex2.pdf">Manuscript (PDF draft)</a>
@@ -60,60 +46,97 @@
         <span class="pending-link">Model weights <span class="placeholder">URL HERE</span></span>
       </div>
     </header>
-    <section class="benchmarks" aria-labelledby="benchmark-title">
-      <h2 id="benchmark-title">Benchmark comparisons</h2>
-      <p class="section-note">AUROC on the in-house test cohorts, from Tables 1–2. Each task uses its own cohort and experimental labels.</p>
-      <div class="benchmark-grid">
-        <article class="benchmark benchmark-activity"><div class="benchmark-heading"><div><span class="chart-kicker">ANTIMICROBIAL ACTIVITY</span><h3>APEX2</h3></div><span class="metric-label">AUROC</span></div><p class="cohort">195 shared test peptides · mean over 11 strains</p>
-          <div class="bar-chart" role="img" aria-label="Antimicrobial AUROC: APEX2 strain activity 0.81, AMPGen 0.69, OmegAMP 0.67, HydrAMP-MIC 0.66, AMP-READ 0.65, amPEPpy 0.63, ApexPathogen 0.62, AMPlify 0.62, HydrAMP-AMP 0.61.">
-            <div class="bar-row is-highlight"><span class="bar-label">APEX2</span><span class="bar-track"><span class="bar-fill" style="width:81%"></span></span><span class="bar-value">0.81</span></div>
-            <div class="bar-row"><span class="bar-label">AMPGen</span><span class="bar-track"><span class="bar-fill" style="width:69%"></span></span><span class="bar-value">0.69</span></div>
-            <div class="bar-row"><span class="bar-label">OmegAMP</span><span class="bar-track"><span class="bar-fill" style="width:67%"></span></span><span class="bar-value">0.67</span></div>
-            <div class="bar-row"><span class="bar-label">HydrAMP-MIC</span><span class="bar-track"><span class="bar-fill" style="width:66%"></span></span><span class="bar-value">0.66</span></div>
-            <div class="bar-row"><span class="bar-label">AMP-READ</span><span class="bar-track"><span class="bar-fill" style="width:65%"></span></span><span class="bar-value">0.65</span></div>
-            <div class="bar-row"><span class="bar-label">amPEPpy</span><span class="bar-track"><span class="bar-fill" style="width:63%"></span></span><span class="bar-value">0.63</span></div>
-            <div class="bar-row"><span class="bar-label">ApexPathogen</span><span class="bar-track"><span class="bar-fill" style="width:62%"></span></span><span class="bar-value">0.62</span></div>
-            <div class="bar-row"><span class="bar-label">AMPlify</span><span class="bar-track"><span class="bar-fill" style="width:62%"></span></span><span class="bar-value">0.62</span></div>
-            <div class="bar-row"><span class="bar-label">HydrAMP-AMP</span><span class="bar-track"><span class="bar-fill" style="width:61%"></span></span><span class="bar-value">0.61</span></div>
-            <div class="chart-axis" aria-hidden="true"><span>0</span><span>0.5</span><span>1.0</span></div>
-          </div><p class="chart-note">APEX2 uses its strain activity head. Each strain receives equal weight. Conditional MIC interval concordance is <strong>0.69</strong> on this cohort.</p>
-        </article>
-        <div class="toxicity-benchmarks">
-          <article class="benchmark benchmark-tox"><div class="benchmark-heading"><div><span class="chart-kicker">CYTOTOXICITY</span><h3>ApexTox</h3></div><span class="metric-label">AUROC</span></div><p class="cohort">145 in-house test peptides · CC50 ≤ 50 µM</p><div class="bar-chart" role="img" aria-label="Cytotoxicity AUROC: ApexTox CC50 0.78, ApexTox broad 0.75, ToxinPred3 0.60."><div class="bar-row is-highlight"><span class="bar-label">ApexTox CC50</span><span class="bar-track"><span class="bar-fill" style="width:78%"></span></span><span class="bar-value">0.78</span></div><div class="bar-row is-highlight"><span class="bar-label">ApexTox broad</span><span class="bar-track"><span class="bar-fill" style="width:75%"></span></span><span class="bar-value">0.75</span></div><div class="bar-row"><span class="bar-label">ToxinPred3</span><span class="bar-track"><span class="bar-fill" style="width:60%"></span></span><span class="bar-value">0.60</span></div><div class="chart-axis" aria-hidden="true"><span>0</span><span>0.5</span><span>1.0</span></div></div><p class="chart-note">Experimental CC50 at or below 50 µM defines a positive label; peptides receive equal total weight.</p></article>
-          <article class="benchmark benchmark-hemo"><div class="benchmark-heading"><div><span class="chart-kicker">HEMOLYSIS</span><h3>ApexHemo</h3></div><span class="metric-label">AUROC</span></div><p class="cohort">118 in-house test peptides · HC50 ≤ 128 µM</p><div class="bar-chart" role="img" aria-label="Hemolysis AUROC: ApexHemo HC50 0.93, ApexHemo broad 0.91, retrained HemoPI2 classifier 0.77, retrained HemoPI2 HC50 0.70."><div class="bar-row is-highlight"><span class="bar-label">ApexHemo HC50</span><span class="bar-track"><span class="bar-fill" style="width:93%"></span></span><span class="bar-value">0.93</span></div><div class="bar-row is-highlight"><span class="bar-label">ApexHemo broad</span><span class="bar-track"><span class="bar-fill" style="width:91%"></span></span><span class="bar-value">0.91</span></div><div class="bar-row"><span class="bar-label">HemoPI2 classifier</span><span class="bar-track"><span class="bar-fill" style="width:77%"></span></span><span class="bar-value">0.77</span></div><div class="bar-row"><span class="bar-label">HemoPI2 HC50</span><span class="bar-track"><span class="bar-fill" style="width:70%"></span></span><span class="bar-value">0.70</span></div><div class="chart-axis" aria-hidden="true"><span>0</span><span>0.5</span><span>1.0</span></div></div><p class="chart-note">HemoPI2 models were retrained for this comparison. Experimental HC50 at or below 128 µM defines a positive label.</p></article>
+    <section class="model-section" id="apex2" aria-labelledby="apex2-title">
+      <h2 id="apex2-title" class="apex2-title">APEX2</h2>
+      <article class="topic" id="apex2-data">
+        <h3>Data</h3>
+        <p>The APEX2 dataset combines in-house assays across 11 bacterial strains with curated, strain-matched public measurements, giving 38,492 peptide–strain targets across 4,930 peptides. A broader activity dataset contains 49,188 peptides from public AMP records and sampled UniProt fragments. Accounting for overlap between these tasks, the collection contains 52,918 distinct sequences across the training, validation and test partitions.</p>
+<figure class="paper-figure ">
+          <a class="figure-image-link" href="/apex2/assets/apex2_fig1.png" data-figure data-crop="120,40,2710,810" data-source-width="2997" data-source-height="2749" data-title="Figure 1a–b" data-caption="In-house assay coverage and sequence-space distributions of the in-house, public and UniProt datasets." aria-label="Enlarge Figure 1a–b"><span class="panel-crop" style="--crop-x:120;--crop-y:40;--crop-w:2710;--crop-h:810;--source-w:2997;--source-h:2749"><img src="/apex2/assets/apex2_fig1.png" width="2997" height="2749" alt="In-house assay coverage and sequence-space distributions of the in-house, public and UniProt datasets." loading="lazy"></span></a>
+          <figcaption><span>Figure 1a–b. In-house assay coverage and sequence-space distributions of the in-house, public and UniProt datasets.</span><a href="/apex2/assets/apex2_fig1.png" data-figure data-crop="120,40,2710,810" data-source-width="2997" data-source-height="2749" data-title="Figure 1a–b" data-caption="In-house assay coverage and sequence-space distributions of the in-house, public and UniProt datasets." aria-label="Enlarge Figure 1a–b">Enlarge ↗</a></figcaption>
+        </figure>
+      </article>
+      <article class="topic" id="apex2-reformulation">
+        <h3>Reformulation</h3>
+        <p>APEX2 separates two questions: whether a peptide inhibits bacterial growth within the tested range, and at what concentration it does so. The model jointly predicts activity probability and MIC conditional on activity. Because serial dilutions constrain MICs to intervals, the potency loss penalizes predictions outside the experimentally supported interval rather than treating the reported concentration as an exact value.</p>
+<figure class="paper-figure ">
+          <a class="figure-image-link" href="/apex2/assets/apex2_fig1.png" data-figure data-crop="135,850,2800,490" data-source-width="2997" data-source-height="2749" data-title="Figure 1c" data-caption="The hurdle formulation and interval-based MIC loss. Growth at 16 µM and inhibition at 32 µM place the MIC in the interval (16, 32] µM." aria-label="Enlarge Figure 1c"><span class="panel-crop" style="--crop-x:135;--crop-y:850;--crop-w:2800;--crop-h:490;--source-w:2997;--source-h:2749"><img src="/apex2/assets/apex2_fig1.png" width="2997" height="2749" alt="The hurdle formulation and interval-based MIC loss. Growth at 16 µM and inhibition at 32 µM place the MIC in the interval (16, 32] µM." loading="lazy"></span></a>
+          <figcaption><span>Figure 1c. The hurdle formulation and interval-based MIC loss. Growth at 16 µM and inhibition at 32 µM place the MIC in the interval (16, 32] µM.</span><a href="/apex2/assets/apex2_fig1.png" data-figure data-crop="135,850,2800,490" data-source-width="2997" data-source-height="2749" data-title="Figure 1c" data-caption="The hurdle formulation and interval-based MIC loss. Growth at 16 µM and inhibition at 32 µM place the MIC in the interval (16, 32] µM." aria-label="Enlarge Figure 1c">Enlarge ↗</a></figcaption>
+        </figure>
+      </article>
+      <article class="topic" id="apex2-architecture">
+        <h3>Architecture and model generation</h3>
+        <p>A shared sequence representation feeds three outputs: broad antimicrobial activity, strain-specific activity and conditional MIC. The encoders combine learned and physicochemical residue features with optional protein language model embeddings. Three-fold cross-validation evaluated 300 configurations spanning architectures and training settings. The selected 14-member ensemble combines CNNs, bidirectional LSTMs, bidirectional GRUs and a Transformer, with validation-based checkpoint selection.</p>
+<figure class="paper-figure ">
+          <a class="figure-image-link" href="/apex2/assets/apex2_fig1.png" data-figure data-crop="120,1370,2840,1320" data-source-width="2997" data-source-height="2749" data-title="Figure 1d–e" data-caption="Sequence encodings, prediction heads, configuration search and ensemble selection." aria-label="Enlarge Figure 1d–e"><span class="panel-crop" style="--crop-x:120;--crop-y:1370;--crop-w:2840;--crop-h:1320;--source-w:2997;--source-h:2749"><img src="/apex2/assets/apex2_fig1.png" width="2997" height="2749" alt="Sequence encodings, prediction heads, configuration search and ensemble selection." loading="lazy"></span></a>
+          <figcaption><span>Figure 1d–e. Sequence encodings, prediction heads, configuration search and ensemble selection.</span><a href="/apex2/assets/apex2_fig1.png" data-figure data-crop="120,1370,2840,1320" data-source-width="2997" data-source-height="2749" data-title="Figure 1d–e" data-caption="Sequence encodings, prediction heads, configuration search and ensemble selection." aria-label="Enlarge Figure 1d–e">Enlarge ↗</a></figcaption>
+        </figure>
+      </article>
+      <article class="topic" id="apex2-results">
+        <h3>Results</h3>
+        <p>On the shared in-house test cohort of 195 peptides, APEX2 achieved a mean strain-level AUROC of 0.81 and AUPRC of 0.67. Its conditional MIC output achieved an interval concordance of 0.69. These were the highest values among the evaluated models for the corresponding outputs. APEX2 also achieved the highest interval concordance on the sequence-filtered external bacterial benchmark.</p>
+<figure class="paper-figure ">
+          <a class="figure-image-link" href="/apex2/assets/apex2_fig2.png" data-figure data-crop="60,20,3040,1170" data-source-width="4031" data-source-height="3597" data-title="Figure 2a–d" data-caption="Activity discrimination and potency ranking in the in-house comparison (a–c) and shared external bacterial cohort (d)." aria-label="Enlarge Figure 2a–d"><span class="panel-crop" style="--crop-x:60;--crop-y:20;--crop-w:3040;--crop-h:1170;--source-w:4031;--source-h:3597"><img src="/apex2/assets/apex2_fig2.png" width="4031" height="3597" alt="Activity discrimination and potency ranking in the in-house comparison (a–c) and shared external bacterial cohort (d)." loading="lazy"></span></a>
+          <figcaption><span>Figure 2a–d. Activity discrimination and potency ranking in the in-house comparison (a–c) and shared external bacterial cohort (d).</span><a href="/apex2/assets/apex2_fig2.png" data-figure data-crop="60,20,3040,1170" data-source-width="4031" data-source-height="3597" data-title="Figure 2a–d" data-caption="Activity discrimination and potency ranking in the in-house comparison (a–c) and shared external bacterial cohort (d)." aria-label="Enlarge Figure 2a–d">Enlarge ↗</a></figcaption>
+        </figure>
+        <div class="ablation-row">
+          <div><h4>Architecture and training formulation</h4><p>Comparisons on the full 369-peptide test cohort examined the contributions of architecture and training formulation. Both improved on the baseline; combining them gave the strongest performance. The hurdle formulation also reduced the systematic offset in predicted MICs and improved numerical prediction accuracy.</p></div>
+<figure class="paper-figure ">
+          <a class="figure-image-link" href="/apex2/assets/apex2_fig2.png" data-figure data-crop="3115,75,780,1060" data-source-width="4031" data-source-height="3597" data-title="Figure 2e–f" data-caption="Architecture and loss ablations, and numerical MIC prediction accuracy on the full test cohort." aria-label="Enlarge Figure 2e–f"><span class="panel-crop" style="--crop-x:3115;--crop-y:75;--crop-w:780;--crop-h:1060;--source-w:4031;--source-h:3597"><img src="/apex2/assets/apex2_fig2.png" width="4031" height="3597" alt="Architecture and loss ablations, and numerical MIC prediction accuracy on the full test cohort." loading="lazy"></span></a>
+          <figcaption><span>Figure 2e–f. Architecture and loss ablations, and numerical MIC prediction accuracy on the full test cohort.</span><a href="/apex2/assets/apex2_fig2.png" data-figure data-crop="3115,75,780,1060" data-source-width="4031" data-source-height="3597" data-title="Figure 2e–f" data-caption="Architecture and loss ablations, and numerical MIC prediction accuracy on the full test cohort." aria-label="Enlarge Figure 2e–f">Enlarge ↗</a></figcaption>
+        </figure>
         </div>
-      </div>
+        <div class="highlight-panel" id="encrypted-peptide-recovery">
+          <h4>Recovery of human encrypted peptides</h4>
+          <p>APEX2 recovered 11 of 15 known human encrypted antimicrobial peptides, compared with four for ApexPathogen. The peptides were absent as exact sequences from APEX2 training, although eight occurred within longer auxiliary-training sequences. Recovery required a score below the cutoff in at least one strain: MIC divided by activity probability below 128 for APEX2, or MIC below 128 µM for ApexPathogen.</p>
+<figure class="paper-figure recovery-figure">
+          <a class="figure-image-link" href="/apex2/assets/apex2_fig2.png" data-figure data-crop="2325,2430,1575,975" data-source-width="4031" data-source-height="3597" data-title="Figure 2j" data-caption="Recovery of known human encrypted peptides. Large points show each peptide’s minimum score across strains; faint points show individual strains. Dashed lines indicate the two recovery cutoffs." aria-label="Enlarge Figure 2j"><span class="panel-crop" style="--crop-x:2325;--crop-y:2430;--crop-w:1575;--crop-h:975;--source-w:4031;--source-h:3597"><img src="/apex2/assets/apex2_fig2.png" width="4031" height="3597" alt="Recovery of known human encrypted peptides. Large points show each peptide’s minimum score across strains; faint points show individual strains. Dashed lines indicate the two recovery cutoffs." loading="lazy"></span></a>
+          <figcaption><span>Figure 2j. Recovery of known human encrypted peptides. Large points show each peptide’s minimum score across strains; faint points show individual strains. Dashed lines indicate the two recovery cutoffs.</span><a href="/apex2/assets/apex2_fig2.png" data-figure data-crop="2325,2430,1575,975" data-source-width="4031" data-source-height="3597" data-title="Figure 2j" data-caption="Recovery of known human encrypted peptides. Large points show each peptide’s minimum score across strains; faint points show individual strains. Dashed lines indicate the two recovery cutoffs." aria-label="Enlarge Figure 2j">Enlarge ↗</a></figcaption>
+        </figure>
+        </div>
+      </article>
     </section>
-    <section class="figures" aria-labelledby="figures-title">
-      <h2 id="figures-title">Figures</h2>
-      <figure class="paper-figure" id="figure-1">
-        <div class="figure-heading"><h3>Figure 1. APEX2 data, formulation and architecture</h3><a href="/apex2/assets/apex2_fig1.png" data-figure data-title="Figure 1. APEX2 data, formulation and architecture" data-caption="In-house and public data support separate predictions of broad antimicrobial activity, strain-specific activity and MIC conditional on activity. The overview shows the interval-based potency loss, neural architecture and ensemble-selection workflow." aria-label="Enlarge figure 1">Enlarge ↗</a></div>
-        <a class="figure-image-link" href="/apex2/assets/apex2_fig1.png" data-figure data-title="Figure 1. APEX2 data, formulation and architecture" data-caption="In-house and public data support separate predictions of broad antimicrobial activity, strain-specific activity and MIC conditional on activity. The overview shows the interval-based potency loss, neural architecture and ensemble-selection workflow."><img src="/apex2/assets/apex2_fig1.png" width="2997" height="2749" alt="Figure 1. APEX2 data, formulation and architecture. In-house and public data support separate predictions of broad antimicrobial activity, strain-specific activity and MIC conditional on activity. The overview shows the interval-based potency loss, neural architecture and ensemble-selection workflow." loading="lazy"></a>
-        <figcaption>In-house and public data support separate predictions of broad antimicrobial activity, strain-specific activity and MIC conditional on activity. The overview shows the interval-based potency loss, neural architecture and ensemble-selection workflow.</figcaption>
-      </figure>
-      <figure class="paper-figure" id="figure-2">
-        <div class="figure-heading"><h3>Figure 2. APEX2 performance and human-proteome analysis</h3><a href="/apex2/assets/apex2_fig2.png" data-figure data-title="Figure 2. APEX2 performance and human-proteome analysis" data-caption="Comparisons of activity discrimination, potency ranking and prediction accuracy, together with architecture and training-formulation ablations. Human-proteome analyses examine sequence preferences, relationships between strain outputs and recovery of known encrypted peptides." aria-label="Enlarge figure 2">Enlarge ↗</a></div>
-        <a class="figure-image-link" href="/apex2/assets/apex2_fig2.png" data-figure data-title="Figure 2. APEX2 performance and human-proteome analysis" data-caption="Comparisons of activity discrimination, potency ranking and prediction accuracy, together with architecture and training-formulation ablations. Human-proteome analyses examine sequence preferences, relationships between strain outputs and recovery of known encrypted peptides."><img src="/apex2/assets/apex2_fig2.png" width="4031" height="3597" alt="Figure 2. APEX2 performance and human-proteome analysis. Comparisons of activity discrimination, potency ranking and prediction accuracy, together with architecture and training-formulation ablations. Human-proteome analyses examine sequence preferences, relationships between strain outputs and recovery of known encrypted peptides." loading="lazy"></a>
-        <figcaption>Comparisons of activity discrimination, potency ranking and prediction accuracy, together with architecture and training-formulation ablations. Human-proteome analyses examine sequence preferences, relationships between strain outputs and recovery of known encrypted peptides.</figcaption>
-      </figure>
-      <figure class="paper-figure" id="figure-3">
-        <div class="figure-heading"><h3>Figure 3. Curation of cytotoxicity and hemolysis data</h3><a href="/apex2/assets/apex2_fig3.png" data-figure data-title="Figure 3. Curation of cytotoxicity and hemolysis data" data-caption="Agent-assisted curation with human review consolidates experimental records into concentration–response measurements and endpoint summaries. Dataset composition and sequence-space projections show the contributions of in-house and public data." aria-label="Enlarge figure 3">Enlarge ↗</a></div>
-        <a class="figure-image-link" href="/apex2/assets/apex2_fig3.png" data-figure data-title="Figure 3. Curation of cytotoxicity and hemolysis data" data-caption="Agent-assisted curation with human review consolidates experimental records into concentration–response measurements and endpoint summaries. Dataset composition and sequence-space projections show the contributions of in-house and public data."><img src="/apex2/assets/apex2_fig3.png" width="4066" height="1140" alt="Figure 3. Curation of cytotoxicity and hemolysis data. Agent-assisted curation with human review consolidates experimental records into concentration–response measurements and endpoint summaries. Dataset composition and sequence-space projections show the contributions of in-house and public data." loading="lazy"></a>
-        <figcaption>Agent-assisted curation with human review consolidates experimental records into concentration–response measurements and endpoint summaries. Dataset composition and sequence-space projections show the contributions of in-house and public data.</figcaption>
-      </figure>
-      <figure class="paper-figure" id="figure-4">
-        <div class="figure-heading"><h3>Figure 4. ApexTox and ApexHemo predictions and performance</h3><a href="/apex2/assets/apex2_fig4.png" data-figure data-title="Figure 4. ApexTox and ApexHemo predictions and performance" data-caption="Concentration–response predictions, CC50 and HC50 estimates, and comparisons with toxicity predictors, followed by analyses of relationships with antimicrobial predictions and sequence composition. The figure includes both in-house test and public validation cohorts." aria-label="Enlarge figure 4">Enlarge ↗</a></div>
-        <a class="figure-image-link" href="/apex2/assets/apex2_fig4.png" data-figure data-title="Figure 4. ApexTox and ApexHemo predictions and performance" data-caption="Concentration–response predictions, CC50 and HC50 estimates, and comparisons with toxicity predictors, followed by analyses of relationships with antimicrobial predictions and sequence composition. The figure includes both in-house test and public validation cohorts."><img src="/apex2/assets/apex2_fig4.png" width="4066" height="3767" alt="Figure 4. ApexTox and ApexHemo predictions and performance. Concentration–response predictions, CC50 and HC50 estimates, and comparisons with toxicity predictors, followed by analyses of relationships with antimicrobial predictions and sequence composition. The figure includes both in-house test and public validation cohorts." loading="lazy"></a>
-        <figcaption>Concentration–response predictions, CC50 and HC50 estimates, and comparisons with toxicity predictors, followed by analyses of relationships with antimicrobial predictions and sequence composition. The figure includes both in-house test and public validation cohorts.</figcaption>
-      </figure>
-      <figure class="paper-figure" id="figure-5">
-        <div class="figure-heading"><h3>Figure 5. Joint peptide design and ApexSuite</h3><a href="/apex2/assets/apex2_fig5.png" data-figure data-title="Figure 5. Joint peptide design and ApexSuite" data-caption="Evolutionary searches using APEX2 alone or together with ApexTox and ApexHemo are compared through predicted fitness, Pareto fronts and amino-acid composition. Searches use five paired seeds, populations of 256 peptides, 20-residue sequences and 100 offspring generations; the final panel summarizes the broader ApexSuite model family." aria-label="Enlarge figure 5">Enlarge ↗</a></div>
-        <a class="figure-image-link" href="/apex2/assets/apex2_fig5.png" data-figure data-title="Figure 5. Joint peptide design and ApexSuite" data-caption="Evolutionary searches using APEX2 alone or together with ApexTox and ApexHemo are compared through predicted fitness, Pareto fronts and amino-acid composition. Searches use five paired seeds, populations of 256 peptides, 20-residue sequences and 100 offspring generations; the final panel summarizes the broader ApexSuite model family."><img src="/apex2/assets/apex2_fig5.png" width="3706" height="1450" alt="Figure 5. Joint peptide design and ApexSuite. Evolutionary searches using APEX2 alone or together with ApexTox and ApexHemo are compared through predicted fitness, Pareto fronts and amino-acid composition. Searches use five paired seeds, populations of 256 peptides, 20-residue sequences and 100 offspring generations; the final panel summarizes the broader ApexSuite model family." loading="lazy"></a>
-        <figcaption>Evolutionary searches using APEX2 alone or together with ApexTox and ApexHemo are compared through predicted fitness, Pareto fronts and amino-acid composition. Searches use five paired seeds, populations of 256 peptides, 20-residue sequences and 100 offspring generations; the final panel summarizes the broader ApexSuite model family.</figcaption>
-      </figure>
+    <section class="model-section" id="toxicity" aria-labelledby="toxicity-title">
+      <h2 id="toxicity-title"><span class="tox-title">ApexTox</span> and <span class="hemo-title">ApexHemo</span></h2>
+      <article class="topic" id="toxicity-data">
+        <h3>Data curation</h3>
+        <p>Agent-assisted curation with human review consolidated measurements from 30 projects, recovering 21,408 cytotoxicity observations and 32,025 hemolysis observations across 1,774 distinct peptides. Questions about sequence identity, concentrations, normalization and response curves were resolved during review. Public quantitative assays and binary annotations supplemented the in-house data, retaining both measured endpoints and bounds from curves that did not cross 50% within the tested range.</p>
+<figure class="paper-figure ">
+          <a class="figure-image-link" href="/apex2/assets/apex2_fig3.png" data-figure data-crop="0,0,4066,1140" data-source-width="4066" data-source-height="1140" data-title="Figure 3" data-caption="The curation workflow, composition of the toxicity datasets and distributions of in-house and public peptides in sequence space." aria-label="Enlarge Figure 3"><span class="panel-crop" style="--crop-x:0;--crop-y:0;--crop-w:4066;--crop-h:1140;--source-w:4066;--source-h:1140"><img src="/apex2/assets/apex2_fig3.png" width="4066" height="1140" alt="The curation workflow, composition of the toxicity datasets and distributions of in-house and public peptides in sequence space." loading="lazy"></span></a>
+          <figcaption><span>Figure 3. The curation workflow, composition of the toxicity datasets and distributions of in-house and public peptides in sequence space.</span><a href="/apex2/assets/apex2_fig3.png" data-figure data-crop="0,0,4066,1140" data-source-width="4066" data-source-height="1140" data-title="Figure 3" data-caption="The curation workflow, composition of the toxicity datasets and distributions of in-house and public peptides in sequence space." aria-label="Enlarge Figure 3">Enlarge ↗</a></figcaption>
+        </figure>
+      </article>
+      <article class="topic" id="toxicity-architecture">
+        <h3>Architecture</h3>
+        <p>ApexTox and ApexHemo use the same general sequence-encoder framework as APEX2. Each ensemble member predicts a CC50 or HC50 and a fixed or learned Hill slope, defining a concentration–response curve. ApexTox additionally accounts for cell context. Training combines quantitative endpoints, censored bounds and measured responses at individual concentrations, while a separate broad classification head learns from binary toxicity evidence.</p>
+<figure class="paper-figure ">
+          <a class="figure-image-link" href="/apex2/assets/apex2_fig4.png" data-figure data-crop="70,60,3845,750" data-source-width="4066" data-source-height="3767" data-title="Figure 4a" data-caption="Shared architecture and training for concentration-dependent toxicity prediction, including cell context for ApexTox." aria-label="Enlarge Figure 4a"><span class="panel-crop" style="--crop-x:70;--crop-y:60;--crop-w:3845;--crop-h:750;--source-w:4066;--source-h:3767"><img src="/apex2/assets/apex2_fig4.png" width="4066" height="3767" alt="Shared architecture and training for concentration-dependent toxicity prediction, including cell context for ApexTox." loading="lazy"></span></a>
+          <figcaption><span>Figure 4a. Shared architecture and training for concentration-dependent toxicity prediction, including cell context for ApexTox.</span><a href="/apex2/assets/apex2_fig4.png" data-figure data-crop="70,60,3845,750" data-source-width="4066" data-source-height="3767" data-title="Figure 4a" data-caption="Shared architecture and training for concentration-dependent toxicity prediction, including cell context for ApexTox." aria-label="Enlarge Figure 4a">Enlarge ↗</a></figcaption>
+        </figure>
+      </article>
+      <article class="topic" id="toxicity-results">
+        <h3>Results</h3>
+        <h4 class="tox-title">ApexTox</h4>
+        <p>ApexTox response curves generally shifted toward lower concentrations for peptides with lower measured CC50s. On the in-house test cohort of 145 peptides, its CC50 output achieved an AUROC of 0.78, compared with 0.60 for ToxinPred3, using experimental CC50 ≤50 µM to define positive labels.</p>
+<figure class="paper-figure ">
+          <a class="figure-image-link" href="/apex2/assets/apex2_fig4.png" data-figure data-crop="100,830,3920,820" data-source-width="4066" data-source-height="3767" data-title="Figure 4b–e" data-caption="Cell-viability curves, CC50 agreement, predictions for exact and censored endpoints, and cytotoxicity discrimination." aria-label="Enlarge Figure 4b–e"><span class="panel-crop" style="--crop-x:100;--crop-y:830;--crop-w:3920;--crop-h:820;--source-w:4066;--source-h:3767"><img src="/apex2/assets/apex2_fig4.png" width="4066" height="3767" alt="Cell-viability curves, CC50 agreement, predictions for exact and censored endpoints, and cytotoxicity discrimination." loading="lazy"></span></a>
+          <figcaption><span>Figure 4b–e. Cell-viability curves, CC50 agreement, predictions for exact and censored endpoints, and cytotoxicity discrimination.</span><a href="/apex2/assets/apex2_fig4.png" data-figure data-crop="100,830,3920,820" data-source-width="4066" data-source-height="3767" data-title="Figure 4b–e" data-caption="Cell-viability curves, CC50 agreement, predictions for exact and censored endpoints, and cytotoxicity discrimination." aria-label="Enlarge Figure 4b–e">Enlarge ↗</a></figcaption>
+        </figure>
+        <h4 class="hemo-title">ApexHemo</h4>
+        <p>On the in-house test cohort of 118 peptides, ApexHemo’s HC50 output achieved an AUROC of 0.93, compared with 0.77 for the retrained HemoPI2 classifier and 0.70 for its HC50 regressor. Positive labels were defined by experimental HC50 ≤128 µM. The panels also compare response curves, numerical HC50 agreement and predictions for censored endpoints.</p>
+<figure class="paper-figure ">
+          <a class="figure-image-link" href="/apex2/assets/apex2_fig4.png" data-figure data-crop="100,1720,3930,820" data-source-width="4066" data-source-height="3767" data-title="Figure 4f–i" data-caption="Hemolysis curves, HC50 agreement, predictions for exact and censored endpoints, and hemolysis discrimination." aria-label="Enlarge Figure 4f–i"><span class="panel-crop" style="--crop-x:100;--crop-y:1720;--crop-w:3930;--crop-h:820;--source-w:4066;--source-h:3767"><img src="/apex2/assets/apex2_fig4.png" width="4066" height="3767" alt="Hemolysis curves, HC50 agreement, predictions for exact and censored endpoints, and hemolysis discrimination." loading="lazy"></span></a>
+          <figcaption><span>Figure 4f–i. Hemolysis curves, HC50 agreement, predictions for exact and censored endpoints, and hemolysis discrimination.</span><a href="/apex2/assets/apex2_fig4.png" data-figure data-crop="100,1720,3930,820" data-source-width="4066" data-source-height="3767" data-title="Figure 4f–i" data-caption="Hemolysis curves, HC50 agreement, predictions for exact and censored endpoints, and hemolysis discrimination." aria-label="Enlarge Figure 4f–i">Enlarge ↗</a></figcaption>
+        </figure>
+        <p class="figure-note">Figure 4b–i includes in-house test and public validation data; the numerical comparisons above use the in-house test cohorts. Public validation contributed to checkpoint selection.</p>
+      </article>
     </section>
   </main>
-  <footer class="footer container"><a href="/">Erik Hartman</a><span>APEX2 · Manuscript draft</span></footer>
-  <dialog id="figure-dialog" aria-labelledby="figure-title"><div class="dialog-heading"><h2 id="figure-title"></h2><button type="button" data-close-figure aria-label="Close figure">Close <span aria-hidden="true">×</span></button></div><img id="figure-image" alt=""><p id="figure-caption"></p><a id="figure-original" href="/apex2/assets/apex2_fig1.png" target="_blank" rel="noopener">Open full-resolution figure ↗</a></dialog>
+  <footer class="footer container"><a href="/">Erik Hartman</a><span>APEX2 · Manuscript draft · <a href="https://github.com/mitsenkov/ascii-fold">ASCII Fold</a></span></footer>
+  <dialog id="figure-dialog" aria-labelledby="figure-title">
+    <div class="dialog-heading"><h2 id="figure-title"></h2><button type="button" data-close-figure aria-label="Close figure">Close <span aria-hidden="true">×</span></button></div>
+    <div id="figure-viewport" class="panel-crop"><img id="figure-image" alt=""></div>
+    <p id="figure-caption"></p><a id="figure-original" href="/apex2/assets/apex2_fig1.png" target="_blank" rel="noopener">Open full-resolution source figure ↗</a>
+  </dialog>
 </body>
 </html>
