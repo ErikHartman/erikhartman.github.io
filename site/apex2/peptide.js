@@ -1,4 +1,4 @@
-// Reuse the homepage's local ASCII renderer, with only the p53 peptide chain.
+// Reuse the homepage's local ASCII renderer for Peptide F (PDB 1PEF).
 const host = document.querySelector('[data-ascii-peptide]');
 if (host) loadPeptide();
 
@@ -20,22 +20,23 @@ async function loadPeptide() {
     const [{ createAsciiFold }, { parsePDB }, response] = await Promise.all([
       import('/vendor/ascii-fold/engine.js'),
       import('/vendor/ascii-fold/parse.js'),
-      fetch('/structures/1ycr.pdb'),
+      fetch('/structures/1pef.pdb'),
     ]);
     if (!response.ok) throw new Error('Peptide structure unavailable');
     const text = await response.text();
     const peptide = parsePDB(text.split(/\r?\n/)
-      .filter(line => !line.startsWith('ATOM  ') || line[21] === 'B').join('\n'));
-    if (peptide.chain !== 'B' || peptide.rows.length < 5) throw new Error('Peptide chain not found');
+      .filter(line => !line.startsWith('ATOM  ') || line[21] === 'A').join('\n'));
+    if (peptide.chain !== 'A' || peptide.rows.length < 5) throw new Error('Peptide chain not found');
 
     view = createAsciiFold(host, {
       layout: 'ascii', detail: 34, spin: 0, background: false,
       palette: { bg: '#ffffff', ink: '#7956a2', mono: '#7956a2' },
     });
-    view.setStructure({ chains: [{ ...peptide, color: '#7956a2' }], chain: 'B' }, { title: 'p53 peptide' });
+    view.setStructure({ chains: [{ ...peptide, color: '#7956a2' }], chain: 'A' }, { title: 'Peptide F' });
+    view.setRotation(1.2, -0.35);
     view.element.setAttribute('aria-hidden', 'true');
     host.setAttribute('role', 'img');
-    host.setAttribute('aria-label', 'p53 peptide from PDB 1YCR, chain B, drawn in purple ASCII. Drag or use arrow keys to rotate, plus and minus to zoom, R to reset.');
+    host.setAttribute('aria-label', 'Peptide F from PDB 1PEF, chain A, drawn in purple ASCII. Drag or use arrow keys to rotate, plus and minus to zoom, R to reset.');
     const initialRotation = view.rotation;
 
     const updateSpin = () => {

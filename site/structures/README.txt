@@ -24,3 +24,18 @@ To display a different complex:
 The current quaternion points the p53 peptide toward the camera. It is a
 viewing transform only; atomic coordinates are unchanged. Only configured
 protein/peptide chains are drawn. The viewer does not run predictions.
+
+APEX2 page header: Peptide F, an amphiphilic 18-residue peptide
+PDB accession: 1PEF
+Metadata: https://www.rcsb.org/structure/1PEF
+Coordinates: https://files.rcsb.org/download/1PEF.pdb
+Retrieved: 2026-11-13
+Chain A: 18 modeled residues, EQLLKALEFLLKELLEKL
+The ASCII renderer uses chain A only, with the deposited HELIX annotation.
+This is an illustrative structure, not an APEX2-designed peptide.
+
+Citation: Taylor et al. (1996), Protein Science 5, 414–421.
+https://doi.org/10.1002/pro.5560050302
+
+SHA-256 (1pef.pdb):
+69ccbf7caa3ec8b1837eaab2e615ad18c941ddb840fc2d89fe90c05a2ee54a60
