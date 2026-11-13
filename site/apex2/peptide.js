@@ -8,7 +8,7 @@ async function loadPeptide() {
   const spinButton = figure.querySelector('[data-peptide-spin]');
   const resetButton = figure.querySelector('[data-peptide-reset]');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  let view, spinning = false, visible = true;
+  let view, spinning = !reducedMotion.matches, visible = true;
   host.tabIndex = 0;
   host.setAttribute('aria-busy', 'true');
   if (status) {
