@@ -38,7 +38,7 @@ async function document(file) {
 let files;
 try { files = await walk(root); }
 catch { console.error('No generated site found. Run npm run build first.'); process.exit(1); }
-for (const required of ['index.html', '404.html', 'publications/index.html', 'blog/index.html', 'cv/index.html', 'flashcards/index.html', 'robots.txt', 'sitemap.xml', 'publications.bib']) {
+for (const required of ['index.html', '404.html', 'publications/index.html', 'blog/index.html', 'cv/index.html', 'flashcards/index.html', 'apex2/index.html', 'robots.txt', 'sitemap.xml', 'feed.xml', 'publications.bib']) {
   if (!files.includes(path.join(root, required))) problems.push(`Missing required output: ${required}`);
 }
 const htmlFiles = files.filter(file => file.endsWith('.html'));
@@ -50,6 +50,11 @@ for (const file of htmlFiles) {
   const relative = path.relative(root, file).split(path.sep).join('/');
   const { html, markup, tags } = await document(file);
   const report = message => problems.push(`${relative}: ${message}`);
+  if (relative === 'apex2/index.html') {
+    const directives = tags.filter(tag => tag.name === 'meta' && tag.attrs.name?.toLowerCase() === 'robots')
+      .flatMap(tag => (tag.attrs.content || '').toLowerCase().split(/[\s,]+/));
+    if (!directives.includes('noindex')) report('unlisted APEX2 page must retain its noindex directive');
+  }
   const rendered = markup.replace(/<(pre|code)\b[^>]*>[\s\S]*?<\/\1>/gi, '');
   if (/{%[\s\S]*?%}|{{[\s\S]*?}}/.test(rendered)) report('unrendered Liquid template syntax');
   if (!relative.startsWith('flashcards/')) {
@@ -70,6 +75,9 @@ for (const file of htmlFiles) {
       linkCount += 1;
       let pathname;
       try { pathname = decodeURIComponent(target.pathname); } catch { report(`invalid encoded path: ${value}`); continue; }
+      if (!relative.startsWith('apex2/') && (pathname === '/apex2' || pathname.startsWith('/apex2/'))) {
+        report(`public page links to unlisted APEX2 content: ${value}`);
+      }
       let destination = path.resolve(root, `.${pathname}`);
       if (destination !== path.resolve(root) && !destination.startsWith(root)) { report(`path outside site: ${value}`); continue; }
       try {
@@ -82,6 +90,18 @@ for (const file of htmlFiles) {
         if (fragment && !(await document(destination)).ids.has(fragment)) report(`missing fragment: ${value}`);
       }
     }
+  }
+}
+// Keep the research preview out of discovery surfaces until its public launch.
+for (const name of ['sitemap.xml', 'feed.xml']) {
+  if (!files.includes(path.join(root, name))) continue;
+  const contents = decode(await readFile(path.join(root, name), 'utf8'));
+  if (/\/apex2(?:[\/#?<>"'\s]|$)/i.test(contents)) problems.push(`${name}: unlisted APEX2 content must not be advertised`);
+}
+if (files.includes(path.join(root, 'robots.txt'))) {
+  const robots = await readFile(path.join(root, 'robots.txt'), 'utf8');
+  if (!/^Disallow:\s*\/apex2\/assets\/\s*$/mi.test(robots)) {
+    problems.push('robots.txt: unlisted APEX2 manuscript and figures must retain their asset crawl restriction');
   }
 }
 // Compare bibliography coverage with source data without relying on layout classes.

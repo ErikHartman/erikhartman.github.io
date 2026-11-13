@@ -197,7 +197,9 @@ for (const route of legacyArchives) {
 }
 await writeFile(path.join(out, 'publications.bib'), `${publications.map(bibtex).join('\n\n')}\n`);
 await writeFile(path.join(out, '.nojekyll'), '');
-await writeFile(path.join(out, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${site.url}/sitemap.xml\n`);
+// Keep the unlisted APEX2 page crawlable so its noindex directive can be read,
+// while discouraging separate indexing of its manuscript and figure assets.
+await writeFile(path.join(out, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /apex2/assets/\nSitemap: ${site.url}/sitemap.xml\n`);
 await writeFile(path.join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${routes.filter(route => route !== '/404.html' && !redirectRoutes.has(route)).map(route => `<url><loc>${esc(site.url + route)}</loc></url>`).join('')}</urlset>\n`);
 await writeFile(path.join(out, 'feed.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<feed xmlns="http://www.w3.org/2005/Atom"><title>Erik Hartman — Writing</title><id>${site.url}/blog/</id><link href="${site.url}/feed.xml" rel="self"/><link href="${site.url}/blog/"/><updated>${site.updated}T00:00:00Z</updated><author><name>Erik Hartman</name></author>${writing.map(post => `<entry><title>${esc(post.title)}</title><id>${site.url}${post.route}</id><link href="${site.url}${post.route}"/><updated>${post.date.slice(0,10)}T00:00:00Z</updated><summary>${esc(post.description)}</summary></entry>`).join('')}</feed>\n`);
 console.log(`Built ${routes.length} pages, ${publications.length} publications, and ${writing.length} essays in dist/.`);
