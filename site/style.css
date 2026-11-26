@@ -114,12 +114,23 @@ html:has(.figure-dialog[open]) { overflow: hidden; }
 .citation-content { margin-top: 12px; }
 .citation pre { margin: 0; padding: 14px; max-width: 100%; overflow-x: auto; white-space: pre-wrap; overflow-wrap: anywhere; border: 1px solid var(--line); font-family: var(--mono); font-size: 12px; }
 .citation button { border: 1px solid #888; background: var(--paper); margin-top: 10px; padding: 5px 10px; font-size: 13px; }
-.software-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 36px; }
-.software-item { padding: 18px 0; border-top: 1px solid var(--line); text-decoration: none; display: block; }
-.software-item h3 { text-decoration: underline; text-underline-offset: 3px; }
-.software-item p { margin: 7px 0; font-size: 15px; }
-.software-category { color: var(--muted); font-size: 13px; }
-.software-item:hover h3 { text-decoration-thickness: 2px; }
+.software-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.software-card {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+  text-decoration: none;
+}
+.software-card img { display: block; width: 72px; height: 72px; object-fit: contain; border-radius: 7px; }
+.software-card h3 { margin-bottom: 4px; }
+.software-card p { color: var(--muted); font-size: 15px; line-height: 1.5; }
+.software-card:hover { border-color: #a1a1a1; background: #fafafa; }
+.software-card:hover h3, .software-card:focus-visible h3 { text-decoration: underline; text-underline-offset: 3px; }
 .writing-list { margin-top: 18px; }
 .writing-row { display: grid; grid-template-columns: 130px minmax(0, 1fr); align-items: baseline; gap: 24px; padding: 19px 0; border-top: 1px solid var(--line); text-decoration: none; }
 .writing-row time { color: var(--muted); font-size: 13px; }
@@ -220,7 +231,8 @@ html:has(.figure-dialog[open]) { overflow: hidden; }
   .publication-figure img { height: 140px; }
   .media-item--illustrated { grid-template-columns: 180px minmax(0, 1fr); gap: 22px; }
   .media-figure img { height: 140px; }
-  .software-grid { column-gap: 24px; }
+  .software-card { grid-template-columns: 56px minmax(0, 1fr); gap: 14px; padding: 14px; }
+  .software-card img { width: 56px; height: 56px; }
   .writing-row { grid-template-columns: 1fr; gap: 5px; }
   .year-group { grid-template-columns: 1fr; gap: 0; }
   .cv-section { grid-template-columns: 1fr; gap: 18px; }

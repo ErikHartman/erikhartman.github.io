@@ -153,7 +153,15 @@ await emit('/', page({ active: 'about', body: `
     ${structureViewer()}
   </section>
   <section class="section" aria-labelledby="work-title"><div class="section-heading"><h2 id="work-title">Selected publications</h2><a href="/publications/">All publications</a></div><div class="selected-publications">${selected.map(p => pubRow(p, true)).join('')}</div></section>
-  <section class="section" id="software" aria-labelledby="software-title"><div class="section-heading"><h2 id="software-title">Software</h2><a href="${site.github}">GitHub</a></div><div class="software-grid">${software.map(item => `<a class="software-item" href="${item.url}"><div><h3>${esc(item.name)}</h3></div><p>${esc(item.description)}</p><span class="software-category">${esc(item.category)}</span></a>`).join('')}</div></section>
+  <section class="section" id="software" aria-labelledby="software-title">
+    <div class="section-heading"><h2 id="software-title">Software</h2><a href="${esc(site.github)}">GitHub</a></div>
+    <div class="software-grid">${software.map(item => `
+      <a class="software-card" href="${esc(item.url)}">
+        <img src="${esc(item.logo)}" width="72" height="72" alt="" loading="lazy" decoding="async">
+        <div><h3>${esc(item.name)}</h3><p>${esc(item.description)}</p></div>
+      </a>`).join('')}
+    </div>
+  </section>
   <section class="section" aria-labelledby="writing-title"><div class="section-heading"><h2 id="writing-title">Writing</h2><a href="/blog/">All writing</a></div><div class="writing-list">${writing.slice(0, 3).map(post => writingRow(post)).join('')}</div></section>
   <section class="section" id="media" aria-labelledby="media-title"><div class="section-heading"><h2 id="media-title">Media</h2></div><div class="media-list">${media.map(mediaRow).join('')}</div></section>
 ` }));

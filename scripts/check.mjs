@@ -83,7 +83,8 @@ for (const file of htmlFiles) {
       let pathname;
       try { pathname = decodeURIComponent(target.pathname); } catch { report(`invalid encoded path: ${value}`); continue; }
       const [, targetDirectory] = pathname.split('/');
-      if (targetDirectory !== directory && unlistedPages.has(targetDirectory)) {
+      const isPeptideMapHomeLink = route === '/' && pathname === '/peptigram/';
+      if (targetDirectory !== directory && unlistedPages.has(targetDirectory) && !isPeptideMapHomeLink) {
         report(`public page links to unlisted ${unlistedPages.get(targetDirectory)} content: ${value}`);
       }
       let destination = path.resolve(root, `.${pathname}`);
