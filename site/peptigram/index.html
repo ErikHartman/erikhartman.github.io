@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Map peptides to a parent protein and compare their coverage and abundance across samples.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f4f6f2">
+  <title>Peptide Map — Erik Hartman</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/peptigram/style.css">
+  <script type="module" src="/peptigram/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="shell masthead-inner">
+      <span class="brand"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>Peptide Map</span>
+      <a href="/">Erik Hartman</a>
+    </div>
+  </header>
+
+  <main class="shell" id="main">
+    <header class="hero">
+      <div>
+        <h1>Peptide alignment</h1>
+        <p>Compare peptide coverage and abundance along a parent protein.</p>
+      </div>
+      <div class="hero-actions">
+        <span class="local-note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3"/></svg> Data stays in your browser</span>
+        <button type="button" class="quiet inputs-toggle" id="toggle-inputs" aria-controls="input-panel" aria-expanded="true" hidden>
+          <svg width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="2.5" y="4" width="15" height="12" rx="1.5"/><path d="M7 4v12"/></svg>
+          <span id="toggle-inputs-label">Hide inputs</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="workspace" id="workspace">
+      <aside class="panel inputs" id="input-panel" aria-labelledby="input-heading">
+        <div class="section-heading">
+          <h2 id="input-heading">Inputs</h2>
+          <button type="button" class="quiet" id="load-example">Load example</button>
+        </div>
+        <form id="data-form">
+          <div class="field">
+            <div class="field-head">
+              <label for="protein-text">Parent protein</label>
+              <button type="button" class="text-button" data-file="protein-file">Upload</button>
+              <input type="file" id="protein-file" accept=".fasta,.faa,.fa,.fas,.txt,text/plain" hidden>
+            </div>
+            <textarea id="protein-text" rows="4" spellcheck="false" autocapitalize="off" placeholder=">Protein name&#10;MKWVTFISLLFLFSSAYS" aria-describedby="protein-hint"></textarea>
+            <p class="hint" id="protein-hint">Paste a sequence or upload a FASTA file.</p>
+          </div>
+
+          <div class="field">
+            <div class="field-head">
+              <label for="peptide-text">Peptides</label>
+              <button type="button" class="text-button" data-file="peptide-file">Upload</button>
+              <input type="file" id="peptide-file" accept=".tsv,.csv,.txt,.fasta,.faa,.fa,.fas,text/plain,text/csv,text/tab-separated-values" hidden>
+            </div>
+            <textarea id="peptide-text" rows="6" spellcheck="false" autocapitalize="off" placeholder="peptide,abundance,sample&#10;WVTFISLL,420,Control&#10;LLFLFSS,180,Control" aria-describedby="peptide-hint"></textarea>
+            <p class="hint" id="peptide-hint">Paste one peptide per line or upload CSV or TSV with optional abundance columns.</p>
+          </div>
+
+          <label class="check-line"><input type="checkbox" id="match-il"> Treat I and L as equivalent</label>
+          <button type="submit" class="primary" id="map-button">Map peptides</button>
+          <p id="input-feedback" class="feedback" role="status" hidden></p>
+        </form>
+
+        <details class="format-help">
+          <summary>Input formats</summary>
+          <p>Use a column named <code>peptide</code> or <code>sequence</code>. Add <code>abundance</code> and <code>sample</code> columns for long-format data, or give each sample its own abundance column.</p>
+          <pre>peptide,Control,Treatment
+WVTFISLL,420,180
+LLFLFSS,80,240</pre>
+          <p>FASTA and plain-text peptide lists are also accepted. Blank abundances in a sample column mean that the peptide was unobserved in that sample.</p>
+          <button type="button" class="text-button" id="download-template">Download CSV template</button>
+        </details>
+      </aside>
+
+      <section id="results" class="panel results" aria-labelledby="plot-heading" hidden>
+        <header class="results-header">
+          <div class="result-title">
+            <h2 id="plot-heading">Alignment</h2>
+            <p id="result-subtitle"></p>
+          </div>
+          <details id="export-menu" class="export-menu">
+            <summary>Export</summary>
+            <div class="menu-popover">
+              <button type="button" data-export="svg">Vector figure (SVG)</button>
+              <button type="button" data-export="png">Figure as PNG</button>
+              <button type="button" data-export="print">Print or save as PDF</button>
+              <button type="button" data-export="csv">Visible peptides as CSV</button>
+              <button type="button" data-export="coverage">Residue coverage as CSV</button>
+            </div>
+          </details>
+        </header>
+
+        <div class="metrics" aria-label="Mapping summary">
+          <div><output id="metric-peptides"></output><span>Mapped peptides</span></div>
+          <div><output id="metric-coverage"></output><span>Sequence covered</span></div>
+          <div><output id="metric-samples"></output><span>Samples</span></div>
+        </div>
+
+        <div class="result-controls">
+          <div class="control-row">
+            <div class="segments" role="group" aria-label="Plot view">
+              <button type="button" data-view="sequence" aria-pressed="true">Alignment</button>
+              <button type="button" data-view="coverage" aria-pressed="false">Coverage</button>
+              <button type="button" data-view="both" aria-pressed="false">Both</button>
+            </div>
+            <details id="sample-menu" class="sample-menu" hidden>
+              <summary>Samples</summary>
+              <div id="sample-options" class="menu-popover sample-options"></div>
+            </details>
+            <label id="protein-picker" class="protein-picker" hidden>Protein <select id="protein-select"></select></label>
+          </div>
+
+          <div class="control-row range-row">
+            <div class="range-controls" role="group" aria-label="Residue range">
+              <span>Residues</span>
+              <input id="region-start" aria-label="First residue" type="number" min="1" value="1">
+              <span aria-hidden="true">–</span>
+              <input id="region-end" aria-label="Last residue" type="number" min="1" value="1">
+              <button type="button" class="text-button" id="reset-range">Full sequence</button>
+            </div>
+            <label class="select-label">Zoom <select id="zoom">
+              <option value="auto" selected>Auto</option>
+              <option value="fit">Fit width</option>
+              <option value="12">12 px</option>
+              <option value="16">Large</option>
+              <option value="22">Extra large</option>
+            </select></label>
+          </div>
+
+          <details id="plot-settings" class="plot-settings">
+            <summary>Filters and display</summary>
+            <div class="settings-grid">
+              <label class="setting">Peptide search<input type="search" id="peptide-search" placeholder="Sequence or motif"></label>
+              <label class="setting">Parent motif<input type="search" id="parent-motif" placeholder="Highlight residues"></label>
+              <label class="setting">Minimum abundance<input type="number" id="min-abundance" step="any" placeholder="Any"></label>
+              <label class="setting">Maximum abundance<input type="number" id="max-abundance" step="any" placeholder="Any"></label>
+              <label class="setting">Abundance colors<select id="color-scale">
+                <option value="log">Log (shared)</option>
+                <option value="linear">Linear (shared)</option>
+                <option value="log-sample">Log (per sample)</option>
+                <option value="linear-sample">Linear (per sample)</option>
+                <option value="off">Uniform color</option>
+              </select></label>
+              <label class="setting">Cleavage markers<select id="cleavage">
+                <option value="none">None</option>
+                <option value="observed">Observed peptide termini</option>
+                <option value="trypsin">Trypsin</option>
+                <option value="lysc">Lys-C</option>
+                <option value="gluc">Glu-C (after E)</option>
+              </select></label>
+              <label class="setting">Figure layout<select id="plot-layout">
+                <option value="labelled" selected>Publication</option>
+                <option value="compact">Compact</option>
+              </select></label>
+              <label class="check-line"><input type="checkbox" id="regex-search"> Use regular expressions</label>
+              <label class="check-line"><input type="checkbox" id="show-letters" checked> Show residue letters</label>
+            </div>
+          </details>
+          <p id="plot-feedback" class="feedback" role="status" hidden></p>
+        </div>
+
+        <figure class="plot-figure">
+          <figcaption class="plot-caption">
+            <span id="plot-caption">Sequence alignment</span>
+            <span id="plot-region"></span>
+          </figcaption>
+          <div class="overview" id="protein-overview" hidden>
+            <span>Protein overview</span>
+            <div class="overview-plot">
+              <canvas id="coverage-strip" width="482" height="20" role="img" aria-label="Coverage along the full parent sequence and the selected residue range"></canvas>
+            </div>
+          </div>
+          <div id="plot-scroll" class="plot-scroll" role="region" tabindex="0" aria-label="Peptide plot. Scroll horizontally to see more residues.">
+            <div id="plot-slot"></div>
+          </div>
+        </figure>
+
+        <section id="selection" class="selection" aria-labelledby="selection-heading" hidden>
+          <div class="section-heading">
+            <h3 id="selection-heading">Selected peptide</h3>
+            <button type="button" class="text-button" id="close-selection">Clear selection</button>
+          </div>
+          <p id="selection-sequence" class="selected-sequence"></p>
+          <p id="selection-position" class="hint"></p>
+          <div id="selection-actions" class="selection-actions">
+            <button type="button" class="quiet" id="focus-selection">Focus region</button>
+            <button type="button" class="quiet" id="copy-selection">Copy sequence</button>
+          </div>
+          <div id="selection-values" class="selection-values"></div>
+        </section>
+
+        <details id="diagnostics" class="diagnostics" hidden>
+          <summary id="diagnostic-summary">Mapping notes</summary>
+          <ul id="diagnostic-list"></ul>
+          <button type="button" class="text-button" id="download-unmapped" hidden>Download unmapped peptides</button>
+        </details>
+        <p id="export-status" class="feedback export-status" role="status" hidden></p>
+      </section>
+
+      <section id="empty-state" class="panel empty-state" aria-label="Plot preview">
+        <h2>Sequence plot</h2>
+        <p>Enter a parent protein and peptide list to draw an alignment.</p>
+      </section>
+    </div>
+
+    <noscript><p class="feedback">Enable JavaScript to parse sequences and draw plots in your browser.</p></noscript>
+  </main>
+
+  <footer class="shell footer">
+    <p>Inspired by <a href="https://doi.org/10.1021/acs.jproteome.6b00751">Peptigram by Manguy et al. (2017)</a>.</p>
+  </footer>
+</body>
+</html>

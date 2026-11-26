@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('../dist/', import.meta.url));
 const problems = [];
 const documents = new Map();
+const unlistedPages = new Map([['apex2', 'APEX2'], ['peptigram', 'Peptigram']]);
 const decode = value => value.replace(/&(?:amp|quot|apos|lt|gt|#\d+|#x[\da-f]+);/gi, entity => {
   const names = { '&amp;': '&', '&quot;': '"', '&apos;': "'", '&lt;': '<', '&gt;': '>' };
   if (names[entity.toLowerCase()]) return names[entity.toLowerCase()];
@@ -38,7 +39,12 @@ async function document(file) {
 let files;
 try { files = await walk(root); }
 catch { console.error('No generated site found. Run npm run build first.'); process.exit(1); }
-for (const required of ['index.html', '404.html', 'publications/index.html', 'blog/index.html', 'cv/index.html', 'flashcards/index.html', 'apex2/index.html', 'robots.txt', 'sitemap.xml', 'feed.xml', 'publications.bib']) {
+const requiredFiles = [
+  'index.html', '404.html', 'publications/index.html', 'blog/index.html', 'cv/index.html',
+  'flashcards/index.html', 'robots.txt', 'sitemap.xml', 'feed.xml', 'publications.bib',
+  ...Array.from(unlistedPages.keys(), slug => `${slug}/index.html`),
+];
+for (const required of requiredFiles) {
   if (!files.includes(path.join(root, required))) problems.push(`Missing required output: ${required}`);
 }
 const htmlFiles = files.filter(file => file.endsWith('.html'));
@@ -50,10 +56,11 @@ for (const file of htmlFiles) {
   const relative = path.relative(root, file).split(path.sep).join('/');
   const { html, markup, tags } = await document(file);
   const report = message => problems.push(`${relative}: ${message}`);
-  if (relative === 'apex2/index.html') {
+  const [directory] = relative.split('/');
+  if (unlistedPages.has(directory) && relative === `${directory}/index.html`) {
     const directives = tags.filter(tag => tag.name === 'meta' && tag.attrs.name?.toLowerCase() === 'robots')
       .flatMap(tag => (tag.attrs.content || '').toLowerCase().split(/[\s,]+/));
-    if (!directives.includes('noindex')) report('unlisted APEX2 page must retain its noindex directive');
+    if (!directives.includes('noindex')) report(`unlisted ${unlistedPages.get(directory)} page must retain its noindex directive`);
   }
   const rendered = markup.replace(/<(pre|code)\b[^>]*>[\s\S]*?<\/\1>/gi, '');
   if (/{%[\s\S]*?%}|{{[\s\S]*?}}/.test(rendered)) report('unrendered Liquid template syntax');
@@ -75,8 +82,9 @@ for (const file of htmlFiles) {
       linkCount += 1;
       let pathname;
       try { pathname = decodeURIComponent(target.pathname); } catch { report(`invalid encoded path: ${value}`); continue; }
-      if (!relative.startsWith('apex2/') && (pathname === '/apex2' || pathname.startsWith('/apex2/'))) {
-        report(`public page links to unlisted APEX2 content: ${value}`);
+      const [, targetDirectory] = pathname.split('/');
+      if (targetDirectory !== directory && unlistedPages.has(targetDirectory)) {
+        report(`public page links to unlisted ${unlistedPages.get(targetDirectory)} content: ${value}`);
       }
       let destination = path.resolve(root, `.${pathname}`);
       if (destination !== path.resolve(root) && !destination.startsWith(root)) { report(`path outside site: ${value}`); continue; }
@@ -92,11 +100,15 @@ for (const file of htmlFiles) {
     }
   }
 }
-// Keep the research preview out of discovery surfaces until its public launch.
+// Keep unlisted pages out of generated discovery files.
 for (const name of ['sitemap.xml', 'feed.xml']) {
   if (!files.includes(path.join(root, name))) continue;
   const contents = decode(await readFile(path.join(root, name), 'utf8'));
-  if (/\/apex2(?:[\/#?<>"'\s]|$)/i.test(contents)) problems.push(`${name}: unlisted APEX2 content must not be advertised`);
+  for (const [slug, title] of unlistedPages) {
+    if (new RegExp(`/${slug}(?:[/#?<>"'\\s]|$)`, 'i').test(contents)) {
+      problems.push(`${name}: unlisted ${title} content must not be advertised`);
+    }
+  }
 }
 if (files.includes(path.join(root, 'robots.txt'))) {
   const robots = await readFile(path.join(root, 'robots.txt'), 'utf8');
